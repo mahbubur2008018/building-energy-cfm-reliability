@@ -1,11 +1,14 @@
 # Building Energy Conditional Flow Matching: Six-Cohort Reliability Study
 
+
+[![DOI](https://zenodo.org/badge/1432902389.svg)](https://doi.org/10.5281/zenodo.23641280)
+
 **Author:** Md. Mahbubur Rahman  
 **Affiliation:** Department of Mechatronics Engineering, Rajshahi University of Engineering & Technology (RUET), Rajshahi, Bangladesh  
 **ORCID:** https://orcid.org/0009-0004-0252-9140  
 **Repository:** https://github.com/mahbubur2008018/building-energy-cfm-reliability  
 **Licence (original code):** MIT  
-**Status:** Public source-code and research-evidence repository; Zenodo software DOI pending.
+**Status:** Public source-code and research-evidence repository; GitHub `v1.0.0` archived on Zenodo.
 
 ## Purpose and contribution
 
@@ -76,7 +79,11 @@ The original datasets remain with their respective providers. Follow [`data/READ
 
 ## Citation and DOI
 
-Use the GitHub **Cite this repository** feature based on [`CITATION.cff`](CITATION.cff) for the current software citation. A version-specific Zenodo DOI will be added **only after** a GitHub release is archived successfully on Zenodo. No DOI has been assigned in this repository metadata yet.
+A GitHub `v1.0.0` release has been archived by Zenodo. For reproducibility, cite the **version-specific archived software DOI**: [10.5281/zenodo.23641281](https://doi.org/10.5281/zenodo.23641281).
+
+The **concept DOI**, [10.5281/zenodo.23641280](https://doi.org/10.5281/zenodo.23641280), represents the software project across versions and is used for the badge above.
+
+Use GitHub **Cite this repository**, sourced from [`CITATION.cff`](CITATION.cff), for machine-readable citation details. Later documentation commits on `main` are not automatically included in the immutable Zenodo `v1.0.0` archive; a separate GitHub release would be required to archive a changed snapshot.
 
 ## Licence
 

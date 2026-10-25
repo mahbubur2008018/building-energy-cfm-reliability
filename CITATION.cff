@@ -1,7 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this research code, please cite the software repository. Cite the version-specific Zenodo DOI once it is available."
+message: "If you use this research code, please cite the archived v1.0.0 software release: https://doi.org/10.5281/zenodo.23641281."
 title: "Building Energy Conditional Flow Matching: Six-Cohort Reliability Study"
 type: software
+version: "1.0.0"
+doi: "10.5281/zenodo.23641281"
 authors:
   - given-names: "Md. Mahbubur"
     family-names: "Rahman"
