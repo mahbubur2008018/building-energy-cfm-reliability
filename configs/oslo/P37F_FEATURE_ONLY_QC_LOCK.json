@@ -1,0 +1,53 @@
+{
+  "all_old_final_tests_unopened": true,
+  "buildings": 48,
+  "checked_columns": [
+    "TimeStamp",
+    "Tout",
+    "SolGlob",
+    "WindSpd",
+    "WindDir"
+  ],
+  "energy_target_column_was_not_read": true,
+  "failed_buildings": [],
+  "policy": {
+    "allow_only": [
+      "TimeStamp",
+      "Tout",
+      "SolGlob",
+      "WindSpd",
+      "WindDir"
+    ],
+    "feature_pass_per_building": {
+      "maximum_duplicate_timestamp_fraction_in_sampled_valid_timestamps": 0.05,
+      "min_timestamp_valid_sampled_rows": 200,
+      "minimum_finite_fraction_each_weather_variable_after_range_checks": 0.5
+    },
+    "on_failure": "STOP AND REPORT. Do not alter this split, model, thresholds or exclude/test buildings after label access. Seek explicit pre-label amended version if necessary.",
+    "sample_policy": "every 11th physical data record before eligibility checks, as original Drammen P20",
+    "target_ElImp_access_forbidden": true,
+    "timestamp": "parse first 19 characters as calendar timestamp; never use energy to filter eligibility",
+    "weather_range": {
+      "SolGlob": [
+        0,
+        1400
+      ],
+      "Tout": [
+        -60,
+        60
+      ],
+      "WindDir": [
+        0,
+        360
+      ],
+      "WindSpd": [
+        0,
+        80
+      ]
+    }
+  },
+  "protocol_sha256": "5cd2adfcdc4f87a29cda40b2093a1060ec20d726fb311456961fcf7d5464bad3",
+  "source_directory": "/kaggle/input/datasets/mahbubur2008018/new-dataset",
+  "status": "ALL_48_FEATURE_ONLY_PASS",
+  "version": "OSLO_P37F_TO_P40_v2_TRANSPARENT_PRELABEL_AMENDMENT"
+}

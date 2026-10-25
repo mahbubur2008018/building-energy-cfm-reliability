@@ -1,0 +1,7 @@
+{
+  "distribution": "Normal on standardized log1p target",
+  "fit_rows": 40000,
+  "full_fit_rows": 88584,
+  "test_access": false,
+  "unequal_budgets": true
+}

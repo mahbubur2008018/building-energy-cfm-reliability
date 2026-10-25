@@ -1,0 +1,88 @@
+{
+  "P36_fair_row_analysis": "post-Drammen-test validation exploratory only; not substituted for frozen primary",
+  "all_school_category": "Sch",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20263701,
+  "calibration": "nonnegative rowwise pooled additive conformal q on exactly 12 locked calibration buildings; 90% descriptive only",
+  "calibration_score_rank": "ceil((n+1)*.90), no reduction in raw interval width",
+  "feature_only_qc_sha256": "a47f43363d914a85a6d70f7e8fca927b746a74f9d1a5c4ec252974d694571910",
+  "feature_order": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "Tout",
+    "SolGlob",
+    "WindSpd",
+    "WindDir_sin",
+    "WindDir_cos",
+    "log_floor_area",
+    "construction_year",
+    "log_users",
+    "is_Kdg",
+    "is_Sch",
+    "is_Nsh",
+    "is_Off"
+  ],
+  "flow_ode_steps": 32,
+  "history_old_test_labels_off_limits": true,
+  "mc_draw_count": 64,
+  "model_file_hashes": {
+    "model_checkpoints/phase20_cofactor/CatBoost_FIT_ANCHOR.cbm": "9554f29b8cebc51a863540c3b98dbcd73fab8f531ab98828d26453ece1714db5",
+    "model_checkpoints/phase20_cofactor/CatBoost_Q05.cbm": "696ef984728aa6b5efd3448c5e203c6351e2fb9f0c34922f23d6f6c27314031e",
+    "model_checkpoints/phase20_cofactor/CatBoost_Q50.cbm": "990345e086f0bacbe424a4128ea2ec1bd963ad89a2706a2e0a23b23e6ddd9e94",
+    "model_checkpoints/phase20_cofactor/CatBoost_Q95.cbm": "117677b3b88889d9db9c64a2d60806778e53b0bf97b270699b80f1a34d98d803",
+    "model_checkpoints/phase20_cofactor/P20_NGBOOST_NORMAL_FIT_SUBSET.pkl": "5390d826a47960333d74033457142b83c4ef6b92bd440f62fd079cd3fad1d6f8",
+    "model_checkpoints/phase20_cofactor/direct_20262011/BEST.pt": "937baa6b08cbb085cffd2b6206cdf51bb1ce8cc73ac42d3df1138dcde25d49a2",
+    "model_checkpoints/phase20_cofactor/direct_20262012/BEST.pt": "ef02c0e7ef59433c607c2b25e41434e51f04cee51cac85d2bceb49ebdd8bfd05",
+    "model_checkpoints/phase20_cofactor/direct_20262013/BEST.pt": "8121503bcf960f7cd450b256e882a8932ef67b15131d31df472e3fe8b433a963",
+    "model_checkpoints/phase20_cofactor/residual_20262011/BEST.pt": "bc8ef623d921430185f472e6e526ce8a398fbeaa279f78cdb3977c6478394e61",
+    "model_checkpoints/phase20_cofactor/residual_20262012/BEST.pt": "e370fcdd2aede0dcd80b7e36700d06b84429b5f3138ea8a9fd19817340314b82",
+    "model_checkpoints/phase20_cofactor/residual_20262013/BEST.pt": "317a322ab5aaf49795ad6d64f05d6f1c0738ceefdc98ca9a80ed903b33a9b599",
+    "model_checkpoints/phase20_cofactor/residual_nobase_20262011/BEST.pt": "b24cc91b40e724b166e760e758743aef68275d1729b3f3be52536d5fd3516ab3",
+    "model_checkpoints/phase20_cofactor/residual_nobase_20262012/BEST.pt": "dfc781a5734369b06b33e0f288fbff9f4527b6f18bf852897a8d15ebdff7d053",
+    "model_checkpoints/phase20_cofactor/residual_nobase_20262013/BEST.pt": "40cbd69902a1f304d43d54312a6fd4ede2e989748fffc86b2d8a6e51c1406178"
+  },
+  "numerical_policy": "original FIT log1p inverse clamp [0,30], no posthoc model alteration or additional clipping",
+  "one_city_only": true,
+  "original_NGBOOST_training_cap": 40000,
+  "original_p21_settings_sha256": "3070774cdac28679e91deadd07c7d88884fc4f6e1f811dcd1d503a06cf7b0a87",
+  "original_p21_worker_sha256": "98f7e86449ed85aa90ee7f43311b5eceb9dd235a1f16e24a594f402b3ec15ac4",
+  "p20_fit_preprocessing_sha256": "689e1d33cbba19114132fff3bb9c8bc05a3bb658ffeb839a9acf62f894789c71",
+  "p36_secondary_model_sha256": null,
+  "preprocess": "P20 feature formulas with original FIT medians BEFORE original FIT means and scales",
+  "primary_models": [
+    "NGBoost Normal (40k FIT cap)",
+    "direct CFM seed 20262013"
+  ],
+  "primary_statistic": "equal-building mean(64 paired-MC CRPS(NGBoost40k) - 64 paired-MC CRPS(DirectSeed20262013))",
+  "prior_policy_sha256": "5cd2adfcdc4f87a29cda40b2093a1060ec20d726fb311456961fcf7d5464bad3",
+  "quantile_interval_level": 0.9,
+  "resume": "if test-start marker exists, never reread source test column; use sealed local cache only",
+  "sample_every_nth_physical_row": 11,
+  "sample_row_filter": "finite nonnegative target, valid timestamp, deduplicate within building+timestamp preserving first",
+  "secondary_models": "Other 8 frozen CFM variants/seeds, CatBoost quantiles, optional P36 full-fit NGBoost",
+  "source_role_allocation_hash": "917ee8e5148661475bf93c8e276be33a482d620af884433cdb1232954d29df01",
+  "target": "ElImp / 1000; kWh in recorded hour",
+  "temperature/weather_sanity_bounds": {
+    "SolGlob": [
+      0,
+      1400
+    ],
+    "Tout": [
+      -60,
+      60
+    ],
+    "WindDir": [
+      0,
+      360
+    ],
+    "WindSpd": [
+      0,
+      80
+    ]
+  },
+  "version": "OSLO_P37F_TO_P40_v2_TRANSPARENT_PRELABEL_AMENDMENT"
+}

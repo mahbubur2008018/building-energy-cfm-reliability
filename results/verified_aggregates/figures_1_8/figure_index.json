@@ -1,0 +1,2351 @@
+{
+  "figures": {
+    "J01_training_energy_distribution": {
+      "caption": "Distribution of the annual total site energy target in the training split (n = 8,400).",
+      "caveat": "",
+      "data_split": "training",
+      "files": [
+        "600dpi_png/J01_training_energy_distribution.png",
+        "600dpi_tiff/J01_training_energy_distribution.tiff",
+        "vector_pdf/J01_training_energy_distribution.pdf",
+        "vector_svg/J01_training_energy_distribution.svg",
+        "plot_data/J01_training_energy_distribution.csv"
+      ],
+      "fingerprint": "f844dcc0a234ecb9dbfca680ffe3f5098454737269d6c3323212f23f43ca4cb7",
+      "generated_at": "2026-10-19T17:58:59.650259+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J01_training_energy_distribution.csv",
+      "title": "Training energy distribution"
+    },
+    "J02_baseline_accuracy_comparison": {
+      "caption": "Validation and held-out test RMSE and MAE of five prespecified baseline models. The held-out test results are descriptive and were not used for hyperparameter selection.",
+      "caveat": "Data were generated under a single Cairo climate and a random split.",
+      "data_split": "validation+test",
+      "files": [
+        "600dpi_png/J02_baseline_accuracy_comparison.png",
+        "600dpi_tiff/J02_baseline_accuracy_comparison.tiff",
+        "vector_pdf/J02_baseline_accuracy_comparison.pdf",
+        "vector_svg/J02_baseline_accuracy_comparison.svg",
+        "plot_data/J02_baseline_accuracy_comparison.csv"
+      ],
+      "fingerprint": "f844dcc0a234ecb9dbfca680ffe3f5098454737269d6c3323212f23f43ca4cb7",
+      "generated_at": "2026-10-19T17:59:02.713851+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J02_baseline_accuracy_comparison.csv",
+      "title": "Baseline regression metrics"
+    },
+    "J03_best_baseline_actual_vs_predicted": {
+      "caption": "Held-out test observed versus predicted total annual site energy for CatBoost, selected by validation RMSE.",
+      "caveat": "",
+      "data_split": "test",
+      "files": [
+        "600dpi_png/J03_best_baseline_actual_vs_predicted.png",
+        "600dpi_tiff/J03_best_baseline_actual_vs_predicted.tiff",
+        "vector_pdf/J03_best_baseline_actual_vs_predicted.pdf",
+        "vector_svg/J03_best_baseline_actual_vs_predicted.svg",
+        "plot_data/J03_best_baseline_actual_vs_predicted.csv"
+      ],
+      "fingerprint": "f844dcc0a234ecb9dbfca680ffe3f5098454737269d6c3323212f23f43ca4cb7",
+      "generated_at": "2026-10-19T17:59:05.396518+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J03_best_baseline_actual_vs_predicted.csv",
+      "title": "Observed versus predicted annual energy"
+    },
+    "J04_best_baseline_residual_diagnostics": {
+      "caption": "Residual scatter and distribution of CatBoost on the held-out test data; residual = observed minus predicted.",
+      "caveat": "",
+      "data_split": "test",
+      "files": [
+        "600dpi_png/J04_best_baseline_residual_diagnostics.png",
+        "600dpi_tiff/J04_best_baseline_residual_diagnostics.tiff",
+        "vector_pdf/J04_best_baseline_residual_diagnostics.pdf",
+        "vector_svg/J04_best_baseline_residual_diagnostics.svg",
+        "plot_data/J04_best_baseline_residual_diagnostics.csv"
+      ],
+      "fingerprint": "f844dcc0a234ecb9dbfca680ffe3f5098454737269d6c3323212f23f43ca4cb7",
+      "generated_at": "2026-10-19T17:59:08.777163+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J04_best_baseline_residual_diagnostics.csv",
+      "title": "Baseline residual diagnostics"
+    },
+    "J05_baseline_error_by_energy_range": {
+      "caption": "Average absolute error of CatBoost in five observed-energy quantiles of the held-out test set. This is a descriptive post-evaluation diagnostic.",
+      "caveat": "This is in-distribution error stratification; not unseen-climate validation.",
+      "data_split": "test",
+      "files": [
+        "600dpi_png/J05_baseline_error_by_energy_range.png",
+        "600dpi_tiff/J05_baseline_error_by_energy_range.tiff",
+        "vector_pdf/J05_baseline_error_by_energy_range.pdf",
+        "vector_svg/J05_baseline_error_by_energy_range.svg",
+        "plot_data/J05_baseline_error_by_energy_range.csv"
+      ],
+      "fingerprint": "f844dcc0a234ecb9dbfca680ffe3f5098454737269d6c3323212f23f43ca4cb7",
+      "generated_at": "2026-10-19T17:59:10.462733+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J05_baseline_error_by_energy_range.csv",
+      "title": "Performance by energy-demand range"
+    },
+    "J06_cfm_training_loss": {
+      "caption": "Training flow-matching objective by epoch (scaled target, unitless); do not interpret this objective as RMSE.",
+      "caveat": "",
+      "data_split": "training",
+      "files": [
+        "600dpi_png/J06_cfm_training_loss.png",
+        "600dpi_tiff/J06_cfm_training_loss.tiff",
+        "vector_pdf/J06_cfm_training_loss.pdf",
+        "vector_svg/J06_cfm_training_loss.svg",
+        "plot_data/J06_cfm_training_loss.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:17.275704+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J06_cfm_training_loss.csv",
+      "title": "Standard CFM learning curve"
+    },
+    "J07_cfm_validation_rmse": {
+      "caption": "Standard CFM validation RMSE across training alongside CatBoost validation RMSE. CFM checkpoint selection uses validation RMSE only.",
+      "caveat": "",
+      "data_split": "validation",
+      "files": [
+        "600dpi_png/J07_cfm_validation_rmse.png",
+        "600dpi_tiff/J07_cfm_validation_rmse.tiff",
+        "vector_pdf/J07_cfm_validation_rmse.pdf",
+        "vector_svg/J07_cfm_validation_rmse.svg",
+        "plot_data/J07_cfm_validation_rmse.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:19.293965+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J07_cfm_validation_rmse.csv",
+      "title": "Validation RMSE evolution"
+    },
+    "J08_cfm_validation_actual_vs_predicted": {
+      "caption": "Observed annual total site energy versus CFM predictive-sample mean, validation split only.",
+      "caveat": "",
+      "data_split": "validation",
+      "files": [
+        "600dpi_png/J08_cfm_validation_actual_vs_predicted.png",
+        "600dpi_tiff/J08_cfm_validation_actual_vs_predicted.tiff",
+        "vector_pdf/J08_cfm_validation_actual_vs_predicted.pdf",
+        "vector_svg/J08_cfm_validation_actual_vs_predicted.svg",
+        "plot_data/J08_cfm_validation_actual_vs_predicted.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:22.072793+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J08_cfm_validation_actual_vs_predicted.csv",
+      "title": "CFM observed versus predicted"
+    },
+    "J09_cfm_interval_reliability": {
+      "caption": "Nominal versus empirical central interval coverage from 32 flow samples per building on validation data.",
+      "caveat": "Only 32 draws and no post-hoc calibration; sample quantiles are approximate.",
+      "data_split": "validation",
+      "files": [
+        "600dpi_png/J09_cfm_interval_reliability.png",
+        "600dpi_tiff/J09_cfm_interval_reliability.tiff",
+        "vector_pdf/J09_cfm_interval_reliability.pdf",
+        "vector_svg/J09_cfm_interval_reliability.svg",
+        "plot_data/J09_cfm_interval_reliability.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:24.240727+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J09_cfm_interval_reliability.csv",
+      "title": "Uncalibrated interval reliability"
+    },
+    "J100_BDG2_three_site_prediction_bias": {
+      "caption": "Signed prediction bias across the frozen independent three-site evaluation.",
+      "caveat": "Three site clusters; no test-based tuning; descriptive heldout analysis, not guaranteed cross-site uncertainty calibration.",
+      "data_split": "BDG2_independent_three_site_TEST_FROZEN",
+      "files": [
+        "600dpi_png/J100_BDG2_three_site_prediction_bias.png",
+        "600dpi_tiff/J100_BDG2_three_site_prediction_bias.tiff",
+        "vector_pdf/J100_BDG2_three_site_prediction_bias.pdf",
+        "vector_svg/J100_BDG2_three_site_prediction_bias.svg",
+        "plot_data/J100_BDG2_three_site_prediction_bias.csv"
+      ],
+      "fingerprint": "8dda538638ec0c0be44f275d70b1ad6815db40178eb9569fd2a78ccf14be3d37",
+      "generated_at": "2026-10-20T03:13:29.393457+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J100_BDG2_three_site_prediction_bias.csv",
+      "title": "BDG2 measured electricity model bias"
+    },
+    "J101_BDG2_three_site_observed_predicted": {
+      "caption": "Visualization capped at 99th percentile of observed data; original uncapped predictions used for metrics.",
+      "caveat": "Three site clusters; no test-based tuning; descriptive heldout analysis, not guaranteed cross-site uncertainty calibration.",
+      "data_split": "BDG2_independent_three_site_TEST_FROZEN",
+      "files": [
+        "600dpi_png/J101_BDG2_three_site_observed_predicted.png",
+        "600dpi_tiff/J101_BDG2_three_site_observed_predicted.tiff",
+        "vector_pdf/J101_BDG2_three_site_observed_predicted.pdf",
+        "vector_svg/J101_BDG2_three_site_observed_predicted.svg",
+        "plot_data/J101_BDG2_three_site_observed_predicted.csv"
+      ],
+      "fingerprint": "8dda538638ec0c0be44f275d70b1ad6815db40178eb9569fd2a78ccf14be3d37",
+      "generated_at": "2026-10-20T03:13:37.184303+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J101_BDG2_three_site_observed_predicted.csv",
+      "title": "BDG2 three-site observed vs predicted"
+    },
+    "J102_BDG2_three_site_seed_stability": {
+      "caption": "All five training seeds retained; measured electricity per-hour test performance; no test-based seed selection.",
+      "caveat": "Three site clusters; no test-based tuning; descriptive heldout analysis, not guaranteed cross-site uncertainty calibration.",
+      "data_split": "BDG2_independent_three_site_TEST_FROZEN",
+      "files": [
+        "600dpi_png/J102_BDG2_three_site_seed_stability.png",
+        "600dpi_tiff/J102_BDG2_three_site_seed_stability.tiff",
+        "vector_pdf/J102_BDG2_three_site_seed_stability.pdf",
+        "vector_svg/J102_BDG2_three_site_seed_stability.svg",
+        "plot_data/J102_BDG2_three_site_seed_stability.csv"
+      ],
+      "fingerprint": "8dda538638ec0c0be44f275d70b1ad6815db40178eb9569fd2a78ccf14be3d37",
+      "generated_at": "2026-10-20T03:13:39.470451+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J102_BDG2_three_site_seed_stability.csv",
+      "title": "BDG2 frozen test CFM seed diagnostics"
+    },
+    "J103_BDG2_test_worst_one_percent_SSE": {
+      "caption": "Contribution of the highest squared-error 1% of test observations to total SSE. No outlier removal.",
+      "caveat": "Post-hoc descriptive frozen-test analysis; no retuning. Only three independent sites.",
+      "data_split": "BDG2_three_site_independent_FROZEN_POSTHOC",
+      "files": [
+        "600dpi_png/J103_BDG2_test_worst_one_percent_SSE.png",
+        "600dpi_tiff/J103_BDG2_test_worst_one_percent_SSE.tiff",
+        "vector_pdf/J103_BDG2_test_worst_one_percent_SSE.pdf",
+        "vector_svg/J103_BDG2_test_worst_one_percent_SSE.svg",
+        "plot_data/J103_BDG2_test_worst_one_percent_SSE.csv"
+      ],
+      "fingerprint": "5fa049db51c2d7013a9fd80e3946701da329fdc697115f15a70e065f24a0ae20",
+      "generated_at": "2026-10-20T03:25:36.500699+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J103_BDG2_test_worst_one_percent_SSE.csv",
+      "title": "Frozen-test RMSE concentration"
+    },
+    "J104_BDG2_test_extreme_predicted_energy": {
+      "caption": "Logarithmic comparison of maximum predictions and maximum observed hourly electricity; raw metrics are not transformed.",
+      "caveat": "Post-hoc descriptive frozen-test analysis; no retuning. Only three independent sites.",
+      "data_split": "BDG2_three_site_independent_FROZEN_POSTHOC",
+      "files": [
+        "600dpi_png/J104_BDG2_test_extreme_predicted_energy.png",
+        "600dpi_tiff/J104_BDG2_test_extreme_predicted_energy.tiff",
+        "vector_pdf/J104_BDG2_test_extreme_predicted_energy.pdf",
+        "vector_svg/J104_BDG2_test_extreme_predicted_energy.svg",
+        "plot_data/J104_BDG2_test_extreme_predicted_energy.csv"
+      ],
+      "fingerprint": "5fa049db51c2d7013a9fd80e3946701da329fdc697115f15a70e065f24a0ae20",
+      "generated_at": "2026-10-20T03:25:38.510165+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J104_BDG2_test_extreme_predicted_energy.csv",
+      "title": "Extreme frozen-test predicted electricity"
+    },
+    "J105_BDG2_test_calibrated_interval_failure_direction": {
+      "caption": "Proportion inside calibrated 90% intervals and outside on each side on the frozen independent-site test.",
+      "caveat": "Post-hoc descriptive frozen-test analysis; no retuning. Only three independent sites.",
+      "data_split": "BDG2_three_site_independent_FROZEN_POSTHOC",
+      "files": [
+        "600dpi_png/J105_BDG2_test_calibrated_interval_failure_direction.png",
+        "600dpi_tiff/J105_BDG2_test_calibrated_interval_failure_direction.tiff",
+        "vector_pdf/J105_BDG2_test_calibrated_interval_failure_direction.pdf",
+        "vector_svg/J105_BDG2_test_calibrated_interval_failure_direction.svg",
+        "plot_data/J105_BDG2_test_calibrated_interval_failure_direction.csv"
+      ],
+      "fingerprint": "5fa049db51c2d7013a9fd80e3946701da329fdc697115f15a70e065f24a0ae20",
+      "generated_at": "2026-10-20T03:25:40.544611+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J105_BDG2_test_calibrated_interval_failure_direction.csv",
+      "title": "Frozen calibrated interval containment and failure direction"
+    },
+    "J106_BDG2_test_relative_RMSE_by_site": {
+      "caption": "Site-specific RMSE change relative to CatBoost. Standard CFM omitted from graph scale because of extreme divergence; present in source CSV.",
+      "caveat": "Post-hoc descriptive frozen-test analysis; no retuning. Only three independent sites.",
+      "data_split": "BDG2_three_site_independent_FROZEN_POSTHOC",
+      "files": [
+        "600dpi_png/J106_BDG2_test_relative_RMSE_by_site.png",
+        "600dpi_tiff/J106_BDG2_test_relative_RMSE_by_site.tiff",
+        "vector_pdf/J106_BDG2_test_relative_RMSE_by_site.pdf",
+        "vector_svg/J106_BDG2_test_relative_RMSE_by_site.svg",
+        "plot_data/J106_BDG2_test_relative_RMSE_by_site.csv"
+      ],
+      "fingerprint": "5fa049db51c2d7013a9fd80e3946701da329fdc697115f15a70e065f24a0ae20",
+      "generated_at": "2026-10-20T03:25:43.120666+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J106_BDG2_test_relative_RMSE_by_site.csv",
+      "title": "Model RMSE relative to CatBoost across unseen sites"
+    },
+    "J107_BDG2_test_three_site_calibrated_coverage": {
+      "caption": "Calibration coverage varies by unseen site. Three sites do not establish a population-level coverage guarantee.",
+      "caveat": "Post-hoc descriptive frozen-test analysis; no retuning. Only three independent sites.",
+      "data_split": "BDG2_three_site_independent_FROZEN_POSTHOC",
+      "files": [
+        "600dpi_png/J107_BDG2_test_three_site_calibrated_coverage.png",
+        "600dpi_tiff/J107_BDG2_test_three_site_calibrated_coverage.tiff",
+        "vector_pdf/J107_BDG2_test_three_site_calibrated_coverage.pdf",
+        "vector_svg/J107_BDG2_test_three_site_calibrated_coverage.svg",
+        "plot_data/J107_BDG2_test_three_site_calibrated_coverage.csv"
+      ],
+      "fingerprint": "5fa049db51c2d7013a9fd80e3946701da329fdc697115f15a70e065f24a0ae20",
+      "generated_at": "2026-10-20T03:25:45.495927+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J107_BDG2_test_three_site_calibrated_coverage.csv",
+      "title": "Site-specific reliability of frozen prediction intervals"
+    },
+    "J108_BDG2_test_point_vs_interval_tradeoff": {
+      "caption": "Observed trade-off between point RMSE and conformal interval score; neither metric alone implies universal model superiority.",
+      "caveat": "Post-hoc descriptive frozen-test analysis; no retuning. Only three independent sites.",
+      "data_split": "BDG2_three_site_independent_FROZEN_POSTHOC",
+      "files": [
+        "600dpi_png/J108_BDG2_test_point_vs_interval_tradeoff.png",
+        "600dpi_tiff/J108_BDG2_test_point_vs_interval_tradeoff.tiff",
+        "vector_pdf/J108_BDG2_test_point_vs_interval_tradeoff.pdf",
+        "vector_svg/J108_BDG2_test_point_vs_interval_tradeoff.svg",
+        "plot_data/J108_BDG2_test_point_vs_interval_tradeoff.csv"
+      ],
+      "fingerprint": "5fa049db51c2d7013a9fd80e3946701da329fdc697115f15a70e065f24a0ae20",
+      "generated_at": "2026-10-20T03:25:49.650385+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J108_BDG2_test_point_vs_interval_tradeoff.csv",
+      "title": "Frozen-test point prediction versus uncertainty trade-off"
+    },
+    "J109_crosssource_frozen_primary_RMSE_relative_change": {
+      "caption": "Comparisons are computed within each distinct target/source/holdout. They are not pooled estimates. Cairo comparison uses the earlier full residual model; other studies use prespecified no-base residual.",
+      "caveat": "Different targets, models and units. Post-hoc summary of already inspected test sets; descriptive only.",
+      "data_split": "MULTI_SOURCE_POSTHOC_FROZEN_EVIDENCE_SYNTHESIS",
+      "files": [
+        "600dpi_png/J109_crosssource_frozen_primary_RMSE_relative_change.png",
+        "600dpi_tiff/J109_crosssource_frozen_primary_RMSE_relative_change.tiff",
+        "vector_pdf/J109_crosssource_frozen_primary_RMSE_relative_change.pdf",
+        "vector_svg/J109_crosssource_frozen_primary_RMSE_relative_change.svg",
+        "plot_data/J109_crosssource_frozen_primary_RMSE_relative_change.csv"
+      ],
+      "fingerprint": "c1113dab26a6e463b6f7644246151d8e2b2150685042e58e420cfcebe1b8b7c8",
+      "generated_at": "2026-10-20T11:45:09.597805+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J109_crosssource_frozen_primary_RMSE_relative_change.csv",
+      "title": "Within-study primary RMSE contrasts against CatBoost"
+    },
+    "J10_cfm_interval_width": {
+      "caption": "Width of each uncalibrated central 90% flow-sample interval versus the corresponding predictive mean on validation data.",
+      "caveat": "",
+      "data_split": "validation",
+      "files": [
+        "600dpi_png/J10_cfm_interval_width.png",
+        "600dpi_tiff/J10_cfm_interval_width.tiff",
+        "vector_pdf/J10_cfm_interval_width.pdf",
+        "vector_svg/J10_cfm_interval_width.svg",
+        "plot_data/J10_cfm_interval_width.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:26.648708+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J10_cfm_interval_width.csv",
+      "title": "CFM interval width against predicted energy"
+    },
+    "J110_crosssource_frozen_primary_interval_coverage": {
+      "caption": "Observed interval coverage of pre-frozen primary candidates across dissimilar building-energy tasks. Nominal 90% line shown for context.",
+      "caveat": "Shift invalidates ordinary exchangeability coverage guarantees; disparate source tasks cannot be pooled.",
+      "data_split": "MULTI_SOURCE_POSTHOC_FROZEN_EVIDENCE_SYNTHESIS",
+      "files": [
+        "600dpi_png/J110_crosssource_frozen_primary_interval_coverage.png",
+        "600dpi_tiff/J110_crosssource_frozen_primary_interval_coverage.tiff",
+        "vector_pdf/J110_crosssource_frozen_primary_interval_coverage.pdf",
+        "vector_svg/J110_crosssource_frozen_primary_interval_coverage.svg",
+        "plot_data/J110_crosssource_frozen_primary_interval_coverage.csv"
+      ],
+      "fingerprint": "c1113dab26a6e463b6f7644246151d8e2b2150685042e58e420cfcebe1b8b7c8",
+      "generated_at": "2026-10-20T11:45:11.254603+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J110_crosssource_frozen_primary_interval_coverage.csv",
+      "title": "Frozen primary 90% interval coverage by study"
+    },
+    "J111_BDG2_inverse_transform_tail_amplification": {
+      "caption": "Mathematical effect of the previously frozen fit-only log1p target mean and SD. Upper numerical clip shown as in the original implementation; not a causal attribution.",
+      "caveat": "Descriptive mathematical / previously frozen output analysis only. Not new test evidence or a proven numerical cause.",
+      "data_split": "posthoc_frozen_technical_audit",
+      "files": [
+        "600dpi_png/J111_BDG2_inverse_transform_tail_amplification.png",
+        "600dpi_tiff/J111_BDG2_inverse_transform_tail_amplification.tiff",
+        "vector_pdf/J111_BDG2_inverse_transform_tail_amplification.pdf",
+        "vector_svg/J111_BDG2_inverse_transform_tail_amplification.svg",
+        "plot_data/J111_BDG2_inverse_transform_tail_amplification.csv"
+      ],
+      "fingerprint": "bc74db97c7d62874f3380c9d0ec426e30afd03f78a12832084a65b2d445bc8de",
+      "generated_at": "2026-10-20T12:19:02.037585+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J111_BDG2_inverse_transform_tail_amplification.csv",
+      "title": "Inverse-target amplification potential"
+    },
+    "J112_BDG2_frozen_tail_error_concentration": {
+      "caption": "For each frozen method, the worst 1% of absolute-error rows and their fraction of total squared error. All predictions unmodified; 92,356 hourly samples within only three held-out sites.",
+      "caveat": "Descriptive mathematical / previously frozen output analysis only. Not new test evidence or a proven numerical cause.",
+      "data_split": "posthoc_frozen_technical_audit",
+      "files": [
+        "600dpi_png/J112_BDG2_frozen_tail_error_concentration.png",
+        "600dpi_tiff/J112_BDG2_frozen_tail_error_concentration.tiff",
+        "vector_pdf/J112_BDG2_frozen_tail_error_concentration.pdf",
+        "vector_svg/J112_BDG2_frozen_tail_error_concentration.svg",
+        "plot_data/J112_BDG2_frozen_tail_error_concentration.csv"
+      ],
+      "fingerprint": "bc74db97c7d62874f3380c9d0ec426e30afd03f78a12832084a65b2d445bc8de",
+      "generated_at": "2026-10-20T12:19:03.657575+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J112_BDG2_frozen_tail_error_concentration.csv",
+      "title": "Frozen three-site test squared-error concentration"
+    },
+    "J113_BDG2_validation_solver_step_tail_sensitivity": {
+      "caption": "Euler16, Euler32 and Heun32 were compared with Euler64 using the same 256 validation rows, fixed initialization, and all 15 trained models. Summary median over the five fixed seeds.",
+      "caveat": "Post-hoc controlled inference on previously used validation sites only. Not new independent test evidence or a proven causal mechanism.",
+      "data_split": "BDG2_unseen_SITE_validation_exploratory_only",
+      "files": [
+        "600dpi_png/J113_BDG2_validation_solver_step_tail_sensitivity.png",
+        "600dpi_tiff/J113_BDG2_validation_solver_step_tail_sensitivity.tiff",
+        "vector_pdf/J113_BDG2_validation_solver_step_tail_sensitivity.pdf",
+        "vector_svg/J113_BDG2_validation_solver_step_tail_sensitivity.svg",
+        "plot_data/J113_BDG2_validation_solver_step_tail_sensitivity.csv"
+      ],
+      "fingerprint": "1dbb83139b15d32887b41b9f50c482e5ddd04922e2a78b9ee036cf570ce26d89",
+      "generated_at": "2026-10-20T12:36:54.509753+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J113_BDG2_validation_solver_step_tail_sensitivity.csv",
+      "title": "Paired ODE discretization sensitivity on BDG2 validation"
+    },
+    "J114_BDG2_validation_generated_log_tail_hazards": {
+      "caption": "Fraction of generated samples whose unclipped log1p(kWh) value exceeds 15; no original predictions were clipped or corrected. Five-seed median.",
+      "caveat": "Post-hoc controlled inference on previously used validation sites only. Not new independent test evidence or a proven causal mechanism.",
+      "data_split": "BDG2_unseen_SITE_validation_exploratory_only",
+      "files": [
+        "600dpi_png/J114_BDG2_validation_generated_log_tail_hazards.png",
+        "600dpi_tiff/J114_BDG2_validation_generated_log_tail_hazards.tiff",
+        "vector_pdf/J114_BDG2_validation_generated_log_tail_hazards.pdf",
+        "vector_svg/J114_BDG2_validation_generated_log_tail_hazards.svg",
+        "plot_data/J114_BDG2_validation_generated_log_tail_hazards.csv"
+      ],
+      "fingerprint": "1dbb83139b15d32887b41b9f50c482e5ddd04922e2a78b9ee036cf570ce26d89",
+      "generated_at": "2026-10-20T12:36:56.662804+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J114_BDG2_validation_generated_log_tail_hazards.csv",
+      "title": "Validation inverse-target tail hazard across ODE samplers"
+    },
+    "J115_BDG2_validation_solver_point_RMSE_by_variant": {
+      "caption": "Median validation-slice RMSE across five frozen seeds and four solver settings. This exploratory result must not be used to retune previously evaluated held-out sites.",
+      "caveat": "Post-hoc controlled inference on previously used validation sites only. Not new independent test evidence or a proven causal mechanism.",
+      "data_split": "BDG2_unseen_SITE_validation_exploratory_only",
+      "files": [
+        "600dpi_png/J115_BDG2_validation_solver_point_RMSE_by_variant.png",
+        "600dpi_tiff/J115_BDG2_validation_solver_point_RMSE_by_variant.tiff",
+        "vector_pdf/J115_BDG2_validation_solver_point_RMSE_by_variant.pdf",
+        "vector_svg/J115_BDG2_validation_solver_point_RMSE_by_variant.svg",
+        "plot_data/J115_BDG2_validation_solver_point_RMSE_by_variant.csv"
+      ],
+      "fingerprint": "1dbb83139b15d32887b41b9f50c482e5ddd04922e2a78b9ee036cf570ce26d89",
+      "generated_at": "2026-10-20T12:36:59.603941+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J115_BDG2_validation_solver_point_RMSE_by_variant.csv",
+      "title": "Controlled validation-only RMSE by ODE solver and CFM variant"
+    },
+    "J116_BDG2_validation_fit_only_probabilistic_intervalscore": {
+      "caption": "Fixed training data; new probabilistic baselines and frozen CFM model median over 5 seeds. Two validation sites only; exploratory.",
+      "caveat": "Not independent. Existing 2 validation sites were repeatedly inspected for development; no calibration/test labels used.",
+      "data_split": "BDG2_validation_2_sites_EXPLORATORY",
+      "files": [
+        "600dpi_png/J116_BDG2_validation_fit_only_probabilistic_intervalscore.png",
+        "600dpi_tiff/J116_BDG2_validation_fit_only_probabilistic_intervalscore.tiff",
+        "vector_pdf/J116_BDG2_validation_fit_only_probabilistic_intervalscore.pdf",
+        "vector_svg/J116_BDG2_validation_fit_only_probabilistic_intervalscore.svg",
+        "plot_data/J116_BDG2_validation_fit_only_probabilistic_intervalscore.csv"
+      ],
+      "fingerprint": "de1d845be66e8d9fc7c37f47037f2b954ca0820ce2b83bf483a8a91e2280c44c",
+      "generated_at": "2026-10-20T12:53:36.980078+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J116_BDG2_validation_fit_only_probabilistic_intervalscore.csv",
+      "title": "BDG2 validation interval score"
+    },
+    "J117_BDG2_validation_fit_only_probabilistic_coverage": {
+      "caption": "Fixed training data; new probabilistic baselines and frozen CFM model median over 5 seeds. Two validation sites only; exploratory.",
+      "caveat": "Not independent. Existing 2 validation sites were repeatedly inspected for development; no calibration/test labels used.",
+      "data_split": "BDG2_validation_2_sites_EXPLORATORY",
+      "files": [
+        "600dpi_png/J117_BDG2_validation_fit_only_probabilistic_coverage.png",
+        "600dpi_tiff/J117_BDG2_validation_fit_only_probabilistic_coverage.tiff",
+        "vector_pdf/J117_BDG2_validation_fit_only_probabilistic_coverage.pdf",
+        "vector_svg/J117_BDG2_validation_fit_only_probabilistic_coverage.svg",
+        "plot_data/J117_BDG2_validation_fit_only_probabilistic_coverage.csv"
+      ],
+      "fingerprint": "de1d845be66e8d9fc7c37f47037f2b954ca0820ce2b83bf483a8a91e2280c44c",
+      "generated_at": "2026-10-20T12:53:38.679486+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J117_BDG2_validation_fit_only_probabilistic_coverage.csv",
+      "title": "BDG2 validation raw 90% coverage"
+    },
+    "J118_BDG2_validation_fit_only_probabilistic_rmse": {
+      "caption": "Fixed training data; new probabilistic baselines and frozen CFM model median over 5 seeds. Two validation sites only; exploratory.",
+      "caveat": "Not independent. Existing 2 validation sites were repeatedly inspected for development; no calibration/test labels used.",
+      "data_split": "BDG2_validation_2_sites_EXPLORATORY",
+      "files": [
+        "600dpi_png/J118_BDG2_validation_fit_only_probabilistic_rmse.png",
+        "600dpi_tiff/J118_BDG2_validation_fit_only_probabilistic_rmse.tiff",
+        "vector_pdf/J118_BDG2_validation_fit_only_probabilistic_rmse.pdf",
+        "vector_svg/J118_BDG2_validation_fit_only_probabilistic_rmse.svg",
+        "plot_data/J118_BDG2_validation_fit_only_probabilistic_rmse.csv"
+      ],
+      "fingerprint": "de1d845be66e8d9fc7c37f47037f2b954ca0820ce2b83bf483a8a91e2280c44c",
+      "generated_at": "2026-10-20T12:53:40.517454+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J118_BDG2_validation_fit_only_probabilistic_rmse.csv",
+      "title": "BDG2 validation point RMSE"
+    },
+    "J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic": {
+      "caption": "Quantile bounds calibrated using the already inspected Moose validation site, evaluated on the already inspected Panther validation site. This is development evidence only and offers no independent-site guarantee.",
+      "caveat": "Not independent. Existing 2 validation sites were repeatedly inspected for development; no calibration/test labels used.",
+      "data_split": "BDG2_validation_2_sites_EXPLORATORY",
+      "files": [
+        "600dpi_png/J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic.png",
+        "600dpi_tiff/J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic.tiff",
+        "vector_pdf/J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic.pdf",
+        "vector_svg/J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic.svg",
+        "plot_data/J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic.csv"
+      ],
+      "fingerprint": "de1d845be66e8d9fc7c37f47037f2b954ca0820ce2b83bf483a8a91e2280c44c",
+      "generated_at": "2026-10-20T12:53:41.916905+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J119_BDG2_validation_Moose_to_Panther_CQR_diagnostic.csv",
+      "title": "BDG2 split-validation CQR diagnostic"
+    },
+    "J11_cfm_error_vs_uncertainty": {
+      "caption": "Absolute CFM validation point-prediction error against the width of its uncalibrated 90% predictive interval.",
+      "caveat": "Descriptive association, not a guarantee of valid OOD uncertainty.",
+      "data_split": "validation",
+      "files": [
+        "600dpi_png/J11_cfm_error_vs_uncertainty.png",
+        "600dpi_tiff/J11_cfm_error_vs_uncertainty.tiff",
+        "vector_pdf/J11_cfm_error_vs_uncertainty.pdf",
+        "vector_svg/J11_cfm_error_vs_uncertainty.svg",
+        "plot_data/J11_cfm_error_vs_uncertainty.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:28.848663+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J11_cfm_error_vs_uncertainty.csv",
+      "title": "Relationship between uncertainty and error"
+    },
+    "J120_BDG2_exploratory_distributional_RMSE": {
+      "caption": "Fit-only training and previously inspected 2-site validation; NGBoost restricted training budget and CFM five-seed medians.",
+      "caveat": "Development-only: no independent-site generalization claim. NGBoost uses a predeclared 50k subset, not a matched full-data budget.",
+      "data_split": "BDG2_previously_inspected_validation_EXPLORATORY",
+      "files": [
+        "plot_data/J120_BDG2_exploratory_distributional_RMSE.csv",
+        "vector_pdf/J120_BDG2_exploratory_distributional_RMSE.pdf",
+        "vector_svg/J120_BDG2_exploratory_distributional_RMSE.svg",
+        "600dpi_png/J120_BDG2_exploratory_distributional_RMSE.png",
+        "600dpi_tiff/J120_BDG2_exploratory_distributional_RMSE.tiff"
+      ],
+      "fingerprint": "5f7870cd5b03f5b99f6267466b671efbe0d4c714059b01e7da0490b19002d6ad",
+      "generated_at": "2026-10-20T13:12:03.273425+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J120_BDG2_exploratory_distributional_RMSE.csv",
+      "title": "Development validation point accuracy"
+    },
+    "J121_BDG2_exploratory_distributional_CRPS": {
+      "caption": "Fit-only training and previously inspected 2-site validation; NGBoost restricted training budget and CFM five-seed medians.",
+      "caveat": "Development-only: no independent-site generalization claim. NGBoost uses a predeclared 50k subset, not a matched full-data budget.",
+      "data_split": "BDG2_previously_inspected_validation_EXPLORATORY",
+      "files": [
+        "plot_data/J121_BDG2_exploratory_distributional_CRPS.csv",
+        "vector_pdf/J121_BDG2_exploratory_distributional_CRPS.pdf",
+        "vector_svg/J121_BDG2_exploratory_distributional_CRPS.svg",
+        "600dpi_png/J121_BDG2_exploratory_distributional_CRPS.png",
+        "600dpi_tiff/J121_BDG2_exploratory_distributional_CRPS.tiff"
+      ],
+      "fingerprint": "5f7870cd5b03f5b99f6267466b671efbe0d4c714059b01e7da0490b19002d6ad",
+      "generated_at": "2026-10-20T13:12:04.835264+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J121_BDG2_exploratory_distributional_CRPS.csv",
+      "title": "Development validation probabilistic score"
+    },
+    "J122_BDG2_exploratory_distributional_raw_coverage": {
+      "caption": "Fit-only training and previously inspected 2-site validation; NGBoost restricted training budget and CFM five-seed medians.",
+      "caveat": "Development-only: no independent-site generalization claim. NGBoost uses a predeclared 50k subset, not a matched full-data budget.",
+      "data_split": "BDG2_previously_inspected_validation_EXPLORATORY",
+      "files": [
+        "plot_data/J122_BDG2_exploratory_distributional_raw_coverage.csv",
+        "vector_pdf/J122_BDG2_exploratory_distributional_raw_coverage.pdf",
+        "vector_svg/J122_BDG2_exploratory_distributional_raw_coverage.svg",
+        "600dpi_png/J122_BDG2_exploratory_distributional_raw_coverage.png",
+        "600dpi_tiff/J122_BDG2_exploratory_distributional_raw_coverage.tiff"
+      ],
+      "fingerprint": "5f7870cd5b03f5b99f6267466b671efbe0d4c714059b01e7da0490b19002d6ad",
+      "generated_at": "2026-10-20T13:12:06.567213+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J122_BDG2_exploratory_distributional_raw_coverage.csv",
+      "title": "Raw 90% coverage (exploratory)"
+    },
+    "J123_BDG2_exploratory_distributional_interval_score": {
+      "caption": "Fit-only training and previously inspected 2-site validation; NGBoost restricted training budget and CFM five-seed medians.",
+      "caveat": "Development-only: no independent-site generalization claim. NGBoost uses a predeclared 50k subset, not a matched full-data budget.",
+      "data_split": "BDG2_previously_inspected_validation_EXPLORATORY",
+      "files": [
+        "plot_data/J123_BDG2_exploratory_distributional_interval_score.csv",
+        "vector_pdf/J123_BDG2_exploratory_distributional_interval_score.pdf",
+        "vector_svg/J123_BDG2_exploratory_distributional_interval_score.svg",
+        "600dpi_png/J123_BDG2_exploratory_distributional_interval_score.png",
+        "600dpi_tiff/J123_BDG2_exploratory_distributional_interval_score.tiff"
+      ],
+      "fingerprint": "5f7870cd5b03f5b99f6267466b671efbe0d4c714059b01e7da0490b19002d6ad",
+      "generated_at": "2026-10-20T13:12:08.149161+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J123_BDG2_exploratory_distributional_interval_score.csv",
+      "title": "Development validation interval score"
+    },
+    "J124_BDG2_exploratory_distributional_error_tails": {
+      "caption": "Frozen point predictions of new distributional comparators; descriptive only.",
+      "caveat": "Development-only: no independent-site generalization claim. NGBoost uses a predeclared 50k subset, not a matched full-data budget.",
+      "data_split": "BDG2_previously_inspected_validation_EXPLORATORY",
+      "files": [
+        "plot_data/J124_BDG2_exploratory_distributional_error_tails.csv",
+        "vector_pdf/J124_BDG2_exploratory_distributional_error_tails.pdf",
+        "vector_svg/J124_BDG2_exploratory_distributional_error_tails.svg",
+        "600dpi_png/J124_BDG2_exploratory_distributional_error_tails.png",
+        "600dpi_tiff/J124_BDG2_exploratory_distributional_error_tails.tiff"
+      ],
+      "fingerprint": "5f7870cd5b03f5b99f6267466b671efbe0d4c714059b01e7da0490b19002d6ad",
+      "generated_at": "2026-10-20T13:12:14.917320+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J124_BDG2_exploratory_distributional_error_tails.csv",
+      "title": "Development validation error tails"
+    },
+    "J125_COFACTOR_locked_group_split": {
+      "caption": "Metadata-only splits frozen before meter values were read.",
+      "caveat": "Old final tests untouched. New calibration/test building labels still sealed. All validation metrics developmental.",
+      "created_at": "2026-10-20T14:40:03.886502+00:00",
+      "data_split": "COFACTOR_v3_NEW_BUILDING_HELDOUT_VALIDATION_DEV_ONLY",
+      "files": [
+        "plot_data/J125_COFACTOR_locked_group_split.csv",
+        "vector_pdf/J125_COFACTOR_locked_group_split.pdf",
+        "vector_svg/J125_COFACTOR_locked_group_split.svg",
+        "600dpi_png/J125_COFACTOR_locked_group_split.png",
+        "600dpi_tiff/J125_COFACTOR_locked_group_split.tiff"
+      ],
+      "fingerprint": "54d9a5aeca8d83882bc441a6b4f491d69787b00e9cff86de9ff94681c955b3d0",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J125_COFACTOR_locked_group_split.csv",
+      "title": "COFACTOR building role split"
+    },
+    "J126_COFACTOR_val_RMSE": {
+      "caption": "Development-only building-disjoint validation; CFM 3 seeds, NGBoost limited fit budget.",
+      "caveat": "Old final tests untouched. New calibration/test building labels still sealed. All validation metrics developmental.",
+      "created_at": "2026-10-20T14:40:06.175089+00:00",
+      "data_split": "COFACTOR_v3_NEW_BUILDING_HELDOUT_VALIDATION_DEV_ONLY",
+      "files": [
+        "plot_data/J126_COFACTOR_val_RMSE.csv",
+        "vector_pdf/J126_COFACTOR_val_RMSE.pdf",
+        "vector_svg/J126_COFACTOR_val_RMSE.svg",
+        "600dpi_png/J126_COFACTOR_val_RMSE.png",
+        "600dpi_tiff/J126_COFACTOR_val_RMSE.tiff"
+      ],
+      "fingerprint": "54d9a5aeca8d83882bc441a6b4f491d69787b00e9cff86de9ff94681c955b3d0",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J126_COFACTOR_val_RMSE.csv",
+      "title": "Development point error"
+    },
+    "J127_COFACTOR_val_CRPS": {
+      "caption": "Development-only building-disjoint validation; CFM 3 seeds, NGBoost limited fit budget.",
+      "caveat": "Old final tests untouched. New calibration/test building labels still sealed. All validation metrics developmental.",
+      "created_at": "2026-10-20T14:40:08.102517+00:00",
+      "data_split": "COFACTOR_v3_NEW_BUILDING_HELDOUT_VALIDATION_DEV_ONLY",
+      "files": [
+        "plot_data/J127_COFACTOR_val_CRPS.csv",
+        "vector_pdf/J127_COFACTOR_val_CRPS.pdf",
+        "vector_svg/J127_COFACTOR_val_CRPS.svg",
+        "600dpi_png/J127_COFACTOR_val_CRPS.png",
+        "600dpi_tiff/J127_COFACTOR_val_CRPS.tiff"
+      ],
+      "fingerprint": "54d9a5aeca8d83882bc441a6b4f491d69787b00e9cff86de9ff94681c955b3d0",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J127_COFACTOR_val_CRPS.csv",
+      "title": "Raw probabilistic quality"
+    },
+    "J128_COFACTOR_val_coverage": {
+      "caption": "Development-only building-disjoint validation; CFM 3 seeds, NGBoost limited fit budget.",
+      "caveat": "Old final tests untouched. New calibration/test building labels still sealed. All validation metrics developmental.",
+      "created_at": "2026-10-20T14:40:10.229508+00:00",
+      "data_split": "COFACTOR_v3_NEW_BUILDING_HELDOUT_VALIDATION_DEV_ONLY",
+      "files": [
+        "plot_data/J128_COFACTOR_val_coverage.csv",
+        "vector_pdf/J128_COFACTOR_val_coverage.pdf",
+        "vector_svg/J128_COFACTOR_val_coverage.svg",
+        "600dpi_png/J128_COFACTOR_val_coverage.png",
+        "600dpi_tiff/J128_COFACTOR_val_coverage.tiff"
+      ],
+      "fingerprint": "54d9a5aeca8d83882bc441a6b4f491d69787b00e9cff86de9ff94681c955b3d0",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J128_COFACTOR_val_coverage.csv",
+      "title": "Raw interval coverage"
+    },
+    "J129_COFACTOR_val_interval_score": {
+      "caption": "Development-only building-disjoint validation; CFM 3 seeds, NGBoost limited fit budget.",
+      "caveat": "Old final tests untouched. New calibration/test building labels still sealed. All validation metrics developmental.",
+      "created_at": "2026-10-20T14:40:12.279764+00:00",
+      "data_split": "COFACTOR_v3_NEW_BUILDING_HELDOUT_VALIDATION_DEV_ONLY",
+      "files": [
+        "plot_data/J129_COFACTOR_val_interval_score.csv",
+        "vector_pdf/J129_COFACTOR_val_interval_score.pdf",
+        "vector_svg/J129_COFACTOR_val_interval_score.svg",
+        "600dpi_png/J129_COFACTOR_val_interval_score.png",
+        "600dpi_tiff/J129_COFACTOR_val_interval_score.tiff"
+      ],
+      "fingerprint": "54d9a5aeca8d83882bc441a6b4f491d69787b00e9cff86de9ff94681c955b3d0",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J129_COFACTOR_val_interval_score.csv",
+      "title": "Raw 90% interval score"
+    },
+    "J12_validation_catboost_vs_cfm": {
+      "caption": "Validation RMSE and MAE comparing CatBoost with Standard CFM. This does not compare predictive-distribution quality since CatBoost lacks distributional outputs.",
+      "caveat": "",
+      "data_split": "validation",
+      "files": [
+        "600dpi_png/J12_validation_catboost_vs_cfm.png",
+        "600dpi_tiff/J12_validation_catboost_vs_cfm.tiff",
+        "vector_pdf/J12_validation_catboost_vs_cfm.pdf",
+        "vector_svg/J12_validation_catboost_vs_cfm.svg",
+        "plot_data/J12_validation_catboost_vs_cfm.csv"
+      ],
+      "fingerprint": "84d4bcdd64518c45a6f8eae3eb73db14521a0bac42d70cea4c24dafd52a39b0c",
+      "generated_at": "2026-10-19T17:59:31.072163+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J12_validation_catboost_vs_cfm.csv",
+      "title": "Point prediction: CatBoost versus CFM"
+    },
+    "J130_COFACTOR_val_building_heterogeneity": {
+      "caption": "Only the 6 development validation buildings; final test remains unopened.",
+      "caveat": "Old final tests untouched. New calibration/test building labels still sealed. All validation metrics developmental.",
+      "created_at": "2026-10-20T14:40:14.821339+00:00",
+      "data_split": "COFACTOR_v3_NEW_BUILDING_HELDOUT_VALIDATION_DEV_ONLY",
+      "files": [
+        "plot_data/J130_COFACTOR_val_building_heterogeneity.csv",
+        "vector_pdf/J130_COFACTOR_val_building_heterogeneity.pdf",
+        "vector_svg/J130_COFACTOR_val_building_heterogeneity.svg",
+        "600dpi_png/J130_COFACTOR_val_building_heterogeneity.png",
+        "600dpi_tiff/J130_COFACTOR_val_building_heterogeneity.tiff"
+      ],
+      "fingerprint": "54d9a5aeca8d83882bc441a6b4f491d69787b00e9cff86de9ff94681c955b3d0",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J130_COFACTOR_val_building_heterogeneity.csv",
+      "title": "Cross-building validation heterogeneity"
+    },
+    "J131_COFACTOR_TEST_raw_CRPS": {
+      "caption": "9 CFM model/seed combinations and NGBoost on seven buildings; calibration did not alter the CDF.",
+      "caveat": "One-time seven-building test; all in Drammen. Coverage is descriptive, not guaranteed.",
+      "created_at": "2026-10-20T15:25:28.504580+00:00",
+      "data_split": "ONE_TIME_NEW_COFACTOR_V3_BUILDING_HELDOUT_TEST",
+      "files": [
+        "plot_data/J131_COFACTOR_TEST_raw_CRPS.csv",
+        "vector_pdf/J131_COFACTOR_TEST_raw_CRPS.pdf",
+        "vector_svg/J131_COFACTOR_TEST_raw_CRPS.svg",
+        "600dpi_png/J131_COFACTOR_TEST_raw_CRPS.png",
+        "600dpi_tiff/J131_COFACTOR_TEST_raw_CRPS.tiff"
+      ],
+      "fingerprint": "0a6dd41416fd438786a3e0dce3e52973df53159f595d955774eb48bb1dd8b65f",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J131_COFACTOR_TEST_raw_CRPS.csv",
+      "title": "Locked test raw probabilistic scores"
+    },
+    "J132_COFACTOR_TEST_interval_coverage": {
+      "caption": "No distribution-free guarantee across new buildings with five calibration clusters.",
+      "caveat": "One-time seven-building test; all in Drammen. Coverage is descriptive, not guaranteed.",
+      "created_at": "2026-10-20T15:25:31.134361+00:00",
+      "data_split": "ONE_TIME_NEW_COFACTOR_V3_BUILDING_HELDOUT_TEST",
+      "files": [
+        "plot_data/J132_COFACTOR_TEST_interval_coverage.csv",
+        "vector_pdf/J132_COFACTOR_TEST_interval_coverage.pdf",
+        "vector_svg/J132_COFACTOR_TEST_interval_coverage.svg",
+        "600dpi_png/J132_COFACTOR_TEST_interval_coverage.png",
+        "600dpi_tiff/J132_COFACTOR_TEST_interval_coverage.tiff"
+      ],
+      "fingerprint": "0a6dd41416fd438786a3e0dce3e52973df53159f595d955774eb48bb1dd8b65f",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J132_COFACTOR_TEST_interval_coverage.csv",
+      "title": "Test interval coverage and calibration"
+    },
+    "J133_COFACTOR_TEST_RMSE": {
+      "caption": "Tree point predictions and probabilistic predictive means; 64 MC draws for distributions.",
+      "caveat": "One-time seven-building test; all in Drammen. Coverage is descriptive, not guaranteed.",
+      "created_at": "2026-10-20T15:25:33.634963+00:00",
+      "data_split": "ONE_TIME_NEW_COFACTOR_V3_BUILDING_HELDOUT_TEST",
+      "files": [
+        "plot_data/J133_COFACTOR_TEST_RMSE.csv",
+        "vector_pdf/J133_COFACTOR_TEST_RMSE.pdf",
+        "vector_svg/J133_COFACTOR_TEST_RMSE.svg",
+        "600dpi_png/J133_COFACTOR_TEST_RMSE.png",
+        "600dpi_tiff/J133_COFACTOR_TEST_RMSE.tiff"
+      ],
+      "fingerprint": "0a6dd41416fd438786a3e0dce3e52973df53159f595d955774eb48bb1dd8b65f",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J133_COFACTOR_TEST_RMSE.csv",
+      "title": "Frozen test point prediction error"
+    },
+    "J134_COFACTOR_TEST_primary_building_delta": {
+      "caption": "Negative bars favour NGBoost; uncertainty across 7 same-city buildings is substantial.",
+      "caveat": "One-time seven-building test; all in Drammen. Coverage is descriptive, not guaranteed.",
+      "created_at": "2026-10-20T15:25:35.566838+00:00",
+      "data_split": "ONE_TIME_NEW_COFACTOR_V3_BUILDING_HELDOUT_TEST",
+      "files": [
+        "plot_data/J134_COFACTOR_TEST_primary_building_delta.csv",
+        "vector_pdf/J134_COFACTOR_TEST_primary_building_delta.pdf",
+        "vector_svg/J134_COFACTOR_TEST_primary_building_delta.svg",
+        "600dpi_png/J134_COFACTOR_TEST_primary_building_delta.png",
+        "600dpi_tiff/J134_COFACTOR_TEST_primary_building_delta.tiff"
+      ],
+      "fingerprint": "0a6dd41416fd438786a3e0dce3e52973df53159f595d955774eb48bb1dd8b65f",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J134_COFACTOR_TEST_primary_building_delta.csv",
+      "title": "Primary CRPS difference across test buildings"
+    },
+    "J135_COFACTOR_TEST_building_heterogeneity": {
+      "caption": "Actual heterogeneity across the seven unseen Drammen buildings.",
+      "caveat": "One-time seven-building test; all in Drammen. Coverage is descriptive, not guaranteed.",
+      "created_at": "2026-10-20T15:25:38.066894+00:00",
+      "data_split": "ONE_TIME_NEW_COFACTOR_V3_BUILDING_HELDOUT_TEST",
+      "files": [
+        "plot_data/J135_COFACTOR_TEST_building_heterogeneity.csv",
+        "vector_pdf/J135_COFACTOR_TEST_building_heterogeneity.pdf",
+        "vector_svg/J135_COFACTOR_TEST_building_heterogeneity.svg",
+        "600dpi_png/J135_COFACTOR_TEST_building_heterogeneity.png",
+        "600dpi_tiff/J135_COFACTOR_TEST_building_heterogeneity.tiff"
+      ],
+      "fingerprint": "0a6dd41416fd438786a3e0dce3e52973df53159f595d955774eb48bb1dd8b65f",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J135_COFACTOR_TEST_building_heterogeneity.csv",
+      "title": "Test building heterogeneity"
+    },
+    "J136_COFACTOR_TEST_tail_risk": {
+      "caption": "No post-hoc clipping or outlier exclusion; prior log-space clipping [0,30] fixed by P20.",
+      "caveat": "One-time seven-building test; all in Drammen. Coverage is descriptive, not guaranteed.",
+      "created_at": "2026-10-20T15:25:39.917657+00:00",
+      "data_split": "ONE_TIME_NEW_COFACTOR_V3_BUILDING_HELDOUT_TEST",
+      "files": [
+        "plot_data/J136_COFACTOR_TEST_tail_risk.csv",
+        "vector_pdf/J136_COFACTOR_TEST_tail_risk.pdf",
+        "vector_svg/J136_COFACTOR_TEST_tail_risk.svg",
+        "600dpi_png/J136_COFACTOR_TEST_tail_risk.png",
+        "600dpi_tiff/J136_COFACTOR_TEST_tail_risk.tiff"
+      ],
+      "fingerprint": "0a6dd41416fd438786a3e0dce3e52973df53159f595d955774eb48bb1dd8b65f",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J136_COFACTOR_TEST_tail_risk.csv",
+      "title": "Test extreme prediction audit"
+    },
+    "J137_COFACTOR_P22_validation_test_rank_reversal": {
+      "caption": "Preselected direct seed 20262013 versus NGBoost Normal (40k FIT cap); cohorts differ and test may not be reused for tuning.",
+      "caveat": "Post-test descriptive synthesis, not new independent evidence; no model selection permitted.",
+      "created_at": "2026-10-20T15:40:27.530396+00:00",
+      "data_split": "POST_HOC_FROM_ALREADY_FROZEN_P20_VAL_AND_P21_TEST_SUMMARIES",
+      "files": [
+        "plot_data/J137_COFACTOR_P22_validation_test_rank_reversal.csv",
+        "vector_pdf/J137_COFACTOR_P22_validation_test_rank_reversal.pdf",
+        "vector_svg/J137_COFACTOR_P22_validation_test_rank_reversal.svg",
+        "600dpi_png/J137_COFACTOR_P22_validation_test_rank_reversal.png",
+        "600dpi_tiff/J137_COFACTOR_P22_validation_test_rank_reversal.tiff"
+      ],
+      "fingerprint": "da9a91d0b960c34f0f6564198973db92db9fdaf22e96ca9c1b47ce4c9ed0ffe7",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J137_COFACTOR_P22_validation_test_rank_reversal.csv",
+      "title": "Post-hoc validation-to-test probabilistic ranking reversal"
+    },
+    "J138_COFACTOR_P22_building_effect_uncertainty": {
+      "caption": "Seven same-city building clusters; percentile bootstrap CI crosses zero and does not establish global superiority.",
+      "caveat": "Post-test descriptive synthesis, not new independent evidence; no model selection permitted.",
+      "created_at": "2026-10-20T15:40:29.337495+00:00",
+      "data_split": "POST_HOC_FROM_ALREADY_FROZEN_P20_VAL_AND_P21_TEST_SUMMARIES",
+      "files": [
+        "plot_data/J138_COFACTOR_P22_building_effect_uncertainty.csv",
+        "vector_pdf/J138_COFACTOR_P22_building_effect_uncertainty.pdf",
+        "vector_svg/J138_COFACTOR_P22_building_effect_uncertainty.svg",
+        "600dpi_png/J138_COFACTOR_P22_building_effect_uncertainty.png",
+        "600dpi_tiff/J138_COFACTOR_P22_building_effect_uncertainty.tiff"
+      ],
+      "fingerprint": "da9a91d0b960c34f0f6564198973db92db9fdaf22e96ca9c1b47ce4c9ed0ffe7",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J138_COFACTOR_P22_building_effect_uncertainty.csv",
+      "title": "Post-hoc seven-building paired contrast and uncertainty"
+    },
+    "J13_exploratory_interval_coverage": {
+      "caption": "Observed coverage of nominal 90% intervals on an exploratory subset of the previously used validation data. Not independent publication evidence.",
+      "caveat": "The standard CFM checkpoint was selected using this original validation set; conformal guarantee is not claimed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J13_exploratory_interval_coverage.png",
+        "600dpi_tiff/J13_exploratory_interval_coverage.tiff",
+        "vector_pdf/J13_exploratory_interval_coverage.pdf",
+        "vector_svg/J13_exploratory_interval_coverage.svg",
+        "plot_data/J13_exploratory_interval_coverage.csv"
+      ],
+      "fingerprint": "912ec6b7220c262bd58fc9556dadefac957c890a3ab24a37d1f538b5495e6c65",
+      "generated_at": "2026-10-19T17:59:49.603528+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J13_exploratory_interval_coverage.csv",
+      "title": "Interval coverage comparison"
+    },
+    "J14_exploratory_interval_score": {
+      "caption": "Mean central 90% interval score for conformal CatBoost, CQR and standard CFM variants. All on a reused validation partition.",
+      "caveat": "Not a fresh held-out test; use for protocol design, not a claimed generalization improvement.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J14_exploratory_interval_score.png",
+        "600dpi_tiff/J14_exploratory_interval_score.tiff",
+        "vector_pdf/J14_exploratory_interval_score.pdf",
+        "vector_svg/J14_exploratory_interval_score.svg",
+        "plot_data/J14_exploratory_interval_score.csv"
+      ],
+      "fingerprint": "912ec6b7220c262bd58fc9556dadefac957c890a3ab24a37d1f538b5495e6c65",
+      "generated_at": "2026-10-19T17:59:51.908635+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J14_exploratory_interval_score.csv",
+      "title": "Interval score comparison"
+    },
+    "J15_exploratory_interval_width_distributions": {
+      "caption": "Cumulative distributions of interval widths for three predictive methods on previously reused validation samples.",
+      "caveat": "Different interval widths are not evidence of coverage validity without independent evaluation.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J15_exploratory_interval_width_distributions.png",
+        "600dpi_tiff/J15_exploratory_interval_width_distributions.tiff",
+        "vector_pdf/J15_exploratory_interval_width_distributions.pdf",
+        "vector_svg/J15_exploratory_interval_width_distributions.svg",
+        "plot_data/J15_exploratory_interval_width_distributions.csv"
+      ],
+      "fingerprint": "912ec6b7220c262bd58fc9556dadefac957c890a3ab24a37d1f538b5495e6c65",
+      "generated_at": "2026-10-19T17:59:54.101141+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J15_exploratory_interval_width_distributions.csv",
+      "title": "Interval width distributions"
+    },
+    "J16_residual_cfm_actual_vs_predicted": {
+      "caption": "Observed and predicted annual total site energy for 900 exploratory validation samples.",
+      "caveat": "Reused validation data; not independent test evidence.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J16_residual_cfm_actual_vs_predicted.png",
+        "600dpi_tiff/J16_residual_cfm_actual_vs_predicted.tiff",
+        "vector_pdf/J16_residual_cfm_actual_vs_predicted.pdf",
+        "vector_svg/J16_residual_cfm_actual_vs_predicted.svg",
+        "plot_data/J16_residual_cfm_actual_vs_predicted.csv"
+      ],
+      "fingerprint": "3e169f6145d767576dd22bf0cf077e98e59b0dc5ef21a0188a197282627d17e9",
+      "generated_at": "2026-10-19T18:58:33.675427+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J16_residual_cfm_actual_vs_predicted.csv",
+      "title": "Residual CFM \u2014 Actual vs Predicted"
+    },
+    "J17_exploratory_point_error_comparison": {
+      "caption": "Comparison of model RMSE on the same exploratory validation subset.",
+      "caveat": "Not an independent generalization test. Calibrated and uncalibrated models share point predictions.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J17_exploratory_point_error_comparison.png",
+        "600dpi_tiff/J17_exploratory_point_error_comparison.tiff",
+        "vector_pdf/J17_exploratory_point_error_comparison.pdf",
+        "vector_svg/J17_exploratory_point_error_comparison.svg",
+        "plot_data/J17_exploratory_point_error_comparison.csv"
+      ],
+      "fingerprint": "3e169f6145d767576dd22bf0cf077e98e59b0dc5ef21a0188a197282627d17e9",
+      "generated_at": "2026-10-19T18:58:35.825985+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J17_exploratory_point_error_comparison.csv",
+      "title": "Point Prediction RMSE Comparison"
+    },
+    "J18_exploratory_residual_cfm_coverage": {
+      "caption": "Empirical coverage of nominal 90% prediction intervals on reused validation data.",
+      "caveat": "Coverage guarantee cannot be inferred from model-selection data.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J18_exploratory_residual_cfm_coverage.png",
+        "600dpi_tiff/J18_exploratory_residual_cfm_coverage.tiff",
+        "vector_pdf/J18_exploratory_residual_cfm_coverage.pdf",
+        "vector_svg/J18_exploratory_residual_cfm_coverage.svg",
+        "plot_data/J18_exploratory_residual_cfm_coverage.csv"
+      ],
+      "fingerprint": "3e169f6145d767576dd22bf0cf077e98e59b0dc5ef21a0188a197282627d17e9",
+      "generated_at": "2026-10-19T18:58:38.067394+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J18_exploratory_residual_cfm_coverage.csv",
+      "title": "Prediction Interval Coverage"
+    },
+    "J19_random_holdout_residual_prediction": {
+      "caption": "Observed versus predicted annual total site energy on original random test split (n=1,800).",
+      "caveat": "Baseline test outcomes were available from Phase 3; not independent unseen-geometry evaluation.",
+      "data_split": "test",
+      "files": [
+        "600dpi_png/J19_random_holdout_residual_prediction.png",
+        "600dpi_tiff/J19_random_holdout_residual_prediction.tiff",
+        "vector_pdf/J19_random_holdout_residual_prediction.pdf",
+        "vector_svg/J19_random_holdout_residual_prediction.svg",
+        "plot_data/J19_random_holdout_residual_prediction.csv"
+      ],
+      "fingerprint": "23adf3c149d440ba3693c8290ba5b8347b5c21f6b4fc1b391b635b21ccecba09",
+      "generated_at": "2026-10-19T19:12:40.397645+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J19_random_holdout_residual_prediction.csv",
+      "title": "Random-holdout residual CFM predictions"
+    },
+    "J20_random_holdout_rmse_comparison": {
+      "caption": "Point prediction RMSE for three frozen models on the same 1,800 random-holdout buildings.",
+      "caveat": "This benchmark does not establish external or unseen-region generalization.",
+      "data_split": "test",
+      "files": [
+        "600dpi_png/J20_random_holdout_rmse_comparison.png",
+        "600dpi_tiff/J20_random_holdout_rmse_comparison.tiff",
+        "vector_pdf/J20_random_holdout_rmse_comparison.pdf",
+        "vector_svg/J20_random_holdout_rmse_comparison.svg",
+        "plot_data/J20_random_holdout_rmse_comparison.csv"
+      ],
+      "fingerprint": "23adf3c149d440ba3693c8290ba5b8347b5c21f6b4fc1b391b635b21ccecba09",
+      "generated_at": "2026-10-19T19:12:42.217371+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J20_random_holdout_rmse_comparison.csv",
+      "title": "Random-holdout model RMSE comparison"
+    },
+    "J21_random_holdout_coverage_width": {
+      "caption": "Observed 90% interval coverage versus average width for frozen probabilistic methods.",
+      "caveat": "Validation reuse prevents claims of finite-sample conformal guarantee.",
+      "data_split": "test",
+      "files": [
+        "600dpi_png/J21_random_holdout_coverage_width.png",
+        "600dpi_tiff/J21_random_holdout_coverage_width.tiff",
+        "vector_pdf/J21_random_holdout_coverage_width.pdf",
+        "vector_svg/J21_random_holdout_coverage_width.svg",
+        "plot_data/J21_random_holdout_coverage_width.csv"
+      ],
+      "fingerprint": "23adf3c149d440ba3693c8290ba5b8347b5c21f6b4fc1b391b635b21ccecba09",
+      "generated_at": "2026-10-19T19:12:44.821314+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J21_random_holdout_coverage_width.csv",
+      "title": "Random-holdout interval efficiency"
+    },
+    "J22_geometry_shift_feature_split": {
+      "caption": "Covariate-only distribution and cutoff for the frozen internal geometry-shift protocol.",
+      "caveat": "Feature-based cohort design only. No OOD targets or model performance evaluated.",
+      "data_split": "protocol_covariates_only",
+      "files": [
+        "600dpi_png/J22_geometry_shift_feature_split.png",
+        "600dpi_tiff/J22_geometry_shift_feature_split.tiff",
+        "vector_pdf/J22_geometry_shift_feature_split.pdf",
+        "vector_svg/J22_geometry_shift_feature_split.svg",
+        "plot_data/J22_geometry_shift_feature_split.csv"
+      ],
+      "fingerprint": "9faf650121d6443f69c65f7213dcbe5750b495fda5cabafa300fb1ac72b2bca3",
+      "generated_at": "2026-10-19T19:21:59.386184+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J22_geometry_shift_feature_split.csv",
+      "title": "Prespecified geometry shift"
+    },
+    "J23_geometry_shift_cohort_map": {
+      "caption": "Building length and height, with cohort membership determined without accessing target values.",
+      "caveat": "Feature-based cohort design only. No OOD targets or model performance evaluated.",
+      "data_split": "protocol_covariates_only",
+      "files": [
+        "600dpi_png/J23_geometry_shift_cohort_map.png",
+        "600dpi_tiff/J23_geometry_shift_cohort_map.tiff",
+        "vector_pdf/J23_geometry_shift_cohort_map.pdf",
+        "vector_svg/J23_geometry_shift_cohort_map.svg",
+        "plot_data/J23_geometry_shift_cohort_map.csv"
+      ],
+      "fingerprint": "9faf650121d6443f69c65f7213dcbe5750b495fda5cabafa300fb1ac72b2bca3",
+      "generated_at": "2026-10-19T19:22:04.788604+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J23_geometry_shift_cohort_map.csv",
+      "title": "Geometry shift cohort map"
+    },
+    "J24_geometry_shift_cfm_training_loss": {
+      "caption": "Flow-matching validation loss by epoch for new training-split Standard and Residual CFM models; their target definitions differ, so numerical losses are not directly comparable.",
+      "caveat": "Different target parameterizations; flow losses are NOT directly comparable. Fit/validation cohort only; no unseen-geometry test results.",
+      "data_split": "training+validation",
+      "files": [
+        "600dpi_png/J24_geometry_shift_cfm_training_loss.png",
+        "600dpi_tiff/J24_geometry_shift_cfm_training_loss.tiff",
+        "vector_pdf/J24_geometry_shift_cfm_training_loss.pdf",
+        "vector_svg/J24_geometry_shift_cfm_training_loss.svg",
+        "plot_data/J24_geometry_shift_cfm_training_loss.csv"
+      ],
+      "fingerprint": "62819f286c5025ca1c99ae5df3d57f43523442ae362842cb32fa4ed56c56ab1a",
+      "generated_at": "2026-10-19T19:50:26.306119+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J24_geometry_shift_cfm_training_loss.csv",
+      "title": "Geometry-shift CFM training curves"
+    },
+    "J25_geometry_shift_oof_residual_distribution": {
+      "caption": "Training-fit out-of-fold CatBoost prediction residual distribution; no OOD labels used.",
+      "caveat": "Fit/validation cohort only; no unseen-geometry test results.",
+      "data_split": "training",
+      "files": [
+        "600dpi_png/J25_geometry_shift_oof_residual_distribution.png",
+        "600dpi_tiff/J25_geometry_shift_oof_residual_distribution.tiff",
+        "vector_pdf/J25_geometry_shift_oof_residual_distribution.pdf",
+        "vector_svg/J25_geometry_shift_oof_residual_distribution.svg",
+        "plot_data/J25_geometry_shift_oof_residual_distribution.csv"
+      ],
+      "fingerprint": "62819f286c5025ca1c99ae5df3d57f43523442ae362842cb32fa4ed56c56ab1a",
+      "generated_at": "2026-10-19T19:50:28.471504+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J25_geometry_shift_oof_residual_distribution.csv",
+      "title": "Out-of-fold residual distribution"
+    },
+    "J26_height_ood_actual_vs_predicted": {
+      "caption": "Matched observations and point predictions for frozen CatBoost and Residual CFM on the Height-OOD test.",
+      "caveat": "Prespecified within-dataset synthetic Height extrapolation, not external cross-climate evidence. Conformal exchangeability is not guaranteed under geometry shift.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J26_height_ood_actual_vs_predicted.png",
+        "600dpi_tiff/J26_height_ood_actual_vs_predicted.tiff",
+        "vector_pdf/J26_height_ood_actual_vs_predicted.pdf",
+        "vector_svg/J26_height_ood_actual_vs_predicted.svg",
+        "plot_data/J26_height_ood_actual_vs_predicted.csv"
+      ],
+      "fingerprint": "eab1d29e5c86e9ac575022eb6b0665eec46bc7654d78d6c2345e21d95d0ef0b2",
+      "generated_at": "2026-10-19T20:01:45.856680+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J26_height_ood_actual_vs_predicted.csv",
+      "title": "Height-OOD actual versus predicted"
+    },
+    "J27_height_ood_rmse_comparison": {
+      "caption": "Point-prediction RMSE for three models retrained from scratch on the frozen geometry-shift split.",
+      "caveat": "Prespecified within-dataset synthetic Height extrapolation, not external cross-climate evidence. Conformal exchangeability is not guaranteed under geometry shift.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J27_height_ood_rmse_comparison.png",
+        "600dpi_tiff/J27_height_ood_rmse_comparison.tiff",
+        "vector_pdf/J27_height_ood_rmse_comparison.pdf",
+        "vector_svg/J27_height_ood_rmse_comparison.svg",
+        "plot_data/J27_height_ood_rmse_comparison.csv"
+      ],
+      "fingerprint": "eab1d29e5c86e9ac575022eb6b0665eec46bc7654d78d6c2345e21d95d0ef0b2",
+      "generated_at": "2026-10-19T20:01:47.312720+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J27_height_ood_rmse_comparison.csv",
+      "title": "Height-OOD RMSE comparison"
+    },
+    "J28_height_ood_interval_coverage": {
+      "caption": "Observed coverage before and after frozen in-domain calibration; no distribution-free coverage claim under shift.",
+      "caveat": "Prespecified within-dataset synthetic Height extrapolation, not external cross-climate evidence. Conformal exchangeability is not guaranteed under geometry shift.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J28_height_ood_interval_coverage.png",
+        "600dpi_tiff/J28_height_ood_interval_coverage.tiff",
+        "vector_pdf/J28_height_ood_interval_coverage.pdf",
+        "vector_svg/J28_height_ood_interval_coverage.svg",
+        "plot_data/J28_height_ood_interval_coverage.csv"
+      ],
+      "fingerprint": "eab1d29e5c86e9ac575022eb6b0665eec46bc7654d78d6c2345e21d95d0ef0b2",
+      "generated_at": "2026-10-19T20:01:49.510209+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J28_height_ood_interval_coverage.csv",
+      "title": "Height-OOD empirical coverage"
+    },
+    "J29_height_ood_interval_width": {
+      "caption": "Mean widths of nominal 90% intervals for matched Height-OOD buildings.",
+      "caveat": "Prespecified within-dataset synthetic Height extrapolation, not external cross-climate evidence. Conformal exchangeability is not guaranteed under geometry shift.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J29_height_ood_interval_width.png",
+        "600dpi_tiff/J29_height_ood_interval_width.tiff",
+        "vector_pdf/J29_height_ood_interval_width.pdf",
+        "vector_svg/J29_height_ood_interval_width.svg",
+        "plot_data/J29_height_ood_interval_width.csv"
+      ],
+      "fingerprint": "eab1d29e5c86e9ac575022eb6b0665eec46bc7654d78d6c2345e21d95d0ef0b2",
+      "generated_at": "2026-10-19T20:01:51.558303+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J29_height_ood_interval_width.csv",
+      "title": "Height-OOD prediction interval width"
+    },
+    "J30_height_ood_interval_score": {
+      "caption": "Proper 90% interval score penalizing excessive width and missed target values.",
+      "caveat": "Prespecified within-dataset synthetic Height extrapolation, not external cross-climate evidence. Conformal exchangeability is not guaranteed under geometry shift.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J30_height_ood_interval_score.png",
+        "600dpi_tiff/J30_height_ood_interval_score.tiff",
+        "vector_pdf/J30_height_ood_interval_score.pdf",
+        "vector_svg/J30_height_ood_interval_score.svg",
+        "plot_data/J30_height_ood_interval_score.csv"
+      ],
+      "fingerprint": "eab1d29e5c86e9ac575022eb6b0665eec46bc7654d78d6c2345e21d95d0ef0b2",
+      "generated_at": "2026-10-19T20:01:53.579009+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J30_height_ood_interval_score.csv",
+      "title": "Height-OOD interval score"
+    },
+    "J31_height_ood_error_by_height": {
+      "caption": "RMSE by covariate-defined height group in the previously evaluated OOD cohort; descriptive only.",
+      "caveat": "POSTHOC descriptive analysis of previously evaluated Height-OOD test; never use to retune or claim external validation.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J31_height_ood_error_by_height.png",
+        "600dpi_tiff/J31_height_ood_error_by_height.tiff",
+        "vector_pdf/J31_height_ood_error_by_height.pdf",
+        "vector_svg/J31_height_ood_error_by_height.svg",
+        "plot_data/J31_height_ood_error_by_height.csv"
+      ],
+      "fingerprint": "9bf0bae62b3e9c67281735b2b8df95130b4c2bc68ca9952c8a1172cafc00ed50",
+      "generated_at": "2026-10-19T20:24:20.173309+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J31_height_ood_error_by_height.csv",
+      "title": "RMSE by OOD building height"
+    },
+    "J32_height_ood_coverage_by_height": {
+      "caption": "Empirical coverage of frozen calibrated 90% prediction intervals by height group; no shift-coverage guarantee.",
+      "caveat": "POSTHOC descriptive analysis of previously evaluated Height-OOD test; never use to retune or claim external validation.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J32_height_ood_coverage_by_height.png",
+        "600dpi_tiff/J32_height_ood_coverage_by_height.tiff",
+        "vector_pdf/J32_height_ood_coverage_by_height.pdf",
+        "vector_svg/J32_height_ood_coverage_by_height.svg",
+        "plot_data/J32_height_ood_coverage_by_height.csv"
+      ],
+      "fingerprint": "9bf0bae62b3e9c67281735b2b8df95130b4c2bc68ca9952c8a1172cafc00ed50",
+      "generated_at": "2026-10-19T20:24:22.755719+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J32_height_ood_coverage_by_height.csv",
+      "title": "90% interval coverage by OOD building height"
+    },
+    "J33_height_ood_signed_bias_by_height": {
+      "caption": "Mean predicted minus observed annual total site energy by OOD height group; descriptive only.",
+      "caveat": "POSTHOC descriptive analysis of previously evaluated Height-OOD test; never use to retune or claim external validation.",
+      "data_split": "height_ood_internal",
+      "files": [
+        "600dpi_png/J33_height_ood_signed_bias_by_height.png",
+        "600dpi_tiff/J33_height_ood_signed_bias_by_height.tiff",
+        "vector_pdf/J33_height_ood_signed_bias_by_height.pdf",
+        "vector_svg/J33_height_ood_signed_bias_by_height.svg",
+        "plot_data/J33_height_ood_signed_bias_by_height.csv"
+      ],
+      "fingerprint": "9bf0bae62b3e9c67281735b2b8df95130b4c2bc68ca9952c8a1172cafc00ed50",
+      "generated_at": "2026-10-19T20:24:25.234463+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J33_height_ood_signed_bias_by_height.csv",
+      "title": "Signed prediction error by OOD height"
+    },
+    "J34_indomain_multiseed_rmse": {
+      "caption": "Validation-set RMSE for nine independently initialized CFM runs; CatBoost and OOF folds fixed.",
+      "caveat": "Reused in-domain validation after Height-OOD inspection. No new confirmatory OOD evidence; base CatBoost/OOF fit is fixed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J34_indomain_multiseed_rmse.png",
+        "600dpi_tiff/J34_indomain_multiseed_rmse.tiff",
+        "vector_pdf/J34_indomain_multiseed_rmse.pdf",
+        "vector_svg/J34_indomain_multiseed_rmse.svg",
+        "plot_data/J34_indomain_multiseed_rmse.csv"
+      ],
+      "fingerprint": "09d46b453204795c1687e1c9251581799190d5b5df1be25a4009da549b9922ed",
+      "generated_at": "2026-10-19T20:45:19.192265+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J34_indomain_multiseed_rmse.csv",
+      "title": "In-domain multi-seed RMSE"
+    },
+    "J35_indomain_ablation_rmse": {
+      "caption": "Comparison of Standard CFM, full OOF Residual CFM and a residual-flow ablation without CatBoost prediction in the condition.",
+      "caveat": "Reused in-domain validation after Height-OOD inspection. No new confirmatory OOD evidence; base CatBoost/OOF fit is fixed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J35_indomain_ablation_rmse.png",
+        "600dpi_tiff/J35_indomain_ablation_rmse.tiff",
+        "vector_pdf/J35_indomain_ablation_rmse.pdf",
+        "vector_svg/J35_indomain_ablation_rmse.svg",
+        "plot_data/J35_indomain_ablation_rmse.csv"
+      ],
+      "fingerprint": "09d46b453204795c1687e1c9251581799190d5b5df1be25a4009da549b9922ed",
+      "generated_at": "2026-10-19T20:45:21.223793+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J35_indomain_ablation_rmse.csv",
+      "title": "In-domain model ablation (mean \u00b1 SD)"
+    },
+    "J36_indomain_paired_ablation": {
+      "caption": "Paired differences in in-domain validation RMSE; negatives favor the full OOF residual CFM. Not a fresh holdout test.",
+      "caveat": "Reused in-domain validation after Height-OOD inspection. No new confirmatory OOD evidence; base CatBoost/OOF fit is fixed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J36_indomain_paired_ablation.png",
+        "600dpi_tiff/J36_indomain_paired_ablation.tiff",
+        "vector_pdf/J36_indomain_paired_ablation.pdf",
+        "vector_svg/J36_indomain_paired_ablation.svg",
+        "plot_data/J36_indomain_paired_ablation.csv"
+      ],
+      "fingerprint": "09d46b453204795c1687e1c9251581799190d5b5df1be25a4009da549b9922ed",
+      "generated_at": "2026-10-19T20:45:23.461029+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J36_indomain_paired_ablation.csv",
+      "title": "Paired-seed ablation differences"
+    },
+    "J37_indomain_multiseed_training_loss": {
+      "caption": "Flow-loss trajectories for three variants. Loss magnitudes across standard and residual target definitions are not directly comparable.",
+      "caveat": "Reused in-domain validation after Height-OOD inspection. No new confirmatory OOD evidence; base CatBoost/OOF fit is fixed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J37_indomain_multiseed_training_loss.png",
+        "600dpi_tiff/J37_indomain_multiseed_training_loss.tiff",
+        "vector_pdf/J37_indomain_multiseed_training_loss.pdf",
+        "vector_svg/J37_indomain_multiseed_training_loss.svg",
+        "plot_data/J37_indomain_multiseed_training_loss.csv"
+      ],
+      "fingerprint": "09d46b453204795c1687e1c9251581799190d5b5df1be25a4009da549b9922ed",
+      "generated_at": "2026-10-19T20:45:27.813367+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J37_indomain_multiseed_training_loss.csv",
+      "title": "Multi-seed training loss curves"
+    },
+    "J38_indomain_uncalibrated_coverage": {
+      "caption": "Empirical coverage of raw sample-quantile intervals by training seed. No conformal calibration or independent-test guarantee.",
+      "caveat": "Reused in-domain validation after Height-OOD inspection. No new confirmatory OOD evidence; base CatBoost/OOF fit is fixed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J38_indomain_uncalibrated_coverage.png",
+        "600dpi_tiff/J38_indomain_uncalibrated_coverage.tiff",
+        "vector_pdf/J38_indomain_uncalibrated_coverage.pdf",
+        "vector_svg/J38_indomain_uncalibrated_coverage.svg",
+        "plot_data/J38_indomain_uncalibrated_coverage.csv"
+      ],
+      "fingerprint": "09d46b453204795c1687e1c9251581799190d5b5df1be25a4009da549b9922ed",
+      "generated_at": "2026-10-19T20:45:30.099729+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J38_indomain_uncalibrated_coverage.csv",
+      "title": "In-domain uncalibrated interval coverage"
+    },
+    "J39_indomain_multiseed_crps": {
+      "caption": "Empirical finite-sample CRPS for 64 generated energy samples per building; exploratory reused in-domain validation data.",
+      "caveat": "Reused in-domain validation after Height-OOD inspection. No new confirmatory OOD evidence; base CatBoost/OOF fit is fixed.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J39_indomain_multiseed_crps.png",
+        "600dpi_tiff/J39_indomain_multiseed_crps.tiff",
+        "vector_pdf/J39_indomain_multiseed_crps.pdf",
+        "vector_svg/J39_indomain_multiseed_crps.svg",
+        "plot_data/J39_indomain_multiseed_crps.csv"
+      ],
+      "fingerprint": "09d46b453204795c1687e1c9251581799190d5b5df1be25a4009da549b9922ed",
+      "generated_at": "2026-10-19T20:45:32.299753+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J39_indomain_multiseed_crps.csv",
+      "title": "In-domain multi-seed CRPS"
+    },
+    "J40_seed_paired_conditioning_ablation": {
+      "caption": "Fixed in-domain validation RMSE by paired CFM training seed; CatBoost and OOF folds held constant.",
+      "caveat": "Previously reused validation; not independent holdout evidence. Five seed replicates share the same CatBoost, data and OOF folds.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J40_seed_paired_conditioning_ablation.png",
+        "600dpi_tiff/J40_seed_paired_conditioning_ablation.tiff",
+        "vector_pdf/J40_seed_paired_conditioning_ablation.pdf",
+        "vector_svg/J40_seed_paired_conditioning_ablation.svg",
+        "plot_data/J40_seed_paired_conditioning_ablation.csv"
+      ],
+      "fingerprint": "6bcd45097d04c66e66687f90a1206b26958ecff5a4c55326feeb3cb7bf0b5828",
+      "generated_at": "2026-10-19T20:57:12.673260+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J40_seed_paired_conditioning_ablation.csv",
+      "title": "Paired-seed conditioning ablation"
+    },
+    "J41_seed_paired_uncertainty_intervals": {
+      "caption": "95% t-intervals summarize CFM initialization variation on one reused validation set, not independent buildings or domains.",
+      "caveat": "Previously reused validation; not independent holdout evidence. Five seed replicates share the same CatBoost, data and OOF folds.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J41_seed_paired_uncertainty_intervals.png",
+        "600dpi_tiff/J41_seed_paired_uncertainty_intervals.tiff",
+        "vector_pdf/J41_seed_paired_uncertainty_intervals.pdf",
+        "vector_svg/J41_seed_paired_uncertainty_intervals.svg",
+        "plot_data/J41_seed_paired_uncertainty_intervals.csv"
+      ],
+      "fingerprint": "6bcd45097d04c66e66687f90a1206b26958ecff5a4c55326feeb3cb7bf0b5828",
+      "generated_at": "2026-10-19T20:57:14.241154+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J41_seed_paired_uncertainty_intervals.csv",
+      "title": "Seed-paired exploratory RMSE differences"
+    },
+    "J42_validation_energy_range_error_diagnostic": {
+      "caption": "Observed annual-energy quintiles with CatBoost and prespecified first training seed 20262001; exploratory post-hoc comparison.",
+      "caveat": "Previously reused validation; not independent holdout evidence. Five seed replicates share the same CatBoost, data and OOF folds.",
+      "data_split": "validation_exploratory",
+      "files": [
+        "600dpi_png/J42_validation_energy_range_error_diagnostic.png",
+        "600dpi_tiff/J42_validation_energy_range_error_diagnostic.tiff",
+        "vector_pdf/J42_validation_energy_range_error_diagnostic.pdf",
+        "vector_svg/J42_validation_energy_range_error_diagnostic.svg",
+        "plot_data/J42_validation_energy_range_error_diagnostic.csv"
+      ],
+      "fingerprint": "6bcd45097d04c66e66687f90a1206b26958ecff5a4c55326feeb3cb7bf0b5828",
+      "generated_at": "2026-10-19T20:57:16.598918+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J42_validation_energy_range_error_diagnostic.csv",
+      "title": "Validation energy-range error diagnostics"
+    },
+    "J43_external_edcs_source_counts": {
+      "caption": "Number of available EDCS records by courtyard shape, inferred from source filenames or sheet names; no energy labels accessed.",
+      "caveat": "Independent external-source feature audit only; NO label access, no energy-prediction results. EDCS has different target than Cairo.",
+      "data_split": "external_features_only",
+      "files": [
+        "600dpi_png/J43_external_edcs_source_counts.png",
+        "600dpi_tiff/J43_external_edcs_source_counts.tiff",
+        "vector_pdf/J43_external_edcs_source_counts.pdf",
+        "vector_svg/J43_external_edcs_source_counts.svg",
+        "plot_data/J43_external_edcs_source_counts.csv"
+      ],
+      "fingerprint": "005e0103cc01f0a389c3553c85fe7016d18da08dda132d7e7e0be032e983262c",
+      "generated_at": "2026-10-19T21:16:23.887345+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J43_external_edcs_source_counts.csv",
+      "title": "EDCS independent source composition"
+    },
+    "J44_external_edcs_geometry_profile": {
+      "caption": "Feature-only distributions of width, length, and height in the candidate independent-source EDCS dataset. Values are not energy outcomes.",
+      "caveat": "Independent external-source feature audit only; NO label access, no energy-prediction results. EDCS has different target than Cairo.",
+      "data_split": "external_features_only",
+      "files": [
+        "600dpi_png/J44_external_edcs_geometry_profile.png",
+        "600dpi_tiff/J44_external_edcs_geometry_profile.tiff",
+        "vector_pdf/J44_external_edcs_geometry_profile.pdf",
+        "vector_svg/J44_external_edcs_geometry_profile.svg",
+        "plot_data/J44_external_edcs_geometry_profile.csv"
+      ],
+      "fingerprint": "005e0103cc01f0a389c3553c85fe7016d18da08dda132d7e7e0be032e983262c",
+      "generated_at": "2026-10-19T21:16:27.180243+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J44_external_edcs_geometry_profile.csv",
+      "title": "EDCS source geometry feature distributions"
+    },
+    "J45_edcs_external_validation_multiseed_rmse": {
+      "caption": "Exploratory L/O courtyard prediction, five CFM training seeds. Source-reported TOTAL_LOAD has conflicting published units.",
+      "caveat": "L/O validation, not U-shape heldout; source unit conflicts between published sections and time horizon unverified.",
+      "data_split": "external_EDCS_LO_validation_exploratory",
+      "files": [
+        "600dpi_png/J45_edcs_external_validation_multiseed_rmse.png",
+        "600dpi_tiff/J45_edcs_external_validation_multiseed_rmse.tiff",
+        "vector_pdf/J45_edcs_external_validation_multiseed_rmse.pdf",
+        "vector_svg/J45_edcs_external_validation_multiseed_rmse.svg",
+        "plot_data/J45_edcs_external_validation_multiseed_rmse.csv"
+      ],
+      "fingerprint": "fdfc10ae051d5b52f7fb40b36f29ac8c18bd587732914f68d3f0903ada53db9a",
+      "generated_at": "2026-10-19T21:35:53.430557+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J45_edcs_external_validation_multiseed_rmse.csv",
+      "title": "EDCS L/O multi-seed RMSE"
+    },
+    "J46_edcs_external_source_ablation": {
+      "caption": "Mean \u00b1 SD across five CFM training seeds; CatBoost is fitted once on the source dataset. U-shape holdout not evaluated.",
+      "caveat": "L/O validation, not U-shape heldout; source unit conflicts between published sections and time horizon unverified.",
+      "data_split": "external_EDCS_LO_validation_exploratory",
+      "files": [
+        "600dpi_png/J46_edcs_external_source_ablation.png",
+        "600dpi_tiff/J46_edcs_external_source_ablation.tiff",
+        "vector_pdf/J46_edcs_external_source_ablation.pdf",
+        "vector_svg/J46_edcs_external_source_ablation.svg",
+        "plot_data/J46_edcs_external_source_ablation.csv"
+      ],
+      "fingerprint": "fdfc10ae051d5b52f7fb40b36f29ac8c18bd587732914f68d3f0903ada53db9a",
+      "generated_at": "2026-10-19T21:35:55.408375+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J46_edcs_external_source_ablation.csv",
+      "title": "EDCS model ablation (L/O validation)"
+    },
+    "J47_edcs_external_uncalibrated_coverage": {
+      "caption": "Uncalibrated sample quantile intervals on reused L/O validation; not calibrated or U-shape independent coverage.",
+      "caveat": "L/O validation, not U-shape heldout; source unit conflicts between published sections and time horizon unverified.",
+      "data_split": "external_EDCS_LO_validation_exploratory",
+      "files": [
+        "600dpi_png/J47_edcs_external_uncalibrated_coverage.png",
+        "600dpi_tiff/J47_edcs_external_uncalibrated_coverage.tiff",
+        "vector_pdf/J47_edcs_external_uncalibrated_coverage.pdf",
+        "vector_svg/J47_edcs_external_uncalibrated_coverage.svg",
+        "plot_data/J47_edcs_external_uncalibrated_coverage.csv"
+      ],
+      "fingerprint": "fdfc10ae051d5b52f7fb40b36f29ac8c18bd587732914f68d3f0903ada53db9a",
+      "generated_at": "2026-10-19T21:35:57.445566+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J47_edcs_external_uncalibrated_coverage.csv",
+      "title": "EDCS raw 90% interval coverage"
+    },
+    "J48_edcs_external_observed_vs_predicted": {
+      "caption": "EDCS native Total_Load values; original publication does not consistently describe units or time aggregation.",
+      "caveat": "L/O validation, not U-shape heldout; source unit conflicts between published sections and time horizon unverified.",
+      "data_split": "external_EDCS_LO_validation_exploratory",
+      "files": [
+        "600dpi_png/J48_edcs_external_observed_vs_predicted.png",
+        "600dpi_tiff/J48_edcs_external_observed_vs_predicted.tiff",
+        "vector_pdf/J48_edcs_external_observed_vs_predicted.pdf",
+        "vector_svg/J48_edcs_external_observed_vs_predicted.svg",
+        "plot_data/J48_edcs_external_observed_vs_predicted.csv"
+      ],
+      "fingerprint": "fdfc10ae051d5b52f7fb40b36f29ac8c18bd587732914f68d3f0903ada53db9a",
+      "generated_at": "2026-10-19T21:35:59.755469+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J48_edcs_external_observed_vs_predicted.csv",
+      "title": "EDCS observed versus predicted (L/O validation)"
+    },
+    "J49_edcs_U_frozen_rmse": {
+      "caption": "RMSE on the U-shaped courtyard holdout after prespecified L/O calibration; five-seed CFM mixture versus CatBoost.",
+      "caveat": "EDCS Total_Load source units conflict; time horizon unverified. U-shape evaluation after L/O calibration. Non-exchangeability means conformal coverage not guaranteed.",
+      "data_split": "external_EDCS_U_shape_frozen_holdout_first_access",
+      "files": [
+        "600dpi_png/J49_edcs_U_frozen_rmse.png",
+        "600dpi_tiff/J49_edcs_U_frozen_rmse.tiff",
+        "vector_pdf/J49_edcs_U_frozen_rmse.pdf",
+        "vector_svg/J49_edcs_U_frozen_rmse.svg",
+        "plot_data/J49_edcs_U_frozen_rmse.csv"
+      ],
+      "fingerprint": "29fe95d4f373cbe28f6b2fea8e6787a2d445237731a37cb4ea65f28ee0c2583c",
+      "generated_at": "2026-10-19T21:53:37.060577+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J49_edcs_U_frozen_rmse.csv",
+      "title": "Frozen EDCS U-shape RMSE"
+    },
+    "J50_edcs_U_coverage": {
+      "caption": "Raw predictive intervals exist for CFM only; CatBoost has only an L/O conformal interval. No under-shift coverage guarantee.",
+      "caveat": "EDCS Total_Load source units conflict; time horizon unverified. U-shape evaluation after L/O calibration. Non-exchangeability means conformal coverage not guaranteed.",
+      "data_split": "external_EDCS_U_shape_frozen_holdout_first_access",
+      "files": [
+        "600dpi_png/J50_edcs_U_coverage.png",
+        "600dpi_tiff/J50_edcs_U_coverage.tiff",
+        "vector_pdf/J50_edcs_U_coverage.pdf",
+        "vector_svg/J50_edcs_U_coverage.svg",
+        "plot_data/J50_edcs_U_coverage.csv"
+      ],
+      "fingerprint": "29fe95d4f373cbe28f6b2fea8e6787a2d445237731a37cb4ea65f28ee0c2583c",
+      "generated_at": "2026-10-19T21:53:39.522014+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J50_edcs_U_coverage.csv",
+      "title": "Frozen U-shape interval coverage"
+    },
+    "J51_edcs_U_primary_bootstrap": {
+      "caption": "Paired row bootstrap of 2,000 replicates; simulation row correlation may make intervals optimistic.",
+      "caveat": "EDCS Total_Load source units conflict; time horizon unverified. U-shape evaluation after L/O calibration. Non-exchangeability means conformal coverage not guaranteed.",
+      "data_split": "external_EDCS_U_shape_frozen_holdout_first_access",
+      "files": [
+        "600dpi_png/J51_edcs_U_primary_bootstrap.png",
+        "600dpi_tiff/J51_edcs_U_primary_bootstrap.tiff",
+        "vector_pdf/J51_edcs_U_primary_bootstrap.pdf",
+        "vector_svg/J51_edcs_U_primary_bootstrap.svg",
+        "plot_data/J51_edcs_U_primary_bootstrap.csv"
+      ],
+      "fingerprint": "29fe95d4f373cbe28f6b2fea8e6787a2d445237731a37cb4ea65f28ee0c2583c",
+      "generated_at": "2026-10-19T21:53:41.722418+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J51_edcs_U_primary_bootstrap.csv",
+      "title": "EDCS U-holdout primary RMSE contrast"
+    },
+    "J52_edcs_U_observed_predicted": {
+      "caption": "Frozen U-shaped holdout observed and predicted Total_Load with source unit ambiguity retained.",
+      "caveat": "EDCS Total_Load source units conflict; time horizon unverified. U-shape evaluation after L/O calibration. Non-exchangeability means conformal coverage not guaranteed.",
+      "data_split": "external_EDCS_U_shape_frozen_holdout_first_access",
+      "files": [
+        "600dpi_png/J52_edcs_U_observed_predicted.png",
+        "600dpi_tiff/J52_edcs_U_observed_predicted.tiff",
+        "vector_pdf/J52_edcs_U_observed_predicted.pdf",
+        "vector_svg/J52_edcs_U_observed_predicted.svg",
+        "plot_data/J52_edcs_U_observed_predicted.csv"
+      ],
+      "fingerprint": "29fe95d4f373cbe28f6b2fea8e6787a2d445237731a37cb4ea65f28ee0c2583c",
+      "generated_at": "2026-10-19T21:53:45.319763+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J52_edcs_U_observed_predicted.csv",
+      "title": "EDCS U-shape observed vs predicted"
+    },
+    "J53_edcs_U_calibrated_interval_score": {
+      "caption": "Interval score penalizes overly wide intervals and prediction interval misses. Lower is better.",
+      "caveat": "EDCS Total_Load source units conflict; time horizon unverified. U-shape evaluation after L/O calibration. Non-exchangeability means conformal coverage not guaranteed.",
+      "data_split": "external_EDCS_U_shape_frozen_holdout_first_access",
+      "files": [
+        "600dpi_png/J53_edcs_U_calibrated_interval_score.png",
+        "600dpi_tiff/J53_edcs_U_calibrated_interval_score.tiff",
+        "vector_pdf/J53_edcs_U_calibrated_interval_score.pdf",
+        "vector_svg/J53_edcs_U_calibrated_interval_score.svg",
+        "plot_data/J53_edcs_U_calibrated_interval_score.csv"
+      ],
+      "fingerprint": "29fe95d4f373cbe28f6b2fea8e6787a2d445237731a37cb4ea65f28ee0c2583c",
+      "generated_at": "2026-10-19T21:53:47.754433+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J53_edcs_U_calibrated_interval_score.csv",
+      "title": "EDCS U-shape interval score"
+    },
+    "J54_edcs_U_absolute_error": {
+      "caption": "Median and interquartile spread of absolute prediction error on the frozen U-shape holdout.",
+      "caveat": "EDCS Total_Load source units conflict; time horizon unverified. U-shape evaluation after L/O calibration. Non-exchangeability means conformal coverage not guaranteed.",
+      "data_split": "external_EDCS_U_shape_frozen_holdout_first_access",
+      "files": [
+        "600dpi_png/J54_edcs_U_absolute_error.png",
+        "600dpi_tiff/J54_edcs_U_absolute_error.tiff",
+        "vector_pdf/J54_edcs_U_absolute_error.pdf",
+        "vector_svg/J54_edcs_U_absolute_error.svg",
+        "plot_data/J54_edcs_U_absolute_error.csv"
+      ],
+      "fingerprint": "29fe95d4f373cbe28f6b2fea8e6787a2d445237731a37cb4ea65f28ee0c2583c",
+      "generated_at": "2026-10-19T21:53:49.979451+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J54_edcs_U_absolute_error.csv",
+      "title": "EDCS U-shape absolute error distribution"
+    },
+    "J55_edcs_calibration_to_U_coverage_shift": {
+      "caption": "Observed 90% interval coverage on L/O calibration and independently evaluated U shape, no post-test adjustment.",
+      "caveat": "U holdout was already inspected; descriptive only. No post-test selection or calibration. EDCS source units/time horizon unresolved.",
+      "data_split": "EDCS_U_shape_frozen_posthoc_descriptive_audit",
+      "files": [
+        "600dpi_png/J55_edcs_calibration_to_U_coverage_shift.png",
+        "600dpi_tiff/J55_edcs_calibration_to_U_coverage_shift.tiff",
+        "vector_pdf/J55_edcs_calibration_to_U_coverage_shift.pdf",
+        "vector_svg/J55_edcs_calibration_to_U_coverage_shift.svg",
+        "plot_data/J55_edcs_calibration_to_U_coverage_shift.csv"
+      ],
+      "fingerprint": "9d36f1855071c6b58811ff376a9331d04a96c7c691202bbe55b9bd4bd747814c",
+      "generated_at": "2026-10-19T22:08:03.798306+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J55_edcs_calibration_to_U_coverage_shift.csv",
+      "title": "Frozen EDCS coverage shift"
+    },
+    "J56_edcs_U_width_coverage_tradeoff": {
+      "caption": "The nominal 90% interval may be too narrow under shape shift; wide CatBoost interval can attain conservative coverage.",
+      "caveat": "U holdout was already inspected; descriptive only. No post-test selection or calibration. EDCS source units/time horizon unresolved.",
+      "data_split": "EDCS_U_shape_frozen_posthoc_descriptive_audit",
+      "files": [
+        "600dpi_png/J56_edcs_U_width_coverage_tradeoff.png",
+        "600dpi_tiff/J56_edcs_U_width_coverage_tradeoff.tiff",
+        "vector_pdf/J56_edcs_U_width_coverage_tradeoff.pdf",
+        "vector_svg/J56_edcs_U_width_coverage_tradeoff.svg",
+        "plot_data/J56_edcs_U_width_coverage_tradeoff.csv"
+      ],
+      "fingerprint": "9d36f1855071c6b58811ff376a9331d04a96c7c691202bbe55b9bd4bd747814c",
+      "generated_at": "2026-10-19T22:08:06.303982+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J56_edcs_U_width_coverage_tradeoff.csv",
+      "title": "EDCS U sharpness-reliability trade-off"
+    },
+    "J57_edcs_validation_U_ranking_reversal": {
+      "caption": "Relative performance versus CatBoost within each cohort. L/O values are five single-seed RMSE means, U values are five-seed mixture RMSEs; differences are not controlled effects of shape alone.",
+      "caveat": "U holdout was already inspected; descriptive only. No post-test selection or calibration. EDCS source units/time horizon unresolved.",
+      "data_split": "EDCS_U_shape_frozen_posthoc_descriptive_audit",
+      "files": [
+        "600dpi_png/J57_edcs_validation_U_ranking_reversal.png",
+        "600dpi_tiff/J57_edcs_validation_U_ranking_reversal.tiff",
+        "vector_pdf/J57_edcs_validation_U_ranking_reversal.pdf",
+        "vector_svg/J57_edcs_validation_U_ranking_reversal.svg",
+        "plot_data/J57_edcs_validation_U_ranking_reversal.csv"
+      ],
+      "fingerprint": "9d36f1855071c6b58811ff376a9331d04a96c7c691202bbe55b9bd4bd747814c",
+      "generated_at": "2026-10-19T22:08:08.920488+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J57_edcs_validation_U_ranking_reversal.csv",
+      "title": "EDCS validation-to-U method ranking reversal"
+    },
+    "J58_edcs_U_prediction_strata_RMSE": {
+      "caption": "Post-hoc U diagnostic. Quartiles were derived from frozen CatBoost predictions rather than observed target levels.",
+      "caveat": "U holdout was already inspected; descriptive only. No post-test selection or calibration. EDCS source units/time horizon unresolved.",
+      "data_split": "EDCS_U_shape_frozen_posthoc_descriptive_audit",
+      "files": [
+        "600dpi_png/J58_edcs_U_prediction_strata_RMSE.png",
+        "600dpi_tiff/J58_edcs_U_prediction_strata_RMSE.tiff",
+        "vector_pdf/J58_edcs_U_prediction_strata_RMSE.pdf",
+        "vector_svg/J58_edcs_U_prediction_strata_RMSE.svg",
+        "plot_data/J58_edcs_U_prediction_strata_RMSE.csv"
+      ],
+      "fingerprint": "9d36f1855071c6b58811ff376a9331d04a96c7c691202bbe55b9bd4bd747814c",
+      "generated_at": "2026-10-19T22:08:11.484060+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J58_edcs_U_prediction_strata_RMSE.csv",
+      "title": "EDCS U RMSE by pre-existing point forecast quartile"
+    },
+    "J59_edcs_U_seedwise_RMSE_diagnostic": {
+      "caption": "Five training seeds per variant, all frozen before first U target access. These are post-hoc measurements, not a reason to choose a seed on U.",
+      "caveat": "U holdout was already inspected; descriptive only. No post-test selection or calibration. EDCS source units/time horizon unresolved.",
+      "data_split": "EDCS_U_shape_frozen_posthoc_descriptive_audit",
+      "files": [
+        "600dpi_png/J59_edcs_U_seedwise_RMSE_diagnostic.png",
+        "600dpi_tiff/J59_edcs_U_seedwise_RMSE_diagnostic.tiff",
+        "vector_pdf/J59_edcs_U_seedwise_RMSE_diagnostic.pdf",
+        "vector_svg/J59_edcs_U_seedwise_RMSE_diagnostic.svg",
+        "plot_data/J59_edcs_U_seedwise_RMSE_diagnostic.csv"
+      ],
+      "fingerprint": "9d36f1855071c6b58811ff376a9331d04a96c7c691202bbe55b9bd4bd747814c",
+      "generated_at": "2026-10-19T22:08:14.111986+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J59_edcs_U_seedwise_RMSE_diagnostic.csv",
+      "title": "EDCS U single-seed stability diagnostic"
+    },
+    "J60_five_climate_source_city_counts": {
+      "caption": "Scenario counts by reported city in the new official supplementary CSV; labels and annual cooling outcomes were not read.",
+      "caveat": "New independent-source feature-only preflight. No energy outcome values inspected. The paper reports annual cooling intensity, not Cairo total site energy.",
+      "data_split": "feature_only_2025_five_climate_before_target_access",
+      "files": [
+        "600dpi_png/J60_five_climate_source_city_counts.png",
+        "600dpi_tiff/J60_five_climate_source_city_counts.tiff",
+        "vector_pdf/J60_five_climate_source_city_counts.pdf",
+        "vector_svg/J60_five_climate_source_city_counts.svg",
+        "plot_data/J60_five_climate_source_city_counts.csv"
+      ],
+      "fingerprint": "8f0b16fd0bc653e08642b6c3aadde53ccfe5f1e266f1059b674e42d390e744a1",
+      "generated_at": "2026-10-19T22:27:33.436477+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J60_five_climate_source_city_counts.csv",
+      "title": "Independent source city counts"
+    },
+    "J61_five_climate_frozen_feature_only_split": {
+      "caption": "Fit, validation and calibration partitions are grouped by identical architecture designs. Miami is a held-out climate within the same simulation source.",
+      "caveat": "New independent-source feature-only preflight. No energy outcome values inspected. The paper reports annual cooling intensity, not Cairo total site energy.",
+      "data_split": "feature_only_2025_five_climate_before_target_access",
+      "files": [
+        "600dpi_png/J61_five_climate_frozen_feature_only_split.png",
+        "600dpi_tiff/J61_five_climate_frozen_feature_only_split.tiff",
+        "vector_pdf/J61_five_climate_frozen_feature_only_split.pdf",
+        "vector_svg/J61_five_climate_frozen_feature_only_split.svg",
+        "plot_data/J61_five_climate_frozen_feature_only_split.csv"
+      ],
+      "fingerprint": "8f0b16fd0bc653e08642b6c3aadde53ccfe5f1e266f1059b674e42d390e744a1",
+      "generated_at": "2026-10-19T22:27:35.168204+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J61_five_climate_frozen_feature_only_split.csv",
+      "title": "Independent-source feature-only split"
+    },
+    "J62_fiveclimate_source_native_target_distribution": {
+      "caption": "FIT and Validation target distribution only; publisher column and article unit descriptions are not assumed interchangeable.",
+      "caveat": "Original CSV says Total site energy consumption (kWh)2, while the article reports annual EUI; units not equated. Miami labels never used.",
+      "data_split": "four_climate_validation_exploratory",
+      "files": [
+        "600dpi_png/J62_fiveclimate_source_native_target_distribution.png",
+        "600dpi_tiff/J62_fiveclimate_source_native_target_distribution.tiff",
+        "vector_pdf/J62_fiveclimate_source_native_target_distribution.pdf",
+        "vector_svg/J62_fiveclimate_source_native_target_distribution.svg",
+        "plot_data/J62_fiveclimate_source_native_target_distribution.csv"
+      ],
+      "fingerprint": "b711ecb5e8c8c5c2e4aa719482c639635f22b89dfad285328e384173b80df97b",
+      "generated_at": "2026-10-19T22:58:50.202710+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J62_fiveclimate_source_native_target_distribution.csv",
+      "title": "Five-climate training target distribution"
+    },
+    "J63_fiveclimate_multiseed_validation_rmse": {
+      "caption": "Five CFM seeds compared with separately frozen CatBoost and published-method RandomForest baselines.",
+      "caveat": "Original CSV says Total site energy consumption (kWh)2, while the article reports annual EUI; units not equated. Miami labels never used.",
+      "data_split": "four_climate_validation_exploratory",
+      "files": [
+        "600dpi_png/J63_fiveclimate_multiseed_validation_rmse.png",
+        "600dpi_tiff/J63_fiveclimate_multiseed_validation_rmse.tiff",
+        "vector_pdf/J63_fiveclimate_multiseed_validation_rmse.pdf",
+        "vector_svg/J63_fiveclimate_multiseed_validation_rmse.svg",
+        "plot_data/J63_fiveclimate_multiseed_validation_rmse.csv"
+      ],
+      "fingerprint": "b711ecb5e8c8c5c2e4aa719482c639635f22b89dfad285328e384173b80df97b",
+      "generated_at": "2026-10-19T22:58:52.974059+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J63_fiveclimate_multiseed_validation_rmse.csv",
+      "title": "Five-climate multi-seed validation RMSE"
+    },
+    "J64_fiveclimate_architecture_ablation": {
+      "caption": "Mean and standard deviation across five CFM training seeds; exploratory validation evidence only.",
+      "caveat": "Original CSV says Total site energy consumption (kWh)2, while the article reports annual EUI; units not equated. Miami labels never used.",
+      "data_split": "four_climate_validation_exploratory",
+      "files": [
+        "600dpi_png/J64_fiveclimate_architecture_ablation.png",
+        "600dpi_tiff/J64_fiveclimate_architecture_ablation.tiff",
+        "vector_pdf/J64_fiveclimate_architecture_ablation.pdf",
+        "vector_svg/J64_fiveclimate_architecture_ablation.svg",
+        "plot_data/J64_fiveclimate_architecture_ablation.csv"
+      ],
+      "fingerprint": "b711ecb5e8c8c5c2e4aa719482c639635f22b89dfad285328e384173b80df97b",
+      "generated_at": "2026-10-19T22:58:55.194383+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J64_fiveclimate_architecture_ablation.csv",
+      "title": "Independent-source method ablation"
+    },
+    "J65_fiveclimate_uncalibrated_validation_coverage": {
+      "caption": "Uncalibrated prediction interval coverage on validation. Miami/calibration labels not inspected.",
+      "caveat": "Original CSV says Total site energy consumption (kWh)2, while the article reports annual EUI; units not equated. Miami labels never used.",
+      "data_split": "four_climate_validation_exploratory",
+      "files": [
+        "600dpi_png/J65_fiveclimate_uncalibrated_validation_coverage.png",
+        "600dpi_tiff/J65_fiveclimate_uncalibrated_validation_coverage.tiff",
+        "vector_pdf/J65_fiveclimate_uncalibrated_validation_coverage.pdf",
+        "vector_svg/J65_fiveclimate_uncalibrated_validation_coverage.svg",
+        "plot_data/J65_fiveclimate_uncalibrated_validation_coverage.csv"
+      ],
+      "fingerprint": "b711ecb5e8c8c5c2e4aa719482c639635f22b89dfad285328e384173b80df97b",
+      "generated_at": "2026-10-19T22:58:57.465056+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J65_fiveclimate_uncalibrated_validation_coverage.csv",
+      "title": "Five-climate raw interval coverage"
+    },
+    "J66_fiveclimate_validation_observed_vs_predicted": {
+      "caption": "Frozen CatBoost and one predeclared training seed, in-source validation only.",
+      "caveat": "Original CSV says Total site energy consumption (kWh)2, while the article reports annual EUI; units not equated. Miami labels never used.",
+      "data_split": "four_climate_validation_exploratory",
+      "files": [
+        "600dpi_png/J66_fiveclimate_validation_observed_vs_predicted.png",
+        "600dpi_tiff/J66_fiveclimate_validation_observed_vs_predicted.tiff",
+        "vector_pdf/J66_fiveclimate_validation_observed_vs_predicted.pdf",
+        "vector_svg/J66_fiveclimate_validation_observed_vs_predicted.svg",
+        "plot_data/J66_fiveclimate_validation_observed_vs_predicted.csv"
+      ],
+      "fingerprint": "b711ecb5e8c8c5c2e4aa719482c639635f22b89dfad285328e384173b80df97b",
+      "generated_at": "2026-10-19T22:59:00.548061+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J66_fiveclimate_validation_observed_vs_predicted.csv",
+      "title": "Five-climate observed versus predicted"
+    },
+    "J67_fiveclimate_validation_citywise_rmse": {
+      "caption": "Citywise validation RMSE. CFM values averaged across five seeds; Miami excluded.",
+      "caveat": "Original CSV says Total site energy consumption (kWh)2, while the article reports annual EUI; units not equated. Miami labels never used.",
+      "data_split": "four_climate_validation_exploratory",
+      "files": [
+        "600dpi_png/J67_fiveclimate_validation_citywise_rmse.png",
+        "600dpi_tiff/J67_fiveclimate_validation_citywise_rmse.tiff",
+        "vector_pdf/J67_fiveclimate_validation_citywise_rmse.pdf",
+        "vector_svg/J67_fiveclimate_validation_citywise_rmse.svg",
+        "plot_data/J67_fiveclimate_validation_citywise_rmse.csv"
+      ],
+      "fingerprint": "b711ecb5e8c8c5c2e4aa719482c639635f22b89dfad285328e384173b80df97b",
+      "generated_at": "2026-10-19T22:59:02.967395+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J67_fiveclimate_validation_citywise_rmse.csv",
+      "title": "Four-climate validation citywise RMSE"
+    },
+    "J68_fiveclimate_Miami_frozen_RMSE": {
+      "caption": "Frozen models evaluated on the Miami climate holdout; comparison uses source-native numeric target.",
+      "caveat": "Holdout inspected once; no retuning. Same simulation source, new climate. Original target-unit header/article discrepancy unresolved. Do not claim independent physical measurements.",
+      "data_split": "Miami_new_climate_frozen_holdout",
+      "files": [
+        "600dpi_png/J68_fiveclimate_Miami_frozen_RMSE.png",
+        "600dpi_tiff/J68_fiveclimate_Miami_frozen_RMSE.tiff",
+        "vector_pdf/J68_fiveclimate_Miami_frozen_RMSE.pdf",
+        "vector_svg/J68_fiveclimate_Miami_frozen_RMSE.svg",
+        "plot_data/J68_fiveclimate_Miami_frozen_RMSE.csv"
+      ],
+      "fingerprint": "8ab56fd7e475c0469a9c367d1d181c6bc2a3bc811efad9c043272bb363888ccc",
+      "generated_at": "2026-10-20T00:14:30.602291+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J68_fiveclimate_Miami_frozen_RMSE.csv",
+      "title": "Frozen Miami RMSE"
+    },
+    "J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage": {
+      "caption": "Nominal 90% interval coverage on the Miami holdout before/after nonnegative expansion locked in four-climate calibration.",
+      "caveat": "Holdout inspected once; no retuning. Same simulation source, new climate. Original target-unit header/article discrepancy unresolved. Do not claim independent physical measurements.",
+      "data_split": "Miami_new_climate_frozen_holdout",
+      "files": [
+        "600dpi_png/J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage.png",
+        "600dpi_tiff/J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage.tiff",
+        "vector_pdf/J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage.pdf",
+        "vector_svg/J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage.svg",
+        "plot_data/J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage.csv"
+      ],
+      "fingerprint": "8ab56fd7e475c0469a9c367d1d181c6bc2a3bc811efad9c043272bb363888ccc",
+      "generated_at": "2026-10-20T00:14:32.676773+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J69_fiveclimate_Miami_raw_vs_frozen_calibrated_coverage.csv",
+      "title": "Miami calibrated coverage"
+    },
+    "J70_fiveclimate_calibration_to_Miami_coverage_shift": {
+      "caption": "Coverage of the same frozen interval rules on four-climate calibration and unseen Miami simulation conditions.",
+      "caveat": "Holdout inspected once; no retuning. Same simulation source, new climate. Original target-unit header/article discrepancy unresolved. Do not claim independent physical measurements.",
+      "data_split": "Miami_new_climate_frozen_holdout",
+      "files": [
+        "600dpi_png/J70_fiveclimate_calibration_to_Miami_coverage_shift.png",
+        "600dpi_tiff/J70_fiveclimate_calibration_to_Miami_coverage_shift.tiff",
+        "vector_pdf/J70_fiveclimate_calibration_to_Miami_coverage_shift.pdf",
+        "vector_svg/J70_fiveclimate_calibration_to_Miami_coverage_shift.svg",
+        "plot_data/J70_fiveclimate_calibration_to_Miami_coverage_shift.csv"
+      ],
+      "fingerprint": "8ab56fd7e475c0469a9c367d1d181c6bc2a3bc811efad9c043272bb363888ccc",
+      "generated_at": "2026-10-20T00:14:35.099636+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J70_fiveclimate_calibration_to_Miami_coverage_shift.csv",
+      "title": "Four-climate calibration versus Miami coverage"
+    },
+    "J71_fiveclimate_Miami_frozen_primary_scatter": {
+      "caption": "CatBoost versus five-seed no-base residual CFM on the same frozen Miami cohort.",
+      "caveat": "Holdout inspected once; no retuning. Same simulation source, new climate. Original target-unit header/article discrepancy unresolved. Do not claim independent physical measurements.",
+      "data_split": "Miami_new_climate_frozen_holdout",
+      "files": [
+        "600dpi_png/J71_fiveclimate_Miami_frozen_primary_scatter.png",
+        "600dpi_tiff/J71_fiveclimate_Miami_frozen_primary_scatter.tiff",
+        "vector_pdf/J71_fiveclimate_Miami_frozen_primary_scatter.pdf",
+        "vector_svg/J71_fiveclimate_Miami_frozen_primary_scatter.svg",
+        "plot_data/J71_fiveclimate_Miami_frozen_primary_scatter.csv"
+      ],
+      "fingerprint": "8ab56fd7e475c0469a9c367d1d181c6bc2a3bc811efad9c043272bb363888ccc",
+      "generated_at": "2026-10-20T00:14:38.406792+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J71_fiveclimate_Miami_frozen_primary_scatter.csv",
+      "title": "Frozen Miami primary scatter"
+    },
+    "J72_fiveclimate_Miami_primary_cluster_bootstrap": {
+      "caption": "Paired architecture-design cluster bootstrap of primary fixed-method RMSE difference; descriptive, not proof of population inference.",
+      "caveat": "Holdout inspected once; no retuning. Same simulation source, new climate. Original target-unit header/article discrepancy unresolved. Do not claim independent physical measurements.",
+      "data_split": "Miami_new_climate_frozen_holdout",
+      "files": [
+        "600dpi_png/J72_fiveclimate_Miami_primary_cluster_bootstrap.png",
+        "600dpi_tiff/J72_fiveclimate_Miami_primary_cluster_bootstrap.tiff",
+        "vector_pdf/J72_fiveclimate_Miami_primary_cluster_bootstrap.pdf",
+        "vector_svg/J72_fiveclimate_Miami_primary_cluster_bootstrap.svg",
+        "plot_data/J72_fiveclimate_Miami_primary_cluster_bootstrap.csv"
+      ],
+      "fingerprint": "8ab56fd7e475c0469a9c367d1d181c6bc2a3bc811efad9c043272bb363888ccc",
+      "generated_at": "2026-10-20T00:14:40.726169+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J72_fiveclimate_Miami_primary_cluster_bootstrap.csv",
+      "title": "Miami primary cluster-bootstrap uncertainty"
+    },
+    "J73_fiveclimate_Miami_width_coverage_tradeoff": {
+      "caption": "Prediction interval coverage and average width after calibration frozen on the four non-Miami climates.",
+      "caveat": "Holdout inspected once; no retuning. Same simulation source, new climate. Original target-unit header/article discrepancy unresolved. Do not claim independent physical measurements.",
+      "data_split": "Miami_new_climate_frozen_holdout",
+      "files": [
+        "600dpi_png/J73_fiveclimate_Miami_width_coverage_tradeoff.png",
+        "600dpi_tiff/J73_fiveclimate_Miami_width_coverage_tradeoff.tiff",
+        "vector_pdf/J73_fiveclimate_Miami_width_coverage_tradeoff.pdf",
+        "vector_svg/J73_fiveclimate_Miami_width_coverage_tradeoff.svg",
+        "plot_data/J73_fiveclimate_Miami_width_coverage_tradeoff.csv"
+      ],
+      "fingerprint": "8ab56fd7e475c0469a9c367d1d181c6bc2a3bc811efad9c043272bb363888ccc",
+      "generated_at": "2026-10-20T00:14:43.135902+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J73_fiveclimate_Miami_width_coverage_tradeoff.csv",
+      "title": "Miami width-coverage trade-off"
+    },
+    "J74_Miami_frozen_target_distribution_shift": {
+      "caption": "Observed objective distribution of four-climate fit and validation versus previously frozen Miami holdout.",
+      "caveat": "Previously inspected Miami holdout; descriptive ONLY. No model retuning. Same synthetic data source; site-energy units unresolved. No generalization guarantee.",
+      "data_split": "Miami_climate_posthoc_frozen_diagnostic",
+      "files": [
+        "600dpi_png/J74_Miami_frozen_target_distribution_shift.png",
+        "600dpi_tiff/J74_Miami_frozen_target_distribution_shift.tiff",
+        "vector_pdf/J74_Miami_frozen_target_distribution_shift.pdf",
+        "vector_svg/J74_Miami_frozen_target_distribution_shift.svg",
+        "plot_data/J74_Miami_frozen_target_distribution_shift.csv"
+      ],
+      "fingerprint": "c5f87141c538fcdc9fed7c33208bc7e5ca7b616ec87467f1b9bf422189b7fbe9",
+      "generated_at": "2026-10-20T00:35:19.558045+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J74_Miami_frozen_target_distribution_shift.csv",
+      "title": "Frozen Miami target distribution shift"
+    },
+    "J75_Miami_frozen_allmodel_observed_predicted": {
+      "caption": "Actual-versus-predicted scatter for each predeclared method on the already evaluated Miami holdout.",
+      "caveat": "Previously inspected Miami holdout; descriptive ONLY. No model retuning. Same synthetic data source; site-energy units unresolved. No generalization guarantee.",
+      "data_split": "Miami_climate_posthoc_frozen_diagnostic",
+      "files": [
+        "600dpi_png/J75_Miami_frozen_allmodel_observed_predicted.png",
+        "600dpi_tiff/J75_Miami_frozen_allmodel_observed_predicted.tiff",
+        "vector_pdf/J75_Miami_frozen_allmodel_observed_predicted.pdf",
+        "vector_svg/J75_Miami_frozen_allmodel_observed_predicted.svg",
+        "plot_data/J75_Miami_frozen_allmodel_observed_predicted.csv"
+      ],
+      "fingerprint": "c5f87141c538fcdc9fed7c33208bc7e5ca7b616ec87467f1b9bf422189b7fbe9",
+      "generated_at": "2026-10-20T00:35:24.558660+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J75_Miami_frozen_allmodel_observed_predicted.csv",
+      "title": "All frozen Miami model predictions"
+    },
+    "J76_Miami_frozen_signed_prediction_bias": {
+      "caption": "Signed mean bias with previously frozen predictions; negative bias indicates systematic underprediction.",
+      "caveat": "Previously inspected Miami holdout; descriptive ONLY. No model retuning. Same synthetic data source; site-energy units unresolved. No generalization guarantee.",
+      "data_split": "Miami_climate_posthoc_frozen_diagnostic",
+      "files": [
+        "600dpi_png/J76_Miami_frozen_signed_prediction_bias.png",
+        "600dpi_tiff/J76_Miami_frozen_signed_prediction_bias.tiff",
+        "vector_pdf/J76_Miami_frozen_signed_prediction_bias.pdf",
+        "vector_svg/J76_Miami_frozen_signed_prediction_bias.svg",
+        "plot_data/J76_Miami_frozen_signed_prediction_bias.csv"
+      ],
+      "fingerprint": "c5f87141c538fcdc9fed7c33208bc7e5ca7b616ec87467f1b9bf422189b7fbe9",
+      "generated_at": "2026-10-20T00:35:26.491116+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J76_Miami_frozen_signed_prediction_bias.csv",
+      "title": "Frozen Miami model signed prediction bias"
+    },
+    "J77_Miami_frozen_feature_shift_and_OOV": {
+      "caption": "Comparison of frozen fit-only encoded feature distribution with Miami; city Miami is outside the fit vocabulary.",
+      "caveat": "Previously inspected Miami holdout; descriptive ONLY. No model retuning. Same synthetic data source; site-energy units unresolved. No generalization guarantee.",
+      "data_split": "Miami_climate_posthoc_frozen_diagnostic",
+      "files": [
+        "600dpi_png/J77_Miami_frozen_feature_shift_and_OOV.png",
+        "600dpi_tiff/J77_Miami_frozen_feature_shift_and_OOV.tiff",
+        "vector_pdf/J77_Miami_frozen_feature_shift_and_OOV.pdf",
+        "vector_svg/J77_Miami_frozen_feature_shift_and_OOV.svg",
+        "plot_data/J77_Miami_frozen_feature_shift_and_OOV.csv"
+      ],
+      "fingerprint": "c5f87141c538fcdc9fed7c33208bc7e5ca7b616ec87467f1b9bf422189b7fbe9",
+      "generated_at": "2026-10-20T00:35:29.413357+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J77_Miami_frozen_feature_shift_and_OOV.csv",
+      "title": "Frozen encoded-feature and unknown-category audit"
+    },
+    "J78_Miami_frozen_interval_failure_direction": {
+      "caption": "Percentage of Miami outcomes below, inside and above the frozen 90% prediction intervals.",
+      "caveat": "Previously inspected Miami holdout; descriptive ONLY. No model retuning. Same synthetic data source; site-energy units unresolved. No generalization guarantee.",
+      "data_split": "Miami_climate_posthoc_frozen_diagnostic",
+      "files": [
+        "600dpi_png/J78_Miami_frozen_interval_failure_direction.png",
+        "600dpi_tiff/J78_Miami_frozen_interval_failure_direction.tiff",
+        "vector_pdf/J78_Miami_frozen_interval_failure_direction.pdf",
+        "vector_svg/J78_Miami_frozen_interval_failure_direction.svg",
+        "plot_data/J78_Miami_frozen_interval_failure_direction.csv"
+      ],
+      "fingerprint": "c5f87141c538fcdc9fed7c33208bc7e5ca7b616ec87467f1b9bf422189b7fbe9",
+      "generated_at": "2026-10-20T00:35:31.669562+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J78_Miami_frozen_interval_failure_direction.csv",
+      "title": "Frozen Miami prediction interval failures"
+    },
+    "J79_frozen_Miami_design_matched_target_comparison": {
+      "caption": "Descriptive paired building-design comparison; Miami labels were already inspected and physical climate covariates were not modeled.",
+      "caveat": "Already inspected Miami holdout, same simulation source, no climate causality, target units unresolved. Not confirmatory evidence.",
+      "data_split": "Miami_posthoc_already_inspected_descriptive",
+      "files": [
+        "600dpi_png/J79_frozen_Miami_design_matched_target_comparison.png",
+        "600dpi_tiff/J79_frozen_Miami_design_matched_target_comparison.tiff",
+        "vector_pdf/J79_frozen_Miami_design_matched_target_comparison.pdf",
+        "vector_svg/J79_frozen_Miami_design_matched_target_comparison.svg",
+        "plot_data/J79_frozen_Miami_design_matched_target_comparison.csv"
+      ],
+      "fingerprint": "4a9ce914b9d23cbc5253d7dceaa9ea66bf54d80615feefebd842f6309a9a78db",
+      "generated_at": "2026-10-20T01:00:24.424535+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J79_frozen_Miami_design_matched_target_comparison.csv",
+      "title": "Same-design source-to-Miami observed energy contrast"
+    },
+    "J80_frozen_Miami_RMSE_by_design_familiarity": {
+      "caption": "Post-hoc error strata for all prespecified models; same design in FIT does not imply Miami climate was observed.",
+      "caveat": "Already inspected Miami holdout, same simulation source, no climate causality, target units unresolved. Not confirmatory evidence.",
+      "data_split": "Miami_posthoc_already_inspected_descriptive",
+      "files": [
+        "600dpi_png/J80_frozen_Miami_RMSE_by_design_familiarity.png",
+        "600dpi_tiff/J80_frozen_Miami_RMSE_by_design_familiarity.tiff",
+        "vector_pdf/J80_frozen_Miami_RMSE_by_design_familiarity.pdf",
+        "vector_svg/J80_frozen_Miami_RMSE_by_design_familiarity.svg",
+        "plot_data/J80_frozen_Miami_RMSE_by_design_familiarity.csv"
+      ],
+      "fingerprint": "4a9ce914b9d23cbc5253d7dceaa9ea66bf54d80615feefebd842f6309a9a78db",
+      "generated_at": "2026-10-20T01:00:27.050592+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J80_frozen_Miami_RMSE_by_design_familiarity.csv",
+      "title": "Frozen Miami RMSE by design familiarity"
+    },
+    "J81_frozen_Miami_matched_design_target_shift": {
+      "caption": "Distribution of Miami-minus-four-climate-FIT observed target differences for architectures shared across cities; descriptive, noncausal.",
+      "caveat": "Already inspected Miami holdout, same simulation source, no climate causality, target units unresolved. Not confirmatory evidence.",
+      "data_split": "Miami_posthoc_already_inspected_descriptive",
+      "files": [
+        "600dpi_png/J81_frozen_Miami_matched_design_target_shift.png",
+        "600dpi_tiff/J81_frozen_Miami_matched_design_target_shift.tiff",
+        "vector_pdf/J81_frozen_Miami_matched_design_target_shift.pdf",
+        "vector_svg/J81_frozen_Miami_matched_design_target_shift.svg",
+        "plot_data/J81_frozen_Miami_matched_design_target_shift.csv"
+      ],
+      "fingerprint": "4a9ce914b9d23cbc5253d7dceaa9ea66bf54d80615feefebd842f6309a9a78db",
+      "generated_at": "2026-10-20T01:00:29.290463+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J81_frozen_Miami_matched_design_target_shift.csv",
+      "title": "Miami design-matched target displacement"
+    },
+    "J82_BDG2_measured_source_site_inventory": {
+      "caption": "Number of buildings with an electricity meter header matched to building metadata per eligible site; no meter readings accessed.",
+      "caveat": "Exploratory measured dataset source preflight, not predictive evaluation.",
+      "data_split": "measured_BDG2_feature_only",
+      "files": [
+        "600dpi_png/J82_BDG2_measured_source_site_inventory.png",
+        "600dpi_tiff/J82_BDG2_measured_source_site_inventory.tiff",
+        "vector_pdf/J82_BDG2_measured_source_site_inventory.pdf",
+        "vector_svg/J82_BDG2_measured_source_site_inventory.svg",
+        "plot_data/J82_BDG2_measured_source_site_inventory.csv"
+      ],
+      "fingerprint": "070f68d5efaa800810d8da7c9627adbd25af39529ec8a9d344d1b9403ae0b1ac",
+      "generated_at": "2026-10-20T01:16:19.987178+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J82_BDG2_measured_source_site_inventory.csv",
+      "title": "BDG2 available electricity meter buildings by site"
+    },
+    "J83_BDG2_measured_frozen_site_roles": {
+      "caption": "Feature-only site partition assignments before meter readings, weather series or target values are inspected.",
+      "caveat": "Exploratory measured dataset source preflight, not predictive evaluation.",
+      "data_split": "measured_BDG2_feature_only",
+      "files": [
+        "600dpi_png/J83_BDG2_measured_frozen_site_roles.png",
+        "600dpi_tiff/J83_BDG2_measured_frozen_site_roles.tiff",
+        "vector_pdf/J83_BDG2_measured_frozen_site_roles.pdf",
+        "vector_svg/J83_BDG2_measured_frozen_site_roles.svg",
+        "plot_data/J83_BDG2_measured_frozen_site_roles.csv"
+      ],
+      "fingerprint": "070f68d5efaa800810d8da7c9627adbd25af39529ec8a9d344d1b9403ae0b1ac",
+      "generated_at": "2026-10-20T01:16:22.086644+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J83_BDG2_measured_frozen_site_roles.csv",
+      "title": "BDG2 source-site role assignments"
+    },
+    "J84_BDG2_meter_weather_timestamp_alignment": {
+      "caption": "Percentage of hourly meter timestamps matched by weather timestamps by site. Timestamp comparisons do not use energy outcomes.",
+      "caveat": "Source-audit figure. Only FIT-site meter target values were accessed; not a model-performance result.",
+      "data_split": "BDG2_source_feature_and_FIT_only_quality",
+      "files": [
+        "600dpi_png/J84_BDG2_meter_weather_timestamp_alignment.png",
+        "600dpi_tiff/J84_BDG2_meter_weather_timestamp_alignment.tiff",
+        "vector_pdf/J84_BDG2_meter_weather_timestamp_alignment.pdf",
+        "vector_svg/J84_BDG2_meter_weather_timestamp_alignment.svg",
+        "plot_data/J84_BDG2_meter_weather_timestamp_alignment.csv"
+      ],
+      "fingerprint": "40eb267d582a7d84d82725e2221b5ac08c446d0075a6413fed802dc5cdc47312",
+      "generated_at": "2026-10-20T01:27:51.908019+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J84_BDG2_meter_weather_timestamp_alignment.csv",
+      "title": "BDG2 source-local weather vs meter timestamps"
+    },
+    "J85_BDG2_fit_only_meter_quality": {
+      "caption": "Number of electricity meter columns passing predeclared training-site availability and nonnegative-reading checks. No validation/calibration/test meter data read.",
+      "caveat": "Source-audit figure. Only FIT-site meter target values were accessed; not a model-performance result.",
+      "data_split": "BDG2_source_feature_and_FIT_only_quality",
+      "files": [
+        "600dpi_png/J85_BDG2_fit_only_meter_quality.png",
+        "600dpi_tiff/J85_BDG2_fit_only_meter_quality.tiff",
+        "vector_pdf/J85_BDG2_fit_only_meter_quality.pdf",
+        "vector_svg/J85_BDG2_fit_only_meter_quality.svg",
+        "plot_data/J85_BDG2_fit_only_meter_quality.csv"
+      ],
+      "fingerprint": "40eb267d582a7d84d82725e2221b5ac08c446d0075a6413fed802dc5cdc47312",
+      "generated_at": "2026-10-20T01:27:53.911704+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J85_BDG2_fit_only_meter_quality.csv",
+      "title": "BDG2 fit-only electricity meter coverage"
+    },
+    "J86_BDG2_weather_feature_missingness": {
+      "caption": "Feature-only weather data completeness for site-registered meteorological attributes; no energy target values from held-out sites.",
+      "caveat": "Source-audit figure. Only FIT-site meter target values were accessed; not a model-performance result.",
+      "data_split": "BDG2_source_feature_and_FIT_only_quality",
+      "files": [
+        "600dpi_png/J86_BDG2_weather_feature_missingness.png",
+        "600dpi_tiff/J86_BDG2_weather_feature_missingness.tiff",
+        "vector_pdf/J86_BDG2_weather_feature_missingness.pdf",
+        "vector_svg/J86_BDG2_weather_feature_missingness.svg",
+        "plot_data/J86_BDG2_weather_feature_missingness.csv"
+      ],
+      "fingerprint": "40eb267d582a7d84d82725e2221b5ac08c446d0075a6413fed802dc5cdc47312",
+      "generated_at": "2026-10-20T01:27:55.876181+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J86_BDG2_weather_feature_missingness.csv",
+      "title": "BDG2 site-weather feature missingness"
+    },
+    "J87_BDG2_validation_hourly_electricity_distribution": {
+      "caption": "Source-measured hourly electricity consumption in two validation sites (raw numeric kWh transformed only for axis).",
+      "caveat": "FIT and two validation sites only; no calibration/test electricity meter values read. Hourly nowcasting not forecasting.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J87_BDG2_validation_hourly_electricity_distribution.png",
+        "600dpi_tiff/J87_BDG2_validation_hourly_electricity_distribution.tiff",
+        "vector_pdf/J87_BDG2_validation_hourly_electricity_distribution.pdf",
+        "vector_svg/J87_BDG2_validation_hourly_electricity_distribution.svg",
+        "plot_data/J87_BDG2_validation_hourly_electricity_distribution.csv"
+      ],
+      "fingerprint": "e5fac3b854183e88a8aa9480314094fea7dff22daa6aa24433a8c55f2d552b87",
+      "generated_at": "2026-10-20T02:38:11.288606+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J87_BDG2_validation_hourly_electricity_distribution.csv",
+      "title": "BDG2 measured hourly electricity distribution"
+    },
+    "J88_BDG2_multiseed_validation_RMSE": {
+      "caption": "Mean and standard deviation over five CFM initialization seeds, measured electricity hourly kWh.",
+      "caveat": "FIT and two validation sites only; no calibration/test electricity meter values read. Hourly nowcasting not forecasting.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J88_BDG2_multiseed_validation_RMSE.png",
+        "600dpi_tiff/J88_BDG2_multiseed_validation_RMSE.tiff",
+        "vector_pdf/J88_BDG2_multiseed_validation_RMSE.pdf",
+        "vector_svg/J88_BDG2_multiseed_validation_RMSE.svg",
+        "plot_data/J88_BDG2_multiseed_validation_RMSE.csv"
+      ],
+      "fingerprint": "e5fac3b854183e88a8aa9480314094fea7dff22daa6aa24433a8c55f2d552b87",
+      "generated_at": "2026-10-20T02:38:13.135905+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J88_BDG2_multiseed_validation_RMSE.csv",
+      "title": "BDG2 site-heldout five-seed RMSE"
+    },
+    "J89_BDG2_multiseed_validation_coverage": {
+      "caption": "Uncalibrated measured electricity hourly prediction interval coverage; not a calibration guarantee.",
+      "caveat": "FIT and two validation sites only; no calibration/test electricity meter values read. Hourly nowcasting not forecasting.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J89_BDG2_multiseed_validation_coverage.png",
+        "600dpi_tiff/J89_BDG2_multiseed_validation_coverage.tiff",
+        "vector_pdf/J89_BDG2_multiseed_validation_coverage.pdf",
+        "vector_svg/J89_BDG2_multiseed_validation_coverage.svg",
+        "plot_data/J89_BDG2_multiseed_validation_coverage.csv"
+      ],
+      "fingerprint": "e5fac3b854183e88a8aa9480314094fea7dff22daa6aa24433a8c55f2d552b87",
+      "generated_at": "2026-10-20T02:38:15.317597+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J89_BDG2_multiseed_validation_coverage.csv",
+      "title": "BDG2 raw interval coverage"
+    },
+    "J90_BDG2_validation_actual_vs_predicted": {
+      "caption": "Exploratory validation: CatBoost and one prespecified no-base residual seed, plot clipped to 99th observed percentile for visibility.",
+      "caveat": "FIT and two validation sites only; no calibration/test electricity meter values read. Hourly nowcasting not forecasting.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J90_BDG2_validation_actual_vs_predicted.png",
+        "600dpi_tiff/J90_BDG2_validation_actual_vs_predicted.tiff",
+        "vector_pdf/J90_BDG2_validation_actual_vs_predicted.pdf",
+        "vector_svg/J90_BDG2_validation_actual_vs_predicted.svg",
+        "plot_data/J90_BDG2_validation_actual_vs_predicted.csv"
+      ],
+      "fingerprint": "e5fac3b854183e88a8aa9480314094fea7dff22daa6aa24433a8c55f2d552b87",
+      "generated_at": "2026-10-20T02:38:19.758026+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J90_BDG2_validation_actual_vs_predicted.csv",
+      "title": "BDG2 actual vs predicted hourly electricity"
+    },
+    "J91_BDG2_validation_sitewise_RMSE": {
+      "caption": "Separate error for each of two heldout validation sites; site clusters are the appropriate uncertainty unit.",
+      "caveat": "FIT and two validation sites only; no calibration/test electricity meter values read. Hourly nowcasting not forecasting.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J91_BDG2_validation_sitewise_RMSE.png",
+        "600dpi_tiff/J91_BDG2_validation_sitewise_RMSE.tiff",
+        "vector_pdf/J91_BDG2_validation_sitewise_RMSE.pdf",
+        "vector_svg/J91_BDG2_validation_sitewise_RMSE.svg",
+        "plot_data/J91_BDG2_validation_sitewise_RMSE.csv"
+      ],
+      "fingerprint": "e5fac3b854183e88a8aa9480314094fea7dff22daa6aa24433a8c55f2d552b87",
+      "generated_at": "2026-10-20T02:38:21.814394+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J91_BDG2_validation_sitewise_RMSE.csv",
+      "title": "BDG2 sitewise validation RMSE"
+    },
+    "J92_BDG2_validation_seedwise_extreme_RMSE": {
+      "caption": "Seedwise validation RMSE on two frozen unseen sites; log scale shows rare catastrophic outcomes.",
+      "caveat": "Post-hoc description of frozen 2-site validation, no test claims, no tuning.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J92_BDG2_validation_seedwise_extreme_RMSE.png",
+        "600dpi_tiff/J92_BDG2_validation_seedwise_extreme_RMSE.tiff",
+        "vector_pdf/J92_BDG2_validation_seedwise_extreme_RMSE.pdf",
+        "vector_svg/J92_BDG2_validation_seedwise_extreme_RMSE.svg",
+        "plot_data/J92_BDG2_validation_seedwise_extreme_RMSE.csv"
+      ],
+      "fingerprint": "bc4f1fa136881bdd60298f988b34268f3e29851e3e88c6f231d1da2e8aaf189e",
+      "generated_at": "2026-10-20T02:51:21.119790+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J92_BDG2_validation_seedwise_extreme_RMSE.csv",
+      "title": "BDG2 seedwise RMSE / log scale"
+    },
+    "J93_BDG2_validation_top1pct_SSE_share": {
+      "caption": "Proportion of total squared error contributed by the top 1% largest absolute-error rows; no clipping applied.",
+      "caveat": "Post-hoc description of frozen 2-site validation, no test claims, no tuning.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J93_BDG2_validation_top1pct_SSE_share.png",
+        "600dpi_tiff/J93_BDG2_validation_top1pct_SSE_share.tiff",
+        "vector_pdf/J93_BDG2_validation_top1pct_SSE_share.pdf",
+        "vector_svg/J93_BDG2_validation_top1pct_SSE_share.svg",
+        "plot_data/J93_BDG2_validation_top1pct_SSE_share.csv"
+      ],
+      "fingerprint": "bc4f1fa136881bdd60298f988b34268f3e29851e3e88c6f231d1da2e8aaf189e",
+      "generated_at": "2026-10-20T02:51:23.537024+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J93_BDG2_validation_top1pct_SSE_share.csv",
+      "title": "BDG2 worst 1% SSE concentration"
+    },
+    "J94_BDG2_validation_maximum_prediction_by_seed": {
+      "caption": "Maximum of saved frozen point predictions, revealing whether rare inverse-log excursions dominate errors.",
+      "caveat": "Post-hoc description of frozen 2-site validation, no test claims, no tuning.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J94_BDG2_validation_maximum_prediction_by_seed.png",
+        "600dpi_tiff/J94_BDG2_validation_maximum_prediction_by_seed.tiff",
+        "vector_pdf/J94_BDG2_validation_maximum_prediction_by_seed.pdf",
+        "vector_svg/J94_BDG2_validation_maximum_prediction_by_seed.svg",
+        "plot_data/J94_BDG2_validation_maximum_prediction_by_seed.csv"
+      ],
+      "fingerprint": "bc4f1fa136881bdd60298f988b34268f3e29851e3e88c6f231d1da2e8aaf189e",
+      "generated_at": "2026-10-20T02:51:26.436463+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J94_BDG2_validation_maximum_prediction_by_seed.csv",
+      "title": "BDG2 maximum predictive mean by seed"
+    },
+    "J95_BDG2_validation_two_site_seedwise_RMSE": {
+      "caption": "Separate sitewise RMSE per CFM seed and variant versus CatBoost; only two validation sites, descriptive only.",
+      "caveat": "Post-hoc description of frozen 2-site validation, no test claims, no tuning.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J95_BDG2_validation_two_site_seedwise_RMSE.png",
+        "600dpi_tiff/J95_BDG2_validation_two_site_seedwise_RMSE.tiff",
+        "vector_pdf/J95_BDG2_validation_two_site_seedwise_RMSE.pdf",
+        "vector_svg/J95_BDG2_validation_two_site_seedwise_RMSE.svg",
+        "plot_data/J95_BDG2_validation_two_site_seedwise_RMSE.csv"
+      ],
+      "fingerprint": "bc4f1fa136881bdd60298f988b34268f3e29851e3e88c6f231d1da2e8aaf189e",
+      "generated_at": "2026-10-20T02:51:29.819551+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J95_BDG2_validation_two_site_seedwise_RMSE.csv",
+      "title": "BDG2 validation sitewise RMSE variation"
+    },
+    "J96_BDG2_validation_absolute_error_ECDF": {
+      "caption": "Exploratory error magnitude distributions for CatBoost and the first fixed no-base/standard CFM seed; curves truncated for visual clarity only.",
+      "caveat": "Post-hoc description of frozen 2-site validation, no test claims, no tuning.",
+      "data_split": "BDG2_unseen_site_VALIDATION_exploratory",
+      "files": [
+        "600dpi_png/J96_BDG2_validation_absolute_error_ECDF.png",
+        "600dpi_tiff/J96_BDG2_validation_absolute_error_ECDF.tiff",
+        "vector_pdf/J96_BDG2_validation_absolute_error_ECDF.pdf",
+        "vector_svg/J96_BDG2_validation_absolute_error_ECDF.svg",
+        "plot_data/J96_BDG2_validation_absolute_error_ECDF.csv"
+      ],
+      "fingerprint": "bc4f1fa136881bdd60298f988b34268f3e29851e3e88c6f231d1da2e8aaf189e",
+      "generated_at": "2026-10-20T02:51:32.878383+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J96_BDG2_validation_absolute_error_ECDF.csv",
+      "title": "BDG2 frozen validation absolute-error ECDF"
+    },
+    "J97_BDG2_three_site_test_RMSE": {
+      "caption": "RMSE for fixed baselines and five-seed CFM mixtures, three independent heldout BDG2 sites.",
+      "caveat": "Three site clusters; no test-based tuning; descriptive heldout analysis, not guaranteed cross-site uncertainty calibration.",
+      "data_split": "BDG2_independent_three_site_TEST_FROZEN",
+      "files": [
+        "600dpi_png/J97_BDG2_three_site_test_RMSE.png",
+        "600dpi_tiff/J97_BDG2_three_site_test_RMSE.tiff",
+        "vector_pdf/J97_BDG2_three_site_test_RMSE.pdf",
+        "vector_svg/J97_BDG2_three_site_test_RMSE.svg",
+        "plot_data/J97_BDG2_three_site_test_RMSE.csv"
+      ],
+      "fingerprint": "8dda538638ec0c0be44f275d70b1ad6815db40178eb9569fd2a78ccf14be3d37",
+      "generated_at": "2026-10-20T03:13:23.475043+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J97_BDG2_three_site_test_RMSE.csv",
+      "title": "BDG2 three-site frozen model comparison"
+    },
+    "J98_BDG2_three_site_test_coverage": {
+      "caption": "Empirical 90% interval coverage after frozen separate-site calibration, without marginal coverage guarantee.",
+      "caveat": "Three site clusters; no test-based tuning; descriptive heldout analysis, not guaranteed cross-site uncertainty calibration.",
+      "data_split": "BDG2_independent_three_site_TEST_FROZEN",
+      "files": [
+        "600dpi_png/J98_BDG2_three_site_test_coverage.png",
+        "600dpi_tiff/J98_BDG2_three_site_test_coverage.tiff",
+        "vector_pdf/J98_BDG2_three_site_test_coverage.pdf",
+        "vector_svg/J98_BDG2_three_site_test_coverage.svg",
+        "plot_data/J98_BDG2_three_site_test_coverage.csv"
+      ],
+      "fingerprint": "8dda538638ec0c0be44f275d70b1ad6815db40178eb9569fd2a78ccf14be3d37",
+      "generated_at": "2026-10-20T03:13:25.390255+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J98_BDG2_three_site_test_coverage.csv",
+      "title": "BDG2 independent-site interval coverage"
+    },
+    "J99_BDG2_three_site_RMSE_by_site": {
+      "caption": "Independent three-site differences in measured hourly electricity estimation error; each site is a cluster.",
+      "caveat": "Three site clusters; no test-based tuning; descriptive heldout analysis, not guaranteed cross-site uncertainty calibration.",
+      "data_split": "BDG2_independent_three_site_TEST_FROZEN",
+      "files": [
+        "600dpi_png/J99_BDG2_three_site_RMSE_by_site.png",
+        "600dpi_tiff/J99_BDG2_three_site_RMSE_by_site.tiff",
+        "vector_pdf/J99_BDG2_three_site_RMSE_by_site.pdf",
+        "vector_svg/J99_BDG2_three_site_RMSE_by_site.svg",
+        "plot_data/J99_BDG2_three_site_RMSE_by_site.csv"
+      ],
+      "fingerprint": "8dda538638ec0c0be44f275d70b1ad6815db40178eb9569fd2a78ccf14be3d37",
+      "generated_at": "2026-10-20T03:13:27.702782+00:00",
+      "raster_dpi": 600,
+      "source_data": "plot_data/J99_BDG2_three_site_RMSE_by_site.csv",
+      "title": "BDG2 sitewise RMSE"
+    }
+  },
+  "version": "journal-figures-v4-vector-raster-csv"
+}

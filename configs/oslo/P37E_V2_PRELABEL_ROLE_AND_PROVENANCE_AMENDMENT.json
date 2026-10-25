@@ -1,0 +1,203 @@
+{
+  "amendment_context": {
+    "all_Oslo_CAL_and_TEST_labels_still_sealed_at_creation": true,
+    "metadata_revalidated_against_official_attached_48_Oslo_headers": true,
+    "new_prelabel_protocol_version": 2,
+    "old_seven_building_Drammen_final_test_not_opened": true,
+    "original_P37C_compact_bytes_not_available": true,
+    "original_P37E_reported_SHA256": "f73d55d11f7e370bfa083c054a66f2401f9ef7523edf3dc12b7a0c86ebf7dd2a",
+    "original_filename_salt_role_algorithm_and_all_model_metric_policies_unchanged": true,
+    "original_lock_bytes_not_available": true,
+    "original_training_and_frozen_prediction_models_unmodified": true,
+    "reason": "Lost original P37C review ZIP and P37E role-lock bytes on Kaggle session restart",
+    "report_prelabel_amendment_transparently_in_manuscript": true,
+    "reproduced_using_original_P37C_and_P37E_script": true,
+    "resulting_SHA256_not_equal_to_original_and_not_misrepresented_as_such": true,
+    "source_rows_read": "ONLY METADATA AND HEADER; ZERO ELECTRICITY LABEL VALUES"
+  },
+  "cohort_scope": "48 Oslo school buildings within one municipality; no multi-city independence claim",
+  "future_calibration_plan": {
+    "additive_conformal": "Q90 of pooled CAL rowwise nonnegative interval scores; descriptive under building shift; never fit on TEST labels",
+    "calibration_buildings": 12,
+    "group_conformal_coverage_not_promised": true,
+    "no_future_test_access_before_calibrator_lock_and_crc": true,
+    "policy": "Frozen raw predictor, plus separately report calibration applied using ONLY 12 new Oslo CAL buildings and stored before testing",
+    "test_buildings": 36
+  },
+  "initial_buildings": 48,
+  "metadata_fingerprint_sha256": "cd5b935bba5056f8f67e897d018b29a40cfe24b81023692bf44b1289820eaed3",
+  "metric_policy": {
+    "cluster_uncertainty": "paired resampling of independent buildings, 10000 descriptive percentile bootstrap repetitions (seed 20263701); also report within-municipality dependence",
+    "mc_samples": 64,
+    "no_silent_test_clipping": true,
+    "ode_steps": 32,
+    "physical_inverse_log_bounds": [
+      0,
+      30
+    ],
+    "primary": "equal-building mean physical-space 64-draw paired Monte Carlo CRPS difference NGBoost40k minus DirectCFM20262013; positive favours Direct",
+    "secondary": [
+      "RMSE_kWh",
+      "MAE_kWh",
+      "raw90_coverage",
+      "raw90_width_kWh",
+      "interval_score90_kWh",
+      "tail_over_1e6kWh",
+      "per-building_CRPS"
+    ],
+    "uncertainty_claim": "No guarantee of 90pct coverage across new climate/city/building groups"
+  },
+  "missing_metadata_predeclared_policy": {
+    "export_8094.txt": {
+      "action": "NaN -> ORIGINAL Drammen FIT median -> ORIGINAL Drammen FIT mean/sd",
+      "feature": "construction_year",
+      "missing": "year_of_construction"
+    },
+    "export_8127.txt": {
+      "action": "NaN -> ORIGINAL Drammen FIT median in log feature space -> ORIGINAL FIT mean/sd",
+      "feature": "log_floor_area",
+      "missing": "floor_area"
+    },
+    "no_new_missing_indicator_or_refitting": true,
+    "other_buildings": "No new imputation training; apply original frozen P20 NaN-to-FIT-median transform to all 18 features",
+    "report_missing_metadata_subgroup_results": true
+  },
+  "model_selection_frozen_before_oslo_outcomes": {
+    "no_oslo_based_selection_or_retraining": true,
+    "primary": "Original pre-Drammen-test NGBoost Normal trained on 40k FIT rows",
+    "primary_comparator": "Original pre-Drammen-test Direct CFM seed 20262013",
+    "secondary": "Full-FIT NGBoost P36 (post-Drammen-test exploratory), other original CFM seeds/variants exploratory"
+  },
+  "next_feature_only_quality_gate_PREDECLARED": {
+    "allow_only": [
+      "TimeStamp",
+      "Tout",
+      "SolGlob",
+      "WindSpd",
+      "WindDir"
+    ],
+    "feature_pass_per_building": {
+      "maximum_duplicate_timestamp_fraction_in_sampled_valid_timestamps": 0.05,
+      "min_timestamp_valid_sampled_rows": 200,
+      "minimum_finite_fraction_each_weather_variable_after_range_checks": 0.5
+    },
+    "on_failure": "STOP AND REPORT. Do not alter this split, model, thresholds or exclude/test buildings after label access. Seek explicit pre-label amended version if necessary.",
+    "sample_policy": "every 11th physical data record before eligibility checks, as original Drammen P20",
+    "target_ElImp_access_forbidden": true,
+    "timestamp": "parse first 19 characters as calendar timestamp; never use energy to filter eligibility",
+    "weather_range": {
+      "SolGlob": [
+        0,
+        1400
+      ],
+      "Tout": [
+        -60,
+        60
+      ],
+      "WindDir": [
+        0,
+        360
+      ],
+      "WindSpd": [
+        0,
+        80
+      ]
+    }
+  },
+  "next_gate": "P37F feature-only QC; independently verify units/timezone/time intervals and historic model implementation before any calibration/test access",
+  "original_Drammen_feature_order": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "Tout",
+    "SolGlob",
+    "WindSpd",
+    "WindDir_sin",
+    "WindDir_cos",
+    "log_floor_area",
+    "construction_year",
+    "log_users",
+    "is_Kdg",
+    "is_Sch",
+    "is_Nsh",
+    "is_Off"
+  ],
+  "original_drammen_source_doi": "10.5281/zenodo.14752397",
+  "p20_fit_preprocessor_sha256": "689e1d33cbba19114132fff3bb9c8bc05a3bb658ffeb839a9acf62f894789c71",
+  "p37c_header_metadata_sha256": "d05acb1eff3a6efb39df2a9d83bb93fb68ce4fd88791194a125700d734e0b806",
+  "protocol_id": "OSLO_P37E_EXTERNAL_FROZEN_DRAMMEN_MODELS_TRANSFER_v2_PRELABEL_RECOVERY",
+  "role_allocation": {
+    "calibration": [
+      "export_8093.txt",
+      "export_8095.txt",
+      "export_8102.txt",
+      "export_8113.txt",
+      "export_8116.txt",
+      "export_8124.txt",
+      "export_8125.txt",
+      "export_8127.txt",
+      "export_8128.txt",
+      "export_8129.txt",
+      "export_8133.txt",
+      "export_8135.txt"
+    ],
+    "test": [
+      "export_8091.txt",
+      "export_8092.txt",
+      "export_8094.txt",
+      "export_8096.txt",
+      "export_8097.txt",
+      "export_8098.txt",
+      "export_8099.txt",
+      "export_8100.txt",
+      "export_8101.txt",
+      "export_8103.txt",
+      "export_8104.txt",
+      "export_8105.txt",
+      "export_8106.txt",
+      "export_8107.txt",
+      "export_8108.txt",
+      "export_8109.txt",
+      "export_8110.txt",
+      "export_8111.txt",
+      "export_8112.txt",
+      "export_8114.txt",
+      "export_8115.txt",
+      "export_8117.txt",
+      "export_8118.txt",
+      "export_8119.txt",
+      "export_8120.txt",
+      "export_8121.txt",
+      "export_8122.txt",
+      "export_8123.txt",
+      "export_8126.txt",
+      "export_8130.txt",
+      "export_8131.txt",
+      "export_8132.txt",
+      "export_8134.txt",
+      "export_8136.txt",
+      "export_8137.txt",
+      "export_8138.txt"
+    ]
+  },
+  "role_counts": {
+    "calibration": 12,
+    "test": 36
+  },
+  "role_split_method": "SHA256 of fixed public salt and filename ID; metadata-only, never outcome-based",
+  "safety": {
+    "model_training_in_P37E": false,
+    "no_cal_or_test_label_read_in_P37E": true,
+    "no_new_measurement_rows_read_in_P37E": true,
+    "no_old_frozen_test_reopening": true,
+    "source_content_hash_not_computed_to_avoid_label_bytes": true,
+    "test_unlock": false
+  },
+  "source": "COFACTOR-SBHUB Oslo, DOI 10.60609/czgf-5e46",
+  "status": "PRELABEL_V2_AMENDMENT__LOST_ORIGINAL_P37C_PROVENANCE__NO_LABEL_ACCESS",
+  "target_after_future_authorized_access": "ElImp imported electricity Wh per recorded hour / 1000 = kWh per recorded hour",
+  "task": "same-hour electricity estimation; uses contemporaneous weather; NOT ahead-of-time forecast"
+}

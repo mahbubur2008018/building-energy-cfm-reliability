@@ -1,0 +1,44 @@
+{
+  "claims_scope": "unseen public buildings within one Norwegian city; not future forecast or unseen climates",
+  "figure_ids": [
+    "J131_COFACTOR_TEST_raw_CRPS",
+    "J132_COFACTOR_TEST_interval_coverage",
+    "J133_COFACTOR_TEST_RMSE",
+    "J134_COFACTOR_TEST_primary_building_delta",
+    "J135_COFACTOR_TEST_building_heterogeneity",
+    "J136_COFACTOR_TEST_tail_risk"
+  ],
+  "group_calibration_caveat": "DESCRIPTIVE ONLY. Five calibration clusters cannot guarantee finite-width 90pct new-building group-conformal coverage.",
+  "historical_final_test_labels_reused": false,
+  "model_budget_caveat": "NGBoost trained on 40k/88584 FIT rows; not a matched-compute claim",
+  "model_retraining": false,
+  "new_test_only_one_policy": true,
+  "p20_complete_figures": 130,
+  "p21_calibrator_sha256": "3290c33bd497abc5e79aa3ca321c1b56fb6308a7f9efafd0aa0a90b31b26166e",
+  "p21_policy_sha256": "de778ea1f5c1634ea3f4a59599937ab005a2643e049b5702ee67a71ba9bff226",
+  "per_building_table": "/kaggle/working/BUILDING_CFM_STATE/outputs/phase21_cofactor_frozen_confirmation/P21_ONE_TIME_FROZEN_TEST_PER_BUILDING.csv",
+  "phase": "21.0",
+  "primary_result": {
+    "descriptive_cluster_bootstrap_95pct_CI_kWh": [
+      -2.152183490596489,
+      4.076096084406635
+    ],
+    "mean_equal_building_CRPS_difference_kWh": 0.9755335607207108,
+    "method": "pairing by building; percentile bootstrap 10000 replicates; not a multi-city/general-purpose guarantee",
+    "n_test_buildings": 7,
+    "per_building_CRPS_difference_kWh": {
+      "6405": -0.5983792340647365,
+      "6411": 7.364140287423721,
+      "6416": -5.8438819911073026,
+      "6426": 0.29039568664810833,
+      "6429": -1.5048098329021649,
+      "6432": 6.292412327074365,
+      "6442": 0.8288576819729858
+    },
+    "primary": "NGBoost minus Direct CFM seed 20262013; lower/negative favours NGBoost",
+    "same_municipality": true
+  },
+  "source_sha256": "20b6795f859ff62ccd39a2af12078423535223e5cfa285d960364b3f20952a11",
+  "table": "/kaggle/working/BUILDING_CFM_STATE/outputs/phase21_cofactor_frozen_confirmation/P21_ONE_TIME_FROZEN_TEST_RESULTS.csv",
+  "test_policy_locked_before_labels": true
+}

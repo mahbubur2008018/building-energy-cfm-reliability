@@ -1,0 +1,12 @@
+{
+  "calibration_test_read": false,
+  "change": "Rename the local BEST checkpoint dict to best_checkpoint; retain NumPy bs base predictions for the next seed.",
+  "completed_seed_results_preserved": true,
+  "corrected_source_sha256": "2a7d300b43f928fc5606ce7f473a423ececc33f1de4252a8f1e029cd13fc6908",
+  "fit_val_only": true,
+  "locked_training_config_changed": false,
+  "model_checkpoint_files_changed_by_patch": false,
+  "patch_id": "P20.0.2-seed-checkpoint-variable-shadowing",
+  "previous_source_sha256": "5a16cb19e65c43476a2ccb52b87dd358867c1c453e993c92c5e1bec358de32ce",
+  "time_utc": "2026-10-20T14:35:53.041588+00:00"
+}

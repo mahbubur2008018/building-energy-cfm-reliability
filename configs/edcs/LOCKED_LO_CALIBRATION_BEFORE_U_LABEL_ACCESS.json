@@ -1,0 +1,19 @@
+{
+  "study_fp": "d10aabb56c00c3371aeaf1209fc0ae1f4dbb6479cad6f47c85d1de554591b0fa",
+  "calibration_locked_before_U_labels": true,
+  "target_rows_read": 976,
+  "target_source_shapes": [
+    "L",
+    "O"
+  ],
+  "conformal_thresholds": {
+    "CatBoost": 1.4429235459954768,
+    "standard": 0.0,
+    "residual": 0.0,
+    "residual_without_base_feature": 0.0
+  },
+  "source_target_unit": "DISPUTED; source-native numeric units only",
+  "cal_prediction_sha256": "467ca35b68cc6d15a4fa87fb4a1f98f9c13bb85a524ef979cb9422128f1b7c06",
+  "threshold_definition": "ceil((n_cal+1)*0.90)th ascending nonconformity",
+  "U_labels_read": false
+}

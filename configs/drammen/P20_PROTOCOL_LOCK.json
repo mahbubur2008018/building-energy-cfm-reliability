@@ -1,0 +1,83 @@
+{
+  "flow_batch": 1024,
+  "flow_epochs": 60,
+  "flow_eval_batch": 256,
+  "flow_hidden": 128,
+  "flow_inner_stop_building_fraction": 0.15,
+  "flow_lr": 0.0005,
+  "flow_mc_draws": 64,
+  "flow_min_epochs": 18,
+  "flow_ode_steps": 32,
+  "flow_patience": 12,
+  "flow_seeds": [
+    20262011,
+    20262012,
+    20262013
+  ],
+  "historical_final_test_access": false,
+  "master_zip_period_seconds": 900,
+  "min_fit_buildings": 23,
+  "min_valid_sampled_rows_per_dev_building": 200,
+  "min_validation_buildings": 5,
+  "new_calibration_label_access": false,
+  "new_final_test_status": "SEALED: requires a subsequent frozen calibration-and-test phase",
+  "new_test_label_access": false,
+  "ngboost_enabled": true,
+  "ngboost_estimators": 120,
+  "ngboost_fit_cap": 40000,
+  "ngboost_seed": 20262009,
+  "phase": "20.0",
+  "physical_inverse_max_log": 30.0,
+  "physical_inverse_min_log": 0.0,
+  "primary_future_test_metric": "CRPS_kWh_unweighted_rowwise_then_equal_building_mean",
+  "protocol_version": "p20-cofactor-v1-no-old-test",
+  "quantile_iterations": 300,
+  "require_two_cuda_gpus": true,
+  "role_counts": {
+    "Kdg": [
+      12,
+      3,
+      2,
+      3
+    ],
+    "Nsh": [
+      4,
+      1,
+      1,
+      1
+    ],
+    "Off": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "Sch": [
+      10,
+      2,
+      2,
+      2
+    ]
+  },
+  "roles": [
+    "fit",
+    "validation",
+    "calibration",
+    "test"
+  ],
+  "sample_every_nth_hour": 11,
+  "source_doi": "10.5281/zenodo.14752397",
+  "source_md5": "13640361f6fcb2bf428dfad3cfa60888",
+  "source_unit": "Wh/hour",
+  "source_url": "https://zenodo.org/records/14752397/files/Cofactor_Drammen_Buildings_45_v3.zip?download=1",
+  "split_salt": "COFACTOR-2026-P20-PROSPECTIVE-BUILDING-LOCK-v1",
+  "target_raw": "ElImp",
+  "target_unit": "kWh/hour",
+  "task": "same-hour whole-building imported electricity estimation, NOT future forecasting",
+  "tree_depth": 6,
+  "tree_iterations_final": 400,
+  "tree_iterations_oof": 250,
+  "tree_lr": 0.05,
+  "tree_oof_folds": 4,
+  "tree_seed": 20262000
+}

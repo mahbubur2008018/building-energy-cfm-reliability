@@ -1,0 +1,24 @@
+{
+  "data_sha256": "dc3e42f47efa749b33770224094f7561f7823f6e444289cec59b99be01da6251",
+  "fit_n": 88584,
+  "flow_batch": 1024,
+  "flow_epochs": 60,
+  "flow_eval_batch": 256,
+  "flow_hidden": 128,
+  "flow_lr": 0.0005,
+  "flow_mc_draws": 64,
+  "flow_min_epochs": 18,
+  "flow_ode_steps": 32,
+  "flow_patience": 12,
+  "flow_seeds": [
+    20262011,
+    20262012,
+    20262013
+  ],
+  "mu": 3.2890946794041658,
+  "physical_inverse_max_log": 30.0,
+  "physical_inverse_min_log": 0.0,
+  "source_sha256": "20b6795f859ff62ccd39a2af12078423535223e5cfa285d960364b3f20952a11",
+  "target_std": 1.1051499449688522,
+  "val_n": 19467
+}

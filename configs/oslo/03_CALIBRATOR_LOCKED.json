@@ -1,0 +1,6 @@
+{
+  "calibrator_sha256": "37f6d4ff9ea0af08f071edfdf3fbe9ceeff17452d3550bc338f348f84634720d",
+  "implementation_sha256": "0a24ba04a2336ae445b84b407b1e707dbebd61c0d8f3474c2c7ea80bb4938ead",
+  "protocol_sha256": "5cd2adfcdc4f87a29cda40b2093a1060ec20d726fb311456961fcf7d5464bad3",
+  "status": "CALIBRATOR_LOCKED_AND_ARCHIVED_BEFORE_TEST"
+}

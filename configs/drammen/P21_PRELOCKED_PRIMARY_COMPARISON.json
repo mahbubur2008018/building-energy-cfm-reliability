@@ -1,0 +1,20 @@
+{
+  "descriptive_cluster_bootstrap_95pct_CI_kWh": [
+    -2.152183490596489,
+    4.076096084406635
+  ],
+  "mean_equal_building_CRPS_difference_kWh": 0.9755335607207108,
+  "method": "pairing by building; percentile bootstrap 10000 replicates; not a multi-city/general-purpose guarantee",
+  "n_test_buildings": 7,
+  "per_building_CRPS_difference_kWh": {
+    "6405": -0.5983792340647365,
+    "6411": 7.364140287423721,
+    "6416": -5.8438819911073026,
+    "6426": 0.29039568664810833,
+    "6429": -1.5048098329021649,
+    "6432": 6.292412327074365,
+    "6442": 0.8288576819729858
+  },
+  "primary": "NGBoost minus Direct CFM seed 20262013; lower/negative favours NGBoost",
+  "same_municipality": true
+}

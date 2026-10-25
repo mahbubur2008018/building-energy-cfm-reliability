@@ -1,0 +1,35 @@
+{
+  "version": "phase11_2_Miami_calibration_lock_v1",
+  "study_policy_fingerprint": "2c03d462e96c5a8ce3c719c66cc9b72390fa33a849e4bb359cbb453587bd0d9b",
+  "thresholds_source_numeric": {
+    "CatBoost": 0.2866514639937918,
+    "RandomForest": 0.719368467617727,
+    "standard": 0.0,
+    "residual": 0.0,
+    "residual_without_base_feature": 0.0
+  },
+  "calibration_rows": 3456,
+  "calibration_only": true,
+  "Miami_target_accessed": false,
+  "calibration_table_sha256": "29d99819466ba9b3122e44d8b04fdb015692b99a788bb067904457ac9c70df34",
+  "calibration_model_sample_sha256": {
+    "p11_standard_s20262001": "e81c20d6d679a6f8e56c0b3614bdbb7f4bab258d801e619e14b14eae74147d11",
+    "p11_standard_s20262002": "1c2393f17c799e4ebf1e3bcbd390a1672a57a15cb5ff840e2f26c1a652bcc741",
+    "p11_standard_s20262003": "cc02ed0fdf01b2caba0b73065cc52589754b8d2c5e0e0fa687e1e379d38afb8f",
+    "p11_standard_s20262004": "37393ee00fb6e520be56064a7e30d7eb94cbc91f7f83d31d2c081ce71fd522c2",
+    "p11_standard_s20262005": "3d856d407d8acc36dad8cff17d25de459e281c2a0a3dd3a59ca03b0b83aaa2bb",
+    "p11_residual_s20262001": "9c7fda1a57e43b9d8087ce4422ff1501d57d3cf5814ea769de2bcd3ea4f1fc7e",
+    "p11_residual_s20262002": "8d6cf72084c0fef963d8ffdd80327f0e2ceb9ae0e2b93bd15f8f6fd38868b73c",
+    "p11_residual_s20262003": "6a1ca1025f5cbe6df3a784cdaa921170d077b7c54f654c3ff9a0611197f79136",
+    "p11_residual_s20262004": "0d83ab0a49bfac57f039e126b734ece35deabbadfca56f80e10df09ec9ac86a1",
+    "p11_residual_s20262005": "723a512b8a3b72831a5331a2e86c332822e8749af4d6626bab75abf8507a2307",
+    "p11_residual_without_base_feature_s20262001": "539dc94dd60e3e4d1af9425cd18aab2878787d7dc229f4922a0658184ad308ca",
+    "p11_residual_without_base_feature_s20262002": "db52646e7089e2aa277c37b6efe37247322927c666e7744fecedf03f3623cb7c",
+    "p11_residual_without_base_feature_s20262003": "82a5dda704f6ee9c17a64dcbed344e00865cf17731bdb49cceb47be136746a28",
+    "p11_residual_without_base_feature_s20262004": "942510509b7fe9b8436ebaa04e119e473296255d3700fd4f1e1649624e61a544",
+    "p11_residual_without_base_feature_s20262005": "42888aaadcbb941a89f7e13021fbcfe0fffb240504ecfb992cc57a832e54399b"
+  },
+  "generated_utc": "2026-10-20T00:13:33.738881+00:00",
+  "method": "Split conformal, q(1-alpha)=ceil((n+1)*.90) order statistic",
+  "provenance": "Source-native target: numeric field, target units and time horizon unresolved"
+}

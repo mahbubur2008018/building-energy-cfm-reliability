@@ -1,0 +1,38 @@
+{
+  "MC_CRPS_note": "fixed 64-draw paired Monte Carlo approximation, uncalibrated, empirical variance",
+  "NGBoost_caveat": "CPU NGBoost uses only a fixed 40k subset, unequal model budgets: exploratory not matched experiment",
+  "Q1_submission_status": "HOLD; prospective CAL lock, new TEST, full end-to-end seeds, prior-art comparison still needed",
+  "RNG_epoch_checkpoint": "yes, each worker saves full model+optimizer+RNG at every epoch",
+  "anchor": "site-group OOF CatBoost, original fit buildings only",
+  "early_stop": "fit-internal site holdout for all CFM seeds",
+  "external_city_replication": false,
+  "historical_final_tests_read": false,
+  "license_check": "Zenodo v3 license field not clearly specified; verify data reuse/redistribution rights before public artifact release",
+  "new_calibration_buildings_count": 5,
+  "new_calibration_labels_read": false,
+  "new_final_test_labels_read": false,
+  "new_test_buildings_count": 7,
+  "new_validation_status": "development_only, not independent final result",
+  "num_test_buildings_not_test_independent_sites": "all 45 COFACTOR buildings are within ONE municipality; no inter-city inference",
+  "overlap_caveat": "Dates and geography differ from BDG2, but anonymous physical-building overlap cannot be proved from the available IDs alone.",
+  "phase": "20.0",
+  "physical_inverse_policy": "log1p inverse clamped in log-space at [0,30] BEFORE evaluation; outlier count retained",
+  "point_accuracy_note": "distributional point predictions are Monte Carlo physical-space means; quantile CatBoost uses Q50",
+  "predictand": "ElImp, imported electricity: Wh per recorded hour / 1000 = kWh per recorded hour",
+  "same_city_generalization_only": true,
+  "seeds": [
+    20262011,
+    20262012,
+    20262013
+  ],
+  "source_doi": "10.5281/zenodo.14752397",
+  "source_md5": "13640361f6fcb2bf428dfad3cfa60888",
+  "source_schema": "45 building metadata + main electricity meter + weather, semicolon CSV",
+  "source_sha256": "20b6795f859ff62ccd39a2af12078423535223e5cfa285d960364b3f20952a11",
+  "training_only": true,
+  "variants": [
+    "direct",
+    "full_residual",
+    "residual_no_base_conditioner"
+  ]
+}

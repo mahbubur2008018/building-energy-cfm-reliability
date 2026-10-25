@@ -1,0 +1,66 @@
+{
+  "version": "phase11_fiveclimate_v1_FROZEN_BEFORE_TARGET_ACCESS",
+  "source_sha256": "12271497a9678326187d78c435a5d6c4c087eea8b512a091ec294bdde9452d09",
+  "feature_only_file_sha256": "ec32cc83f21a4566ba13feccec4f883f835e9894e9b711a6bd53dacaea6e03ff",
+  "source_article": "https://doi.org/10.1038/s41598-025-32297-z",
+  "source_dataset": "Scientific Reports 2025 supplementary 2",
+  "target_as_documented": "annual cooling energy intensity kWh/m2/year",
+  "target_column": "NOT YET CONFIRMED FROM SOURCE FILE",
+  "target_values_read": false,
+  "city_field": "Variable - Location template",
+  "source_cities": [
+    "Cairo",
+    "Riyadh",
+    "Gizan",
+    "Miami",
+    "Sevilla"
+  ],
+  "final_new_climate_test": "Miami",
+  "train_validation_calibration_cities": [
+    "Cairo",
+    "Riyadh",
+    "Gizan",
+    "Sevilla"
+  ],
+  "split_roles": {
+    "fit": 16118,
+    "climate_Miami_holdout": 5759,
+    "calibration": 3456,
+    "validation": 3454
+  },
+  "design_group_features": [
+    "Variable - court width (m)",
+    "Variable - court length (m)",
+    "Variable - Construction template",
+    "Variable - Glazing type",
+    "Variable - Window to wall %",
+    "Variable - Site orientation (°)"
+  ],
+  "source_row_ids_preserved": true,
+  "preprocessing_rule": "fit preprocessing only on fit source-row IDs",
+  "selection_rule": "primary no-base residual CFM vs CatBoost; standard and full residual as secondary frozen comparators",
+  "seeds": [
+    20262001,
+    20262002,
+    20262003,
+    20262004,
+    20262005
+  ],
+  "training_epochs_per_CFM": 80,
+  "gpu_rule": "train two independent CFM models simultaneously on GPU0 and GPU1, do not share checkpoint paths",
+  "model_config_rule": "use fixed Phase 10.1 configuration, with feature count updated from new source; no test-informed tuning",
+  "quantile_calibration": "90% split conformal on within-source calibration partition, never on Miami",
+  "primary_metric": "Miami holdout RMSE reduction: no-base five-seed CFM mixture versus frozen CatBoost",
+  "secondary_metrics": [
+    "MAE",
+    "R2",
+    "CRPS",
+    "coverage90",
+    "interval_width90",
+    "interval_score90"
+  ],
+  "test_policy": "new source labels must not be read until all model and calibration policies frozen; evaluate Miami once only",
+  "simulated_scenario_dependence": "row bootstrap underestimates uncertainty if designs/weather configurations are correlated",
+  "separate_prediction_targets": true,
+  "license_caution": "Article published under CC BY-NC-ND; verify supplementary reuse permissions before public data republication."
+}

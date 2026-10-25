@@ -1,0 +1,19 @@
+{
+  "study_fp": "d10aabb56c00c3371aeaf1209fc0ae1f4dbb6479cad6f47c85d1de554591b0fa",
+  "U_labels_evaluated_after_calibration_lock": true,
+  "calibration_seal_sha256": "8a93a604aab401cda79c15a2748e2e307601b505470253d732c1aa3daddb9dbb",
+  "calibration_count": 976,
+  "U_test_count": 1536,
+  "primary_model": "residual_without_base_feature",
+  "primary_comparator": "CatBoost",
+  "primary_RMSE_improvement_pct": 8.360238584825252,
+  "bootstrap_rowlevel_CI95": [
+    7.496907383432172,
+    9.234354913090813
+  ],
+  "unit_conflict_unresolved": true,
+  "time_horizon_unverified": true,
+  "shift_coverage_not_guaranteed": true,
+  "no_training_or_post_test_tuning": true,
+  "climate_comparison_not_like_for_like": true
+}

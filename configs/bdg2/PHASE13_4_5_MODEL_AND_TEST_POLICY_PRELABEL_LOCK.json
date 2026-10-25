@@ -1,0 +1,71 @@
+{
+  "fingerprint": "58dae34fbf7d603793df74ece48729bb85487377b8f0b570a57721546edb4045",
+  "policy": {
+    "phase": "13.3",
+    "frozen_before_calibration_and_test_meter_label_access": true,
+    "original_model_candidate": "residual_without_base_feature",
+    "candidate_origin": "Pre-specified in Phase 13.2 from prior datasets (not selected on BDG2 validation)",
+    "primary_comparison": "Five-seed no-base residual CFM mixture versus frozen CatBoost",
+    "secondary_comparisons": [
+      "RandomForest",
+      "standard CFM five-seed mixture",
+      "full residual CFM five-seed mixture"
+    ],
+    "seed_selection": "NO seed selection based on validation or independent test; use all five seeds",
+    "training_seeds": [
+      20262001,
+      20262002,
+      20262003,
+      20262004,
+      20262005
+    ],
+    "point_prediction": "Arithmetic mean of all predictive draws per row in the original source kWh scale",
+    "sampling_per_CFM_seed": 32,
+    "ode_steps": 32,
+    "sampling_seed": 20261329,
+    "sampling_setting_note": "Sampling/inference recipe fixed in Phase 13.2; no tuning on held-out labels",
+    "interval": "For each CFM, empirical 5th and 95th percentiles of pooled 5-seed draws; calibrate nonnegative additive CQR score on CAL sites only",
+    "deterministic_baseline_interval": "Train-fixed point prediction +/- split-conformal absolute-residual radius calibrated on CAL sites only",
+    "conformal_quantile": "ceil((N+1)*0.90) order statistic; separate calibration sites from fit, validation, test",
+    "conformal_caveat": "No 90% coverage guarantee under site-level distribution shift or correlated within-site observations",
+    "meter_sample_policy": "Use same source-timestamp-only deterministic 12 hours per calendar month from Phase 13.2",
+    "site_split": "Frozen Phase 13.0 site assignments; no site reallocation",
+    "heldout_label_policy": "CAL meter values only AFTER policy freeze and archive; INDEPENDENT TEST meter values only AFTER calibration lock and archive",
+    "predefined_nonfit_validity": "Drop missing, nonnumeric or negative meter readings; do not drop extreme valid test values",
+    "time_task": "Hourly electricity estimation using same-hour weather and metadata; not next-hour/day-ahead forecasting",
+    "test_use": "ONE immutable independent-site assessment; do not use test outcomes for model/hyperparameter selection",
+    "model_changes_after_validation": false,
+    "no_new_training_in_phase13_3": true,
+    "grouped_inference_caveat": "Independent test comprises three sites; report per-site results and avoid row-IID certainty claims"
+  },
+  "checkpoint_sha256": {
+    "p13_bdg2_standard_s20262001": "d335398a8d88dd3b8dae2686dafece2a5043670303a1c28fb9753411b4b41ac5",
+    "p13_bdg2_standard_s20262002": "22ded1622a1a4c788b725e4037bef45183bcc1b9476fa1de49a11cdf297e7e14",
+    "p13_bdg2_standard_s20262003": "1687b0a85e4579e388247533b8ab9243d241e52de10654c83c263817c543a75c",
+    "p13_bdg2_standard_s20262004": "b25e42ea657b7b4a430af98d4a0f0856e9de416c0dcfadffd1278ffdf563eb00",
+    "p13_bdg2_standard_s20262005": "fadec8271f8eb00a2e375cbd0057a5d0d2a1a07a12a0e483f664ca74a247a552",
+    "p13_bdg2_residual_s20262001": "dc1fcc5a7028d41d8f9ddb6c4e452a7db098b617f25f3779247c1caf781eec7e",
+    "p13_bdg2_residual_s20262002": "7e591df97ea67545d353c9b625d90ef9258b20f794f247e02fb61f349d8fa901",
+    "p13_bdg2_residual_s20262003": "096dab1e07ea944ef1e8b5aa70cfa95b19b47c6878b69a2b488f4bdbc3b66d56",
+    "p13_bdg2_residual_s20262004": "32b1706163f39359aaddaff8d30bbd11fe801e71cc47a298b95afbb8827d0473",
+    "p13_bdg2_residual_s20262005": "c197fb9747e8c9199dd6eda7dcfdf65662f0bc1f7f8b58e821cbf3cdc0b8fa05",
+    "p13_bdg2_residual_without_base_feature_s20262001": "976d3c9212a8a8b5f319ba20eccfc48ef86a1ad336be56f16e3f280dc2a3efd0",
+    "p13_bdg2_residual_without_base_feature_s20262002": "45c1d4a2fa5736840a25273657e8621ee47a95ffe4ac39347560f86349d11715",
+    "p13_bdg2_residual_without_base_feature_s20262003": "ee7c298bc5b5c6b2d5b57edc1c093ca2137e61e9a9f19123c7a537e235f7cd2f",
+    "p13_bdg2_residual_without_base_feature_s20262004": "6c99b77223c7a391284cd3aa0439d24be0c9bc6cdac415b2f9abea0170c67139",
+    "p13_bdg2_residual_without_base_feature_s20262005": "9c3d336bb8d393ee3fcecbf426a615a626d54a18ec9398320a18a79ecae74f08"
+  },
+  "cal_sites": [
+    "Rat",
+    "Robin"
+  ],
+  "test_sites": [
+    "Fox",
+    "Lamb",
+    "Peacock"
+  ],
+  "test_labels_read": false,
+  "CAL_labels_read": false,
+  "seed_policy": "All five fixed seeds; pooled draws; no seed selection",
+  "units": "hourly electricity energy kWh; contemporaneous weather, not future forecasting"
+}

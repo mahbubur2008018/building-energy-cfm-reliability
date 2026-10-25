@@ -1,0 +1,9 @@
+{
+  "calibrator_sha256": "3290c33bd497abc5e79aa3ca321c1b56fb6308a7f9efafd0aa0a90b31b26166e",
+  "completed_at": "2026-10-20T15:25:39.986004+00:00",
+  "figures_total": 136,
+  "primary_difference_kWh": 0.9755335607207108,
+  "protocol_sha256": "de778ea1f5c1634ea3f4a59599937ab005a2643e049b5702ee67a71ba9bff226",
+  "scientific_scope": "New held-out 7-building test, not out-of-city replication",
+  "status": "ONE_TIME_FROZEN_TEST_COMPLETED"
+}

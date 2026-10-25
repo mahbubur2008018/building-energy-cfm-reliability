@@ -1,0 +1,24 @@
+item,provenance,hash_verified,label
+src/phase20_gpu_flow_worker.py,Extracted from BUILDING_CFM_RESUME_LATEST.zip via CFM_PC_READONLY_PROVENANCE_EXPORT.py,PASS (P32 receipt: 2a7d300b...08),CONFIRMED_EXECUTED_SOURCE
+src/phase21_frozen_inference_worker.py,Extracted from master ZIP,PASS (pre-test anchor + P32: 98f7e864...c4),CONFIRMED_EXECUTED_SOURCE
+src/cfm_ddp_worker.py,Extracted from master ZIP via allowlist,NOT IN P32 ANCHOR SET,SOURCE_PRESENT_NOT_EXTERNALLY_ANCHORED
+src/p18_bdg2_gpu_catboost_fit_worker.py,Extracted from master ZIP via allowlist,NOT IN P32 ANCHOR SET,SOURCE_PRESENT_NOT_EXTERNALLY_ANCHORED
+src/p19_dualgpu_distributional_worker.py,Extracted from master ZIP via allowlist,NOT IN P32 ANCHOR SET,SOURCE_PRESENT_NOT_EXTERNALLY_ANCHORED
+src/phase4_standard_cfm_worker.py,Extracted from master ZIP via allowlist,NOT IN P32 ANCHOR SET,SOURCE_PRESENT_NOT_EXTERNALLY_ANCHORED
+configs/drammen/P20_PROTOCOL_LOCK.json,Extracted from master ZIP,PASS (P36 cross-ref: 24695b...34),CONFIRMED_PROTOCOL_LOCK
+configs/drammen/P21_FROZEN_INFERENCE_SETTINGS.json,Extracted from master ZIP,PASS (pre-test anchor: 307077...87),CONFIRMED_PROTOCOL_LOCK
+configs/oslo/P37E_V2_PRELABEL_ROLE_AND_PROVENANCE_AMENDMENT.json,Extracted from master ZIP,PASS (P37F + P43: 5cd2ad...d3); v1 LOST (G2),CONFIRMED_V2_AMENDMENT_V1_GAP_DISCLOSED
+configs/oslo/P40_OSLO_PREDECLARED_BUILDING_CRPS_CONTRAST.json,Extracted from master ZIP,PASS (P43 receipt: b57bda...df),CONFIRMED_PRIMARY_RESULT
+configs/oslo/P37F_PRE_CAL_IMPLEMENTATION_AND_MODEL_LOCK.json,Extracted from master ZIP,PASS (P37F lock hash verified),CONFIRMED_PROTOCOL_LOCK
+results/verified_aggregates/figures_1_8/ (23 CSVs),P49_SAFE_FIGURE_EXPORT/P49_AGGREGATE_FIGURE_EVIDENCE.zip,Per-file hashes in P49_AGGREGATE_EXPORT_HASH_MANIFEST.csv,VERIFIED_AGGREGATE_ONLY_NO_ROW_LEVEL_DATA
+audit/REPRODUCIBILITY_AUDIT_REPORT.md,AUDIT_OUTPUT/ (local audit 2026-10-23),Source document; not hashed independently,AUDIT_DOCUMENT
+audit/CFM_CHECKPOINT_HASH_RESULTS.csv,FINAL_CHECKPOINT_AUDIT/ (local audit 2026-10-23),14/14 PASS supplementary verification,CHECKPOINT_HASH_RECORD
+reproducibility/*.md (3 files),Generated from verified audit evidence on 2026-10-24,N/A (documentation),GENERATED_DOCUMENTATION
+"README.md, CITATION.cff, data/README.md",Generated from verified audit evidence on 2026-10-24,N/A (documentation),GENERATED_DOCUMENTATION
+scripts/CFM_PC_READONLY_PROVENANCE_EXPORT.py,Building_CFM_Audit/ (local audit tool),Not in P32 anchor set,UTILITY_SCRIPT
+scripts/CFM_CHECKPOINT_HASH_VERIFY.py,Building_CFM_Audit/ (local audit tool),Not in P32 anchor set,UTILITY_SCRIPT
+BUILDING_CFM_RESUME_LATEST.zip,EXCLUDED — master archive (2.3 GiB),SHA-256: 236145bf...93 (audit record),EXCLUDED_MASTER_ARCHIVE
+BUILDING_CFM_COMPLETE_P43_*.zip,EXCLUDED — handover archive (92 MB),Not computed for release,EXCLUDED_HANDOVER_ARCHIVE
+raw_data/ (all meter data),EXCLUDED — raw meter data; no redistribution rights confirmed,NOT READ in audit,EXCLUDED_RAW_DATA
+model_checkpoints/ (14 .pt/.cbm/.pkl files),EXCLUDED — binaries; hashes only in reproducibility/CHECKPOINT_HASH_MANIFEST.md,14/14 PASS hashes recorded,EXCLUDED_BINARIES_HASH_ONLY
+journal_figures/ (696 entries),EXCLUDED — not individually reviewed; filename hints in P48 CSV only,NOT READ in audit,EXCLUDED_UNREVIEWED

@@ -1,0 +1,5 @@
+Split,Model,CRPS_kWh
+Validation,NGBoost,10.851077296628878
+Validation,Direct CFM,12.422009880000475
+Frozen test,NGBoost,16.56801903776195
+Frozen test,Direct CFM,15.581622614061487

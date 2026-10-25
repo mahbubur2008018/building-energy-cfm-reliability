@@ -1,0 +1,10 @@
+{
+  "decision": "Proceed only under openly documented V2 pre-label amendment; do not claim original hash recovered",
+  "labels_remained_sealed_prior_to_lock": true,
+  "original_reported_v1_hash_unverifiable_without_lost_file": "f73d55d11f7e370bfa083c054a66f2401f9ef7523edf3dc12b7a0c86ebf7dd2a",
+  "reconstructed_header_metadata_hash": "cd5b935bba5056f8f67e897d018b29a40cfe24b81023692bf44b1289820eaed3",
+  "role_allocation_sha256": "917ee8e5148661475bf93c8e276be33a482d620af884433cdb1232954d29df01",
+  "source_report_is_not_old_P37C": true,
+  "study_stage": "PRE-CALIBRATION_AND_PRE-TEST",
+  "v2_amendment_hash": "5cd2adfcdc4f87a29cda40b2093a1060ec20d726fb311456961fcf7d5464bad3"
+}

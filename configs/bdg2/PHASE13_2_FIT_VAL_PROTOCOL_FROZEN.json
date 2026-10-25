@@ -1,0 +1,84 @@
+{
+  "fingerprint": "3dc009c414c0d7cfb3877fb84b91cdcab1ba1f8a804f276a31cf2d3a7cf42962",
+  "protocol": {
+    "protocol": "BDG2-P13.2-fit-only-preprocess-site-OFF-v1",
+    "energy_label": "meter electricity kWh summed per hour",
+    "forecast_definition": "Same-hour weather-conditioned estimation, NOT forecast",
+    "weather_time": "source-local exact timestamp join; duplicate weather hours keep first",
+    "weather_features": [
+      "airTemperature",
+      "cloudCoverage",
+      "dewTemperature",
+      "precipDepth1HR",
+      "precipDepth6HR",
+      "seaLvlPressure",
+      "windDirection",
+      "windSpeed"
+    ],
+    "safe_metadata": [
+      "sqm",
+      "yearbuilt",
+      "numberoffloors",
+      "primaryspaceusage",
+      "heatingtype"
+    ],
+    "excluded_from_inputs": [
+      "building_id",
+      "site_id",
+      "eui",
+      "site_eui",
+      "source_eui",
+      "energystarscore",
+      "electricity",
+      "building_id_kaggle",
+      "site_id_kaggle"
+    ],
+    "time_sampling_seed": 20261320,
+    "sampled_hours_per_calendar_month": 12,
+    "training_site_meter_QC": "80% valid, >=1000 hours, no negatives; Phase 13.1 fixed",
+    "validation_meter_policy": "all meters in frozen val sites; exclude only missing/negative hourly records",
+    "cv": "5-fold GroupKFold by FIT SITE (not by row or by building)",
+    "training_target_transform": "log1p(kWh) standardized with FIT mean and std",
+    "catboost": {
+      "iterations": 450,
+      "depth": 7,
+      "learning_rate": 0.055,
+      "l2_leaf_reg": 5,
+      "loss_function": "RMSE",
+      "random_seed": 20261320,
+      "verbose": false,
+      "allow_writing_files": false,
+      "thread_count": 4
+    },
+    "random_forest": {
+      "n_estimators": 120,
+      "max_depth": 18,
+      "min_samples_leaf": 4,
+      "max_features": 0.8,
+      "n_jobs": 4,
+      "random_state": 20261320
+    },
+    "seeds": [
+      20262001,
+      20262002,
+      20262003,
+      20262004,
+      20262005
+    ],
+    "CFM_variants": {
+      "standard": 256,
+      "residual": 128,
+      "residual_without_base_feature": 128
+    },
+    "epochs": 80,
+    "batch_per_gpu": 256,
+    "learning_rate": 0.001,
+    "zip_every_epochs": 10,
+    "validation_draws_per_model": 32,
+    "ode_steps": 32,
+    "sample_seed": 20261329,
+    "metric_protocol": "Validation exploratory, kWh RMSE/MAE/R2, CRPS, 90% raw coverage, interval score",
+    "calibration_and_independent_test_meter_labels_used": false,
+    "fixed_model_candidate": "residual_without_base_feature (from earlier phases; exploratory transfer)"
+  }
+}

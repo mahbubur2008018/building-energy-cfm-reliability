@@ -1,0 +1,16 @@
+{
+  "all_flow_seeds": [
+    20262011,
+    20262012,
+    20262013
+  ],
+  "flow_eval_batch": 256,
+  "flow_mc_draws": 64,
+  "flow_ode_steps": 32,
+  "hidden": 128,
+  "inverse_log_max": 30.0,
+  "inverse_log_min": 0.0,
+  "mc_rng_offset": 89123,
+  "mu": 3.2890946794041658,
+  "std": 1.1051499449688522
+}

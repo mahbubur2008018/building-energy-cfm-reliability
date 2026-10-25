@@ -1,0 +1,11 @@
+{
+  "calibrator_sha256": "37f6d4ff9ea0af08f071edfdf3fbe9ceeff17452d3550bc338f348f84634720d",
+  "implementation_sha256": "0a24ba04a2336ae445b84b407b1e707dbebd61c0d8f3474c2c7ea80bb4938ead",
+  "metrics_sha256": "58d8b7cfe47884f97100f6d5c7bb9dfe682a7d48475290039bc96a3a986f9764",
+  "number_independent_building_clusters": 36,
+  "old_historical_test_labels_accessed": false,
+  "original_138_figures_unchanged": true,
+  "primary_result_sha256": "b57bda7c7ac326f18691c0abf1e3a388f3a44908897f7e4927e9134fd7b477df",
+  "protocol_sha256": "5cd2adfcdc4f87a29cda40b2093a1060ec20d726fb311456961fcf7d5464bad3",
+  "status": "OSLO_ONE_TIME_TEST_COMPLETE_NO_MODEL_RETRAIN_OR_RETEST"
+}

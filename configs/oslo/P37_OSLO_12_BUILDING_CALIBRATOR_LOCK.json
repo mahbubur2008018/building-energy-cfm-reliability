@@ -1,0 +1,23 @@
+{
+  "calibration_buildings": 12,
+  "calibration_rows": 51794,
+  "calibrator_method": "pooled rowwise nonnegative 90%-rank additive correction",
+  "implementation_sha256": "0a24ba04a2336ae445b84b407b1e707dbebd61c0d8f3474c2c7ea80bb4938ead",
+  "no_building_group_coverage_guarantee": true,
+  "protocol_sha256": "5cd2adfcdc4f87a29cda40b2093a1060ec20d726fb311456961fcf7d5464bad3",
+  "q_by_model": {
+    "CatBoost Q05/Q95 raw": 39.36441053066406,
+    "NGBoost Normal (40k FIT cap)": 30.33584899902344,
+    "direct CFM seed 20262011": 46.13444824218749,
+    "direct CFM seed 20262012": 43.86473388671875,
+    "direct CFM seed 20262013": 41.43459822167969,
+    "residual CFM seed 20262011": 50.698724365234376,
+    "residual CFM seed 20262012": 40.48378448486328,
+    "residual CFM seed 20262013": 40.1292610168457,
+    "residual_nobase CFM seed 20262011": 41.82173698828125,
+    "residual_nobase CFM seed 20262012": 39.172081176757814,
+    "residual_nobase CFM seed 20262013": 40.7951814046875
+  },
+  "test_labels_read": false,
+  "version": "OSLO_P37F_TO_P40_v2_TRANSPARENT_PRELABEL_AMENDMENT"
+}

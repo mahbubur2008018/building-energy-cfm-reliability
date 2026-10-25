@@ -1,0 +1,67 @@
+{
+  "CAL_TEST_LABELS_OPENED": false,
+  "building_metadata_read_for_role_definition": true,
+  "label_files_allowed_in_phase20": [
+    "fit",
+    "validation"
+  ],
+  "roles": {
+    "calibration": [
+      "6399",
+      "6400",
+      "6413",
+      "6425",
+      "6437"
+    ],
+    "fit": [
+      "6396",
+      "6397",
+      "6398",
+      "6402",
+      "6407",
+      "6408",
+      "6409",
+      "6410",
+      "6412",
+      "6414",
+      "6417",
+      "6418",
+      "6419",
+      "6420",
+      "6421",
+      "6422",
+      "6424",
+      "6431",
+      "6433",
+      "6434",
+      "6436",
+      "6439",
+      "6440",
+      "6441",
+      "6443",
+      "6444",
+      "6445"
+    ],
+    "test": [
+      "6405",
+      "6411",
+      "6416",
+      "6426",
+      "6429",
+      "6432",
+      "6442"
+    ],
+    "validation": [
+      "6404",
+      "6406",
+      "6415",
+      "6423",
+      "6428",
+      "6438"
+    ]
+  },
+  "source_md5": "13640361f6fcb2bf428dfad3cfa60888",
+  "source_sha256": "20b6795f859ff62ccd39a2af12078423535223e5cfa285d960364b3f20952a11",
+  "split_created_without_energy_labels": true,
+  "split_salt": "COFACTOR-2026-P20-PROSPECTIVE-BUILDING-LOCK-v1"
+}

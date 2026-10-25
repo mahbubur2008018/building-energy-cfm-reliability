@@ -1,0 +1,51 @@
+{
+  "fingerprint": "ac5e08ec1e1dcefea7d8ab2d6c03e4d317d844c3ca8aac43bbc64101efe0d727",
+  "settings": {
+    "version": "phase10_1_exploratory_edcs_v1",
+    "dataset": "Zenodo 15073304 EDCS v5.0",
+    "dataset_sha256": "328df85f90f0618a23d0824af90e1125268c7bee0cbf7a1253057db7c3c29646",
+    "target_header": "TOTAL_LOAD",
+    "target_semantics": "Source-reported simulated heating + cooling load (not Cairo total site energy)",
+    "variable_table_units": "kWh/m²",
+    "methods_text_units": "MWh/m²",
+    "temporal_horizon": "UNKNOWN; DO NOT ASSERT annual",
+    "metadata_conflict": "Unit ambiguity unresolved; this exercise is exploratory and not confirmatory external evaluation",
+    "primary_candidate": "residual_without_base_feature",
+    "comparison": "CatBoost, standard CFM, full residual CFM, no-base residual CFM",
+    "source_split": "fit, validation, calibration on L/O; U shape kept sealed",
+    "gpu_model_seeds": [
+      20262001,
+      20262002,
+      20262003,
+      20262004,
+      20262005
+    ],
+    "folds": 5,
+    "training_epochs": 80,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "draws": 64,
+    "ode_steps": 32,
+    "sampling_seed": 20262055,
+    "variants": {
+      "standard": {
+        "hidden": 256
+      },
+      "residual": {
+        "hidden": 128
+      },
+      "residual_without_base_feature": {
+        "hidden": 128
+      }
+    },
+    "checkpoint_zip_every_epochs": 10,
+    "two_models_train_independently_in_parallel": true,
+    "test_shape": "U",
+    "test_labels_used": false,
+    "evaluation": "L/O validation only (model-selection data, exploratory)",
+    "note": "Protocol amended before any source label was read, only for an EXPLORATORY source-native task; original strict confirmatory gate remains unsatisfied."
+  },
+  "citation": "Data in Brief 61 (2025) 111834; Zenodo 15073304",
+  "pre_label_amendment": true,
+  "limitation": "Original published unit/horizon discrepancy is unresolved."
+}

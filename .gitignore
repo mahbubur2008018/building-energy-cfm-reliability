@@ -1,0 +1,50 @@
+# Research archive master ZIP - MUST NOT be committed (~2.3 GiB)
+BUILDING_CFM_RESUME_LATEST.zip
+BUILDING_CFM_COMPLETE_P43_NEW_CHAT_HANDOVER*.zip
+
+# Large binary model files - not redistributed
+*.pt
+*.pkl
+*.cbm
+*.npz
+*.h5
+*.hdf5
+
+# Raw meter data - NEVER commit
+raw_data/
+meter_data/
+*_test_labels*
+*_cal_labels*
+*observed_predicted*
+*actual_vs_predicted*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Private audit working files
+scratch/
+PRIVATE_*

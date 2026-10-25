@@ -1,0 +1,23 @@
+{
+  "calibration_buildings": 5,
+  "calibration_rows": 14864,
+  "created_at": "2026-10-20T15:22:25.304017+00:00",
+  "no_building_level_distribution_free_guarantee": true,
+  "no_new_test_labels_read": true,
+  "protocol_sha256": "de778ea1f5c1634ea3f4a59599937ab005a2643e049b5702ee67a71ba9bff226",
+  "q_by_model": {
+    "CatBoost Q05/Q95 raw": 9.065311279296878,
+    "NGBoost Normal (40k FIT cap)": 7.714052963256837,
+    "direct CFM seed 20262011": 14.371931076049805,
+    "direct CFM seed 20262012": 15.393730163574219,
+    "direct CFM seed 20262013": 16.036067962646484,
+    "residual CFM seed 20262011": 5.171211242675781,
+    "residual CFM seed 20262012": 2.638763427734375,
+    "residual CFM seed 20262013": 3.18376106262207,
+    "residual_nobase CFM seed 20262011": 2.2056198120117188,
+    "residual_nobase CFM seed 20262012": 1.437433471679686,
+    "residual_nobase CFM seed 20262013": 1.517308235168457
+  },
+  "rowwise_empirical_rank": "ceil((n+1)*0.9)",
+  "sample_policy": "P20 every 11th hour before fixed QC"
+}
