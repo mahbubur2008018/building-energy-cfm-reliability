@@ -1,34 +1,23 @@
-﻿cff-version: 1.2.0
-message: >-
-  If you use this code or results, please cite as below.
-  NOTE: DOI not yet assigned. Repository URL will be updated after creation.
-
-title: Building Energy Conditional Flow Matching - Six-Cohort Reliability Study
+cff-version: 1.2.0
+message: "If you use this research code, please cite the software repository. Cite the version-specific Zenodo DOI once it is available."
+title: "Building Energy Conditional Flow Matching: Six-Cohort Reliability Study"
 type: software
-
 authors:
-  - family-names: Rahman
-    given-names: Md. Mahbubur
-    orcid: https://orcid.org/0009-0004-0252-9140
-
-repository-code: https://github.com/mahbubur2008018/building-energy-cfm-reliability
-
+  - given-names: "Md. Mahbubur"
+    family-names: "Rahman"
+    affiliation: "Department of Mechatronics Engineering, Rajshahi University of Engineering & Technology (RUET), Rajshahi, Bangladesh"
+    orcid: "https://orcid.org/0009-0004-0252-9140"
+repository-code: "https://github.com/mahbubur2008018/building-energy-cfm-reliability"
+license: MIT
 abstract: >-
-  Source code, protocol locks, and verified aggregate results for a six-cohort
-  probabilistic building energy estimation study using Conditional Flow Matching.
-  Evaluates CFM and distributional baselines across Drammen COFACTOR, EDCS, Miami,
-  BDG2, and Oslo COFACTOR-SBHUB datasets. Includes Drammen-to-Oslo transfer experiment.
-  Targets Building Services Engineering Research and Technology (BSER&T).
-
+  Historical Python source code, protocol records and verified aggregate evidence for a six-cohort
+  study of direct and residual conditional flow matching for building-energy estimation under
+  distribution shifts, including frozen Drammen building holdout and Oslo school transfer.
 keywords:
   - building energy estimation
   - conditional flow matching
-  - probabilistic forecasting
-  - conformal prediction
+  - probabilistic regression
+  - distribution shift
+  - model reliability
   - CatBoost
   - NGBoost
-  - building services engineering
-
-license: MIT
-date-released: 2026-10-25
-doi: TO_BE_ASSIGNED_AFTER_ZENODO_SUBMISSION

@@ -1,287 +1,83 @@
-# Building Energy Conditional Flow Matching - Six-Cohort Reliability Study
+# Building Energy Conditional Flow Matching: Six-Cohort Reliability Study
 
-> **Repository status:** Public release — MIT License (Copyright 2026 Md. Mahbubur Rahman)
-> **Target journal:** Building Services Engineering Research and Technology (BSER&T)
-> **Prepared:** 2026-10-24 | **Published:** 2026-10-25
-> **Author:** Md. Mahbubur Rahman | ORCID: https://orcid.org/0009-0004-0252-9140
+**Author:** Md. Mahbubur Rahman  
+**Affiliation:** Department of Mechatronics Engineering, Rajshahi University of Engineering & Technology (RUET), Rajshahi, Bangladesh  
+**ORCID:** https://orcid.org/0009-0004-0252-9140  
+**Repository:** https://github.com/mahbubur2008018/building-energy-cfm-reliability  
+**Licence (original code):** MIT  
+**Status:** Public source-code and research-evidence repository; Zenodo software DOI pending.
 
----
+## Purpose and contribution
 
-## Overview
+This repository supports a six-cohort evaluation of **conditional flow matching (CFM)** for building-energy estimation under geometry, climate, meter-site, building and city shifts. The investigation tests (i) source-specific performance of direct and residual CFM variants, (ii) predictive accuracy and calibration with building-level comparisons, and (iii) numerical plausibility of extreme predictions. The study is an **empirical reliability evaluation**, not a new CFM architecture or a universal model-superiority claim.
 
-This repository contains the source code, historical protocol locks, and verified aggregate results for a
-six-cohort probabilistic building energy estimation study using **Conditional Flow Matching (CFM)**.
-The study evaluates CFM against established distributional baselines across diverse building datasets
-and geographical contexts, targeting a journal submission to BSER&T.
+The six cohorts have different physical outcomes, units and evaluation arrangements. Their errors should not be pooled. The Drammen models alone were transferred unchanged to Oslo; the other historical cohorts have their own source-specific modelling records.
 
-**This is a single-author study.** Author identity and ORCID are to be completed before public release
-(see CITATION.cff).
+## Six evaluation cohorts
 
----
+| Cohort | Shift / test set | Outcome and role |
+|---|---|---|
+| **1. Cairo** (simulated) | Height-out-of-distribution; **2,405** held-out designs | Annual building energy, kWh/year; historical source-specific comparison |
+| **2. EDCS** (simulated) | Unseen U-shaped courtyards; **1,536** held-out records | Simulated heating-plus-cooling load; reported kWh/m² convention, with source-unit ambiguity documented in the manuscript |
+| **3. Five-climate / Miami** (simulated) | Unseen Miami climate; **5,759** designs | Source-authored energy-per-floor-area target, reported separately |
+| **4. BDG2** (measured) | Three unseen sites; **92,356** hourly records | Hourly electricity use, kWh; predictive-tail diagnostics retained |
+| **5. Drammen COFACTOR** (measured) | **7** test buildings; **23,136** hourly records | Hourly imported electricity (kWh); preselected model-pair and building-level comparison |
+| **6. Oslo COFACTOR-SBHUB** (measured) | **36** test schools; **224,709** hourly records | Hourly imported electricity (kWh); unchanged frozen Drammen models transferred to another city |
 
-## Research Objectives
+**Drammen frozen split:** 27 FIT buildings (88,584 rows), 6 VAL (19,467), 5 CAL (14,864) and 7 TEST (23,136).  
+**Oslo frozen split:** 12 CAL schools (51,794 rows) and 36 TEST schools (224,709); 48 metadata-eligible schools overall. The Oslo models were not retrained.
 
-1. Evaluate whether CFM provides competitive probabilistic energy forecasts compared to strong gradient
-   boosting and distributional regression baselines across geographically and architecturally diverse
-   building datasets.
-2. Assess calibration reliability of conformal prediction intervals across source-specific holdout sets.
-3. Conduct an external transfer experiment: apply frozen Drammen-trained models unchanged to an
-   independent Oslo school building dataset.
-4. Characterise the descriptive magnitude and statistical uncertainty of any observed performance
-   differences, without overclaiming statistical significance.
+## CFM variants and baselines
 
----
+| Variant | Modelling arrangement | Role of CatBoost |
+|---|---|---|
+| **Direct CFM** | Conditional flow predicts the transformed energy target directly | No anchor |
+| **Full Residual CFM** | Conditional flow predicts residuals relative to a CatBoost point prediction | Anchor included in flow conditioning and final reconstruction |
+| **No-base Residual CFM** | Conditional flow predicts CatBoost-relative residuals without anchor as a conditioning input | Anchor used for residual-target construction and final reconstruction, **not** flow conditioning |
 
-## Six Cohorts
+**Historical baselines (according to cohort):** CatBoost point regression, CatBoost quantiles, Random Forest and NGBoost Normal. They were not all trained or compared with identical resources in every cohort.
 
-| # | Cohort | Dataset | Buildings | Study role |
-|---|--------|---------|-----------|------------|
-| 1 | **Drammen COFACTOR FIT/VAL** | Drammen COFACTOR v3 (Zenodo: 10.5281/zenodo.14752397) | 33 FIT + 5 CAL (prospective) | Training cohort for all Drammen-trained models |
-| 2 | **Drammen COFACTOR TEST** | Drammen COFACTOR v3 | 7 TEST buildings | Frozen one-time evaluation (P21); primary Drammen result |
-| 3 | **EDCS U-geometry (Cairo)** | EDCS (Cairo, public) | Grouped by building height | Source-specific OOD evaluation; height-shift sensitivity |
-| 4 | **Miami five-climate holdout** | EDCS five-climate | Miami climate held out | Held-out climate; frozen calibration-to-Miami transfer |
-| 5 | **BDG2 three-site** | Building Data Genome 2 | Three sites | Point-error and extremes evaluation |
-| 6 | **Oslo COFACTOR-SBHUB** | Oslo COFACTOR-SBHUB (DOI: 10.60609/czgf-5e46) | 12 CAL + 36 TEST (48 total) | External transfer; frozen Drammen models applied unchanged |
+## Principal frozen findings
 
-> **Critical note:** Each cohort used models appropriate to its role. Only the frozen Drammen-trained
-> models (P20/P21 checkpoints) were transferred unchanged to Oslo. The six cohorts did not share a
-> single trained model. No cross-cohort superiority claim is made.
+| Evaluation | Archived descriptive finding |
+|---|---|
+| Drammen | Direct CFM row-weighted CRPS **15.582 kWh** versus NGBoost **16.568 kWh**; equal-building mean (NGBoost minus Direct) **+0.976 kWh**, descriptive 95% building-bootstrap interval **[−2.152, +4.076]** |
+| Oslo | Direct CFM row-weighted CRPS **38.593 kWh** versus NGBoost **40.609 kWh**; equal-building mean **+1.871 kWh**, descriptive 95% interval **[−2.266, +6.366]**; NGBoost performed better on **21 of 36** schools |
+| Oslo calibration | Nominal-90% interval coverage: Direct CFM **84.86%**, NGBoost **79.64%** |
+| BDG2 | Direct CFM generated **163** predictions above **1,000,000 kWh** for an hourly record; the original extreme tail was retained |
 
----
+Both primary building-bootstrap intervals cross zero. These descriptive comparisons do **not** establish universal or statistically conclusive superiority of CFM. The BDG2 numerical extremes were not post-hoc clipped or excluded.
 
-## Three Source-Specific Evaluations vs. Transfer Study
+## Repository contents
 
-This study includes **four historical source-specific evaluations** and **one transfer study**:
+- [`src/`](src/) — six archived Python worker scripts; historical research artefacts, not a stand-alone rerun pipeline.
+- [`configs/`](configs/) — source-specific protocol and model configuration records, including frozen building-role receipts.
+- [`scripts/`](scripts/) — read-only provenance and checkpoint hash verification utilities.
+- [`results/verified_aggregates/`](results/verified_aggregates/) — selected original figure-source aggregate CSVs and figure metadata.
+- [`reproducibility/`](reproducibility/) — protocol overview, environment disclosure and checkpoint-hash references.
+- [`audit/`](audit/) — historical provenance audit receipts and G1/G2/G3 evidence notes.
+- [`data/README.md`](data/README.md) — original dataset citations, access guidance and data-rights cautions.
 
-### Source-specific evaluations (model trained on each source)
-1. Cairo / EDCS: height-group OOD shift analysis
-2. EDCS U-geometry: calibration-to-holdout coverage assessment
-3. Miami: five-climate held-out climate evaluation
-4. BDG2: three-site extreme-event and point-error evaluation
+The public repository does **not** redistribute the complete Kaggle resume state, raw meter observations, original test-label arrays or model checkpoint binaries. Checkpoint hash receipts are available for provenance review. The historical scripts contain Kaggle-specific file paths and require the original permitted datasets and full preprocessing context to execute.
 
-### Transfer study (frozen Drammen models applied unchanged)
-5. **Drammen-to-Oslo transfer (Cohort 6):** Seven-building Drammen TEST result (Cohorts 1-2) followed
-   by 36-school Oslo TEST using the identical frozen checkpoints. These represent distinct experimental
-   arms; the Oslo result is a transfer evaluation, not an in-domain replication.
+## Reproducibility and scientific scope
 
----
+**G1 — Environment provenance.** No authenticated `pip freeze`, container image digest or complete environment lock from the original Kaggle training period was preserved. Versions recorded during the separate P32 audit session must not be represented as training-time versions. See [`audit/G1_ENVIRONMENT_RECONSTRUCTION_BEST_EFFORT.md`](audit/G1_ENVIRONMENT_RECONSTRUCTION_BEST_EFFORT.md).
 
-## Model Variants
+**G2 — Oslo protocol amendment.** The original P37E v1 lock bytes were lost following a Kaggle session restart. The controlling available record is the v2 metadata-only amendment created while Oslo energy labels were still sealed. The v2 hash is not the recovered v1 hash. See [`audit/G2_OSLO_V1_LOSS_FORMAL_DISCLOSURE.md`](audit/G2_OSLO_V1_LOSS_FORMAL_DISCLOSURE.md).
 
-Three CFM architectures were evaluated:
+**G3 — Unequal computational budgets.** Drammen NGBoost used **40,000** FIT rows; the CFM models followed their separately archived sampling, early-stopping and GPU configurations. These models were not compute matched. See [`audit/G3_COMPUTE_BUDGET_BEST_EFFORT.md`](audit/G3_COMPUTE_BUDGET_BEST_EFFORT.md).
 
-| Variant | CatBoost anchor in flow conditioning? | CatBoost in reconstruction? | Target construction |
-|---------|--------------------------------------|----------------------------|---------------------|
-| **Direct CFM** | No | No | Raw energy target directly |
-| **Full Residual CFM** | Yes - anchor included in flow conditioning | Yes | CatBoost residual; anchor added at reconstruction |
-| **No-base Residual CFM** | **No** - anchor excluded from flow conditioning | Yes | CatBoost residual for target/reconstruction; anchor **not** passed to flow |
+The scripts and archived aggregates enable inspection of the reported evidence. They do not, without the controlled dataset inputs, full original execution state and training environment, guarantee complete byte-for-byte end-to-end reproduction. **No new model training or previously opened TEST evaluation was performed to prepare this repository.**
 
-Each CFM variant was trained with three random seeds: {20262011, 20262012, 20262013}.
+## Data access
 
----
+The original datasets remain with their respective providers. Follow [`data/README.md`](data/README.md) for original links, role protocols and licence/redistribution requirements. Dataset-provider permissions are separate from this repository's MIT licence for the author's original code.
 
-## Baseline Methods
+## Citation and DOI
 
-| Baseline | Description | Notes |
-|----------|-------------|-------|
-| **CatBoost point anchor** | Point prediction; tree depth 6, 400 iterations | Full FIT rows |
-| **CatBoost Quantiles (Q05/Q50/Q95)** | Quantile regression; 300 iterations | Full FIT rows |
-| **Random Forest** | Scikit-learn ensemble | Source-specific use |
-| **NGBoost Normal** | NGBoost with Normal distribution; 120 estimators, LR=0.05 | Capped at 40,000 FIT rows - **unequal compute** |
-
----
-
-## Oslo Cohort: Building Roles
-
-| Role | Count | Method |
-|------|-------|--------|
-| Calibration (CAL) | 12 buildings | SHA-256 of fixed public salt + filename |
-| Test (TEST) | 36 buildings (7 schools) | Same deterministic allocation |
-| Total | 48 buildings | Oslo COFACTOR-SBHUB dataset |
-
-> **Oslo v1 provenance disclosure:** The original P37E v1 lock file was lost during a Kaggle session
-> restart. A v2 amendment was created immediately after, with all labels still sealed. This is
-> transparently disclosed in udit/G2_OSLO_V1_LOSS_FORMAL_DISCLOSURE.md.
-
-> **Oslo primary result:** Mean equal-building CRPS delta (NGBoost40k minus DirectCFM seed 20262013)
-> = **+1.871 kWh** (favours Direct CFM). Bootstrap 95% CI: **[-2.27, +6.37] kWh** - CI spans zero.
-> Result is descriptive only; no claim of statistical significance is made.
-
----
-
-## Drammen Cohort: Building Roles and Primary Result
-
-| Role | Count | Description |
-|------|-------|-------------|
-| FIT | 33 buildings | Model training |
-| CAL | 5 buildings | Conformal calibration |
-| TEST | 7 buildings | One-time frozen evaluation (P21, 2026-10-20 UTC) |
-
-> **Drammen primary result:** 7-building equal-building bootstrap CI for best CFM vs best baseline
-> **spans zero** ([-2.15, +4.08] kWh). Result is descriptive only.
-
----
-
-## Key Reproducibility Parameters
-
-| Parameter | Value | Source |
-|-----------|-------|--------|
-| CFM seeds | 20262011, 20262012, 20262013 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| NGBoost seed | 20262009 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| Validation draw seed | 20262019 | P36 protocol |
-| Oslo bootstrap seed | 20263701 | configs/oslo/P37F_PRE_CAL_IMPLEMENTATION_AND_MODEL_LOCK.json |
-| Flow epochs (max / min / patience) | 60 / 18 / 12 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| ODE solver steps | 32 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| MC draws | 64 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| NGBoost FIT-row cap | 40,000 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| Sample-every-nth (FIT subsampling) | 11 | configs/drammen/P20_PROTOCOL_LOCK.json |
-| Bootstrap repetitions (Oslo) | 10,000 | configs/oslo/P37F_PRE_CAL_IMPLEMENTATION_AND_MODEL_LOCK.json |
-| GPU requirement | 2x CUDA GPUs | configs/drammen/P20_PROTOCOL_LOCK.json |
-
----
-
-## Source Code
-
-Six historical scripts are provided in src/, extracted from the verified provenance export
-(SHA-256 anchors in udit/REPRODUCIBILITY_AUDIT_RESULTS.csv):
-
-| Script | P32 Hash Status | Role |
-|--------|----------------|------|
-| phase20_gpu_flow_worker.py | HASHED (PASS) | CFM training worker (DDP, multi-GPU) |
-| phase21_frozen_inference_worker.py | VERIFIED (PASS, pre-test anchor) | Frozen inference + calibration |
-| cfm_ddp_worker.py | Not in P32 anchor set | DDP multi-GPU wrapper |
-| p18_bdg2_gpu_catboost_fit_worker.py | Not in P32 anchor set | BDG2 CatBoost baseline training |
-| p19_dualgpu_distributional_worker.py | Not in P32 anchor set | Distributional baselines |
-| phase4_standard_cfm_worker.py | Not in P32 anchor set | Earlier-phase CFM worker |
-
-> All scripts are presented exactly as extracted from the archived master ZIP. No code was
-> modified or reconstructed. Scripts contain Kaggle-specific absolute paths (/kaggle/working/)
-> which must be adapted for any reproduction attempt. These are historical records, not
-> ready-to-run scripts.
-
-**Code patch record:**
-- Patch P20.0.2-seed-checkpoint-variable-shadowing: applied 2026-10-20T14:35:53 UTC.
-- Previous SHA-256: 5a16cb19...ce -> Fixed: 2a7d300b...08. No checkpoint files changed.
-- See configs/drammen/P20_WORKER_SOURCE_PATCH_AUDIT.json.
-
----
-
-## Reproducibility Limitations
-
-> **IMPORTANT: Full end-to-end reproduction from this repository alone is not possible.**
-
-### 1. Training environment not authenticated (HIGH severity)
-No requirements.txt, conda environment.yml, or pip freeze was saved during the original
-Kaggle training session (2026-10-19 to 2026-10-20 UTC). Package versions cannot be certified.
-Post-hoc audit (P32, 2026-10-21) recorded: Python 3.13.15, PyTorch 2.11.0+cu128,
-CatBoost 1.2.10, scikit-learn 1.6.1 - these are NOT verified training-time versions.
-See udit/G1_ENVIRONMENT_RECONSTRUCTION_BEST_EFFORT.md.
-
-### 2. Oslo v1 lock permanently lost (HIGH severity)
-The original P37E v1 role-allocation lock was lost on Kaggle session restart. A v2 amendment
-was created with all labels still sealed; its SHA-256 is verified (PASS). The v1 bytes
-cannot be recovered. See udit/G2_OSLO_V1_LOSS_FORMAL_DISCLOSURE.md.
-
-### 3. Unequal compute budgets (HIGH severity)
-NGBoost trained on 40,000 FIT rows; CFM used all available FIT rows with internal early stopping
-on two CUDA GPUs. No equal-compute superiority claim is made.
-See udit/G3_COMPUTE_BUDGET_BEST_EFFORT.md.
-
-### 4. Model checkpoint weights not redistributed
-Checkpoint SHA-256 hashes (14/14 PASS verified against P37F lock) are in
-udit/CFM_CHECKPOINT_HASH_RESULTS.csv. Weight binaries are excluded due to size (~2.3 GiB master archive).
-
-### 5. Kaggle training session closed
-The original training session (Kaggle, 2026-10-19 to 2026-10-20 UTC) is closed and cannot
-be restarted for environment verification. Approximate training wall-time: 1.0-1.5 hours on two
-CUDA GPUs, reconstructed from timestamp evidence.
-
-### 6. Both primary CIs span zero
-- Drammen 7-building bootstrap CI: [-2.15, +4.08] kWh - spans zero.
-- Oslo 36-building bootstrap CI: [-2.27, +6.37] kWh - spans zero.
-Both results are descriptive only. No claim of statistically significant CFM superiority is made.
-
----
-
-## Data Access
-
-Raw electricity meter data **cannot be distributed from this repository**. Obtain from official sources:
-
-| Dataset | Source | DOI / Link |
-|---------|--------|-----------|
-| Drammen COFACTOR v3 | Zenodo | https://zenodo.org/records/14752397 |
-| Oslo COFACTOR-SBHUB | Norwegian data archive | https://doi.org/10.60609/czgf-5e46 |
-| EDCS (Cairo, five-climate) | EDCS consortium | See data/README.md |
-| BDG2 | Building Data Genome Project | See data/README.md |
-
-See data/README.md for full dataset descriptions, licences, split protocols, and access instructions.
-
----
-
-## Verified Hash Records
-
-| Verification | Result | Source |
-|-------------|--------|--------|
-| Phase 21 frozen inference worker (pre-test anchor) | PASS | audit/REPRODUCIBILITY_AUDIT_RESULTS.csv |
-| Phase 21 inference settings (pre-test anchor) | PASS | audit/REPRODUCIBILITY_AUDIT_RESULTS.csv |
-| Phase 20 training worker (P32 receipt) | PASS | audit/REPRODUCIBILITY_AUDIT_RESULTS.csv |
-| Phase 20 training config (P32 receipt) | PASS | audit/REPRODUCIBILITY_AUDIT_RESULTS.csv |
-| Oslo v2 amendment (P37F + P43 receipts) | PASS | audit/REPRODUCIBILITY_AUDIT_RESULTS.csv |
-| Oslo primary result JSON (P43 receipt) | PASS | audit/REPRODUCIBILITY_AUDIT_RESULTS.csv |
-| All 14 P20 model checkpoints (P37F lock) | 14/14 PASS | audit/CFM_CHECKPOINT_HASH_RESULTS.csv |
-| Total verifiable hashes | 13/13 PASS | audit/REPRODUCIBILITY_AUDIT_REPORT.md |
-
----
-
-## Repository Structure
-
-`
-building-energy-cfm-reliability/
-|-- README.md
-|-- CITATION.cff
-|-- LICENSING_TO_CONFIRM.md
-|-- .gitignore
-|-- src/                              # 6 vetted historical scripts
-|-- configs/                          # Protocol locks by cohort
-|   |-- drammen/                      # 14 Drammen P20/P21 lock files
-|   |-- oslo/                         # 10 Oslo P37/P40 lock files
-|   |-- edcs/                         # 3 EDCS lock files
-|   |-- miami/                        # 3 Miami lock files
-|   +-- bdg2/                         # 2 BDG2 lock files
-|-- scripts/                          # Provenance verification utilities
-|-- results/
-|   +-- verified_aggregates/
-|       +-- figures_1_8/              # 23 verified aggregate CSVs (J-series)
-|-- reproducibility/                  # Environment and protocol disclosures
-|-- data/
-|   +-- README.md                     # Dataset access and licence instructions
-|-- audit/                            # Full provenance audit (13/13 PASS)
-|-- PUBLIC_RELEASE_FILE_MANIFEST.csv
-|-- PUBLIC_RELEASE_PROVENANCE_AUDIT.csv
-|-- PUBLIC_RELEASE_SAFETY_REPORT.md
-|-- PUBLIC_RELEASE_READINESS_CHECKLIST.md
-+-- PUBLIC_RELEASE_README_PREVIEW.md
-`
-
----
-
-## Citation
-
-> **Citation DOI not yet assigned.** This repository has not been submitted to Zenodo.
-> Do not cite until a DOI is assigned and author review is complete.
-
-Once a Zenodo DOI is assigned, cite as:
-[Author name(s)], [Year]. Building Energy Conditional Flow Matching - Six-Cohort Reliability Study.
-Zenodo. DOI: [TO BE ASSIGNED AFTER ZENODO SUBMISSION]
-
-See CITATION.cff for machine-readable citation metadata.
-
----
+Use the GitHub **Cite this repository** feature based on [`CITATION.cff`](CITATION.cff) for the current software citation. A version-specific Zenodo DOI will be added **only after** a GitHub release is archived successfully on Zenodo. No DOI has been assigned in this repository metadata yet.
 
 ## Licence
 
-This repository is released under the **MIT License**.
-See [LICENSE](LICENSE) for the full licence text.
-Copyright (c) 2026 Md. Mahbubur Rahman.
-
----
+The author's original research code is licensed under the [MIT License](LICENSE). Third-party datasets, software dependencies and other externally owned content remain governed by their original licences.
