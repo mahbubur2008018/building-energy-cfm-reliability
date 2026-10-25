@@ -285,5 +285,3 @@ See [LICENSE](LICENSE) for the full licence text.
 Copyright (c) 2026 Md. Mahbubur Rahman.
 
 ---
-
-*This repository was prepared by automated curation tools on 2026-10-24 and is pending author review.*
