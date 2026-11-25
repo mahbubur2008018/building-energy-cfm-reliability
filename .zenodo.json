@@ -1,0 +1,32 @@
+{
+  "title": "Building Energy Conditional Flow Matching: Six-Cohort Reliability Study",
+  "description": "Historical Python source code, protocol records, model configurations, and verified aggregate evidence for a six-cohort evaluation of direct and residual conditional flow matching for building-energy estimation under distribution shifts (Cairo, EDCS, Miami, BDG2, Drammen, and Oslo).",
+  "creators": [
+    {
+      "name": "Rahman, Md. Mahbubur",
+      "affiliation": "Department of Mechatronics Engineering, Rajshahi University of Engineering & Technology (RUET), Rajshahi, Bangladesh",
+      "orcid": "0009-0004-0252-9140"
+    }
+  ],
+  "keywords": [
+    "building energy estimation",
+    "conditional flow matching",
+    "probabilistic prediction",
+    "distribution shift",
+    "uncertainty quantification",
+    "calibration",
+    "building energy modelling",
+    "CatBoost",
+    "NGBoost"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mahbubur2008018/building-energy-cfm-reliability",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

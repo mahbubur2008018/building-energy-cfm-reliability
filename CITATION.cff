@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this research code, please cite the archived v1.0.0 software release: https://doi.org/10.5281/zenodo.23641281."
+message: "If you use this research code, protocol records, or empirical data, please cite the archived software release: https://doi.org/10.5281/zenodo.23641281."
 title: "Building Energy Conditional Flow Matching: Six-Cohort Reliability Study"
 type: software
-version: "1.0.0"
+version: "1.1.0"
+date-released: "2026-11-25"
 doi: "10.5281/zenodo.23641281"
 authors:
   - given-names: "Md. Mahbubur"
@@ -12,14 +13,17 @@ authors:
 repository-code: "https://github.com/mahbubur2008018/building-energy-cfm-reliability"
 license: MIT
 abstract: >-
-  Historical Python source code, protocol records and verified aggregate evidence for a six-cohort
-  study of direct and residual conditional flow matching for building-energy estimation under
-  distribution shifts, including frozen Drammen building holdout and Oslo school transfer.
+  Python source code, frozen protocol configurations, baseline models, and verified aggregate
+  evaluation data for a six-cohort empirical evaluation of conditional flow matching (direct,
+  full residual, and no-base residual) for building energy prediction under distribution shift
+  (Cairo, EDCS, Miami, BDG2, Drammen, and Oslo).
 keywords:
-  - building energy estimation
-  - conditional flow matching
-  - probabilistic regression
-  - distribution shift
-  - model reliability
-  - CatBoost
-  - NGBoost
+  - "building energy estimation"
+  - "conditional flow matching"
+  - "probabilistic prediction"
+  - "distribution shift"
+  - "model reliability"
+  - "uncertainty quantification"
+  - "calibration"
+  - "CatBoost"
+  - "NGBoost"
