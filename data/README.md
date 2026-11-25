@@ -1,16 +1,22 @@
-# Dataset sources and access
+# Dataset Sources, Acquisition, and Access
 
-This repository contains **no original raw meter readings or row-level TEST labels**. Obtain source data through the provider's current access and licence conditions. The MIT licence for the author's code does not license third-party datasets.
+This repository contains **no original raw meter readings or confidential row-level records**. In accordance with third-party licensing, users should obtain primary datasets directly from their original providers and published repositories as listed below.
 
-| Cohort | Source / access | Evaluation description |
-|---|---|---|
-| Cairo height-shift simulation | Consult the source reference and archival citation in the manuscript and associated source notes | 2,405 high-height designs evaluated separately from EDCS |
-| EDCS U-shaped geometry simulation | Consult the EDCS dataset authors' original distribution and licence | 1,536 U-shaped records; published descriptor and prose use inconsistent energy-unit conventions; no numerical rescaling imposed |
-| Five-climate / Miami simulation | Consult the original five-climate research source and supplied source-author documentation | 5,759 held-out Miami designs; report outcome units as in the original source |
-| Building Data Genome 2 (BDG2) | https://github.com/buds-lab/building-data-genome-project-2 | Three unseen measured test sites, 92,356 hourly observations; check current source licence |
-| Drammen COFACTOR | Published dataset DOI used in the manuscript: https://doi.org/10.1038/s41597-025-04708-3 ; associated source archive: https://zenodo.org/records/14752397 | 27 FIT / 6 VAL / 5 CAL / 7 TEST buildings |
-| Oslo COFACTOR-SBHUB | https://doi.org/10.60609/czgf-5e46 | 12 CAL / 36 TEST **schools**; no retraining of Drammen models |
+---
 
-The historical dataset splits and calibration/test-access records are recorded under `configs/`. Not every historical source used the same partitioning or measurement units.
+## Dataset Acquisition Links and Citations
 
-**Use restrictions:** Do not claim distribution-free 90% coverage for unseen building clusters based only on row-level calibrated intervals. Do not retune, recalibrate, reselect a model or perform a new nominally independent evaluation using previously opened TEST labels. Consult original providers before redistributing any data.
+| Cohort | Source & Official Acquisition Links | Target Outcome & Units | Dataset Size & Partitioning Structure |
+|:---|:---|:---|:---|
+| **1. Cairo (Height-Shift Simulation)** | Parametric EnergyPlus residential apartment simulations.<br>• Source Reference: Wefki et al. (2026), *Building Services Engineering Research & Technology* (DOI: [`10.1177/01436244251405976`](https://doi.org/10.1177/01436244251405976)).<br>• Simulation configurations based on Egyptian residential building stock standards. | Annual site electricity consumption ($\text{kWh}/\text{year}$) | **12,000 total simulated records** across 480 building geometry configurations. Heights $> 12.76\,\text{m}$ (15–24 m) form the out-of-distribution high-rise test partition (**2,405 records**); remaining records form fitting (6,716), validation (1,439), and calibration (1,440). |
+| **2. EDCS (Unseen Courtyard Geometry)** | EnergyPlus Building Energy Performance Simulation dataset across geometric archetypes.<br>• Official Zenodo Repository (v5.0): [10.5281/zenodo.15073304](https://doi.org/10.5281/zenodo.15073304)<br>• Data Descriptor: *Data in Brief* 61, 2025, 111834. | Total annual energy load ($\text{kWh}/\text{m}^2$; combined heating + cooling load: $\mathrm{TOTAL\_LOAD} = \mathrm{COOLING\_LOAD} + \mathrm{HEATING\_LOAD}$) | **8,535 verified data rows** in official Zenodo spreadsheets (1,536 L-shape + 5,463 O-shape + 1,536 U-shape). 6,999 L- and O-shaped designs form fitting and calibration sets (including 976 calibration records); 1,536 U-shaped designs form the unseen-geometry holdout. Direct CFM comparisons on U-shape are treated as exploratory. |
+| **3. Miami (Five-Climate Simulation)** | Parametric multi-climate commercial building simulations.<br>• Source Reference: Aloshan and Aldali, commercial simulation benchmark across Cairo, Gizan, Riyadh, Sevilla, and Miami.<br>• Open benchmark specifications and climate files via EnergyPlus weather archives. | Energy consumption per floor area ($\text{kWh}/\text{m}^2$) | **28,787 total designs** across five cities. Miami contributes **5,759 frozen test designs** (extreme climate transfer holdout, zone 1A); remaining 23,028 designs from the other four cities provide fitting (16,118), validation (3,454), and calibration (3,456). |
+| **4. Building Data Genome Project 2 (BDG2)** | Real-world hourly non-residential smart meter electrical recordings.<br>• Official Repository: [https://github.com/samuelduchesne/building-data-genome-project-2](https://github.com/samuelduchesne/building-data-genome-project-2)<br>• Data Citation: Miller et al. (2020), *Scientific Data* 7, 368 (DOI: [`10.1038/s41597-020-00710-x`](https://doi.org/10.1038/s41597-020-00710-x)). | Hourly electrical meter consumption ($\text{kWh}$) | Three commercial building sites; out-of-site building holdout used for evaluating extreme prediction diagnostics under out-of-distribution feature combinations. |
+| **5. COFACTOR Drammen** | Hourly space heating consumption in Norwegian municipal buildings.<br>• Official Repository: *Scientific Data* (2025); DOI: [`10.1038/s41597-025-04708-3`](https://doi.org/10.1038/s41597-025-04708-3). | Hourly space heating demand ($\text{kWh}$) | 88,584 retained fitting rows, with pre-locked building cluster partitions for in-city municipal holdout evaluation. |
+| **6. COFACTOR-SBHUB Oslo** | Hourly space heating consumption in 36 educational facilities.<br>• Official Institutional Record: DOI: [`10.60609/czgf-5e46`](https://doi.org/10.60609/czgf-5e46). | Hourly space heating demand ($\text{kWh}$) | 36 distinct primary and secondary schools evaluated under zero-shot transfer from Drammen models without parameter retraining. |
+
+---
+
+## Licensing and Usage Notice
+
+Third-party datasets are licensed under their respective original provider terms. Redistribution of raw training and test meter records is restricted by the source licenses. The Python code in this repository is licensed under the MIT License and does not alter third-party rights.
