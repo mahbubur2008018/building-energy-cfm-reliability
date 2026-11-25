@@ -12,7 +12,7 @@ Historical research code, frozen protocol configurations, and verified aggregate
 > *Affiliation:* Department of Mechatronics Engineering, Rajshahi University of Engineering & Technology (RUET), Rajshahi, Bangladesh  
 > *ORCID:* [0009-0004-0252-9140](https://orcid.org/0009-0004-0252-9140)  
 > *Permanent Repository:* [https://github.com/mahbubur2008018/building-energy-cfm-reliability](https://github.com/mahbubur2008018/building-energy-cfm-reliability)  
-> *Archived Software Release (Zenodo):* Concept DOI [10.5281/zenodo.23641280](https://doi.org/10.5281/zenodo.23641280) | Version DOI [10.5281/zenodo.23641281](https://doi.org/10.5281/zenodo.23641281)
+> *Archived Software Release (Zenodo):* Concept DOI [10.5281/zenodo.23641280](https://doi.org/10.5281/zenodo.23641280) | Initial Version DOI [10.5281/zenodo.23641281](https://doi.org/10.5281/zenodo.23641281)
 
 ---
 
@@ -23,7 +23,7 @@ Continuous normalizing flows using **Conditional Flow Matching (CFM)** learn tim
 ### Evaluation Scope
 1. **Model Formulations:** Empirical comparison of *Direct CFM*, *Full Residual CFM*, and *No-Base Residual CFM*.
 2. **Distribution-Shift Metrics:** Point accuracy (RMSE, MAE), probabilistic calibration, continuous ranked probability score (CRPS), and nominal 90% prediction interval coverage under geometry, climate, meter site, and building transfers.
-3. **Physical-Scale Diagnostics:** Diagnostic checks of unconstrained generative flow predictions under out-of-distribution feature combinations.
+3. **Physical-Scale Diagnostics:** Diagnostic checks of generative flow predictions under out-of-distribution feature combinations.
 
 ---
 
@@ -34,8 +34,8 @@ The study evaluates six distinct cohorts, preserving source-specific outcome def
 | Cohort | Context & Building Type | Shift / Test Partition | Target Outcome & Units | Evaluation Protocol |
 |:---|:---|:---|:---|:---|
 | **1. Cairo** | Residential apartments | Building height shift ($> 12.76\,\text{m}$ holdout) | Annual site electricity ($\text{kWh}/\text{year}$) | 12,000 total simulated records across 480 building geometry configurations; 2,405 high-height records form the test holdout; remaining records allocated to fitting (6,716), validation (1,439), and calibration (1,440). |
-| **2. EDCS** | Office / Institutional | Unseen courtyard geometry (U-shape holdout) | Total annual load ($\text{kWh}/\text{m}^2$; cooling + heating) | 8,535 verified records in Zenodo spreadsheets (1,536 L + 5,463 O + 1,536 U). 6,999 L/O records for fitting/calibration; 1,536 U-shaped records form test holdout. Direct CFM evaluated as exploratory comparison. |
-| **3. Miami** | Five US climate zones | Extreme climate shift (Miami zone 1A holdout) | Energy consumption per floor area ($\text{kWh}/\text{m}^2$) | 28,787 total designs; 5,759 Miami designs form frozen climate holdout; remaining four cities provide fitting (16,118), validation (3,454), and calibration (3,456). |
+| **2. EDCS** | Office / Institutional | Unseen courtyard geometry (U-shape holdout) | Total annual load ($\mathrm{TOTAL\_LOAD} = \mathrm{COOLING\_LOAD} + \mathrm{HEATING\_LOAD}$; $\text{kWh}/\text{m}^2$) | 8,535 verified records in Zenodo spreadsheets (1,536 L + 5,463 O + 1,536 U). Evaluated in native units without rescaling ($\text{kWh}/\text{m}^2$ in source table; prose mentions $\text{MWh}/\text{m}^2$). 6,999 L/O records for fitting/calibration; 1,536 U-shaped records form test holdout. Direct CFM evaluated as exploratory comparison. |
+| **3. Miami** | Five international cities (Cairo, Gizan, Riyadh, Sevilla, Miami) | Extreme climate shift (Miami zone 1A holdout) | Energy consumption per floor area ($\text{kWh}/\text{m}^2$) | 28,787 total designs across five international climates; 5,759 Miami designs form frozen climate holdout; remaining four cities provide fitting (16,118), validation (3,454), and calibration (3,456). |
 | **4. BDG2** | Commercial & university buildings | Multi-site cross-building holdout (3 sites) | Hourly whole-building electrical consumption ($\text{kWh}$) | Three commercial sites; out-of-site building holdout with extreme prediction diagnostics. |
 | **5. Drammen** | Norwegian municipal buildings | In-city unseen building holdout | Hourly space heating consumption ($\text{kWh}$) | 88,584 retained fitting rows; pre-locked building cluster partitions; CRPS evaluation. |
 | **6. Oslo** | Primary & secondary schools | Cross-city transfer from Drammen models | Hourly space heating consumption ($\text{kWh}$) | Zero-shot model transfer across 36 school buildings without parameter retraining. |
@@ -66,8 +66,8 @@ Reconstruction: y_hat = sample(c) + y_hat_base
 ### CatBoost Anchor Generation Protocol
 - **Direct CFM:** The CatBoost prediction is completely bypassed during both conditioning and reconstruction.
 - **Residual Formulations:** CatBoost serves as the point prediction anchor ($\hat{y}_{\text{base}}$). During training, anchor predictions are generated using cohort-appropriate validation splits:
-  - In cross-validation cohorts (e.g., Cairo, BDG2), out-of-fold (OOF) predictions are generated via GroupKFold on building/geometry clusters to avoid training-label leakage.
-  - In fixed split cohorts (e.g., EDCS, Miami, Drammen), base models are trained strictly on the designated training/fit partition and evaluated on holdout partitions.
+  - In cross-validation cohorts (e.g., Cairo, BDG2), 5-fold GroupKFold out-of-fold (OOF) predictions are generated on building/geometry/site clusters to avoid training-label leakage.
+  - In fixed-split cohorts (e.g., EDCS, Miami, Drammen), base models are trained strictly on the designated training/fit partition and evaluated on holdout partitions.
 - Full Residual CFM includes $\hat{y}_{\text{base}}$ in the velocity network conditioning vector $c = [x, \hat{y}_{\text{base}}]$.
 - No-Base Residual CFM conditions strictly on the input features $c = x$, adding $\hat{y}_{\text{base}}$ only during final target reconstruction.
 
@@ -101,7 +101,8 @@ building-energy-cfm-reliability/
 ├── results/
 │   └── verified_aggregates/ <- Verified aggregate evaluation CSVs and figure summaries
 │       ├── figures_1_8/
-│       └── P49_AGGREGATE_EXPORT_HASH_MANIFEST.csv
+│       ├── P49_AGGREGATE_EXPORT_HASH_MANIFEST.csv
+│       └── P49_README.md   <- Documentation and mapping of historical figures to manuscript
 ├── scripts/                <- Verification utilities and provenance export tools
 │   ├── CFM_CHECKPOINT_HASH_VERIFY.py
 │   └── CFM_PC_READONLY_PROVENANCE_EXPORT.py
@@ -145,7 +146,7 @@ pip install -r requirements.txt
 In compliance with provider licensing, third-party raw datasets are not bundled in this repository. Refer to [`data/README.md`](data/README.md) for official download links, repository DOIs, and access instructions for:
 - Cairo height-shift EnergyPlus simulations (Wefki et al., 2026; DOI: `10.1177/01436244251405976`)
 - EDCS building geometry simulations (Zenodo DOI: `10.5281/zenodo.15073304`)
-- Five-climate US commercial simulation benchmark (Aloshan & Aldali)
+- Five-climate international commercial simulation benchmark (Aloshan & Aldali, 2024)
 - Building Data Genome Project 2 (BDG2; Miller et al., 2020; DOI: `10.1038/s41597-020-00710-x`)
 - COFACTOR municipal buildings dataset (Drammen; DOI: `10.1038/s41597-025-04708-3`)
 - COFACTOR-SBHUB school buildings dataset (Oslo; DOI: `10.60609/czgf-5e46`)
@@ -190,8 +191,8 @@ If you use this software, protocol records, or empirical evaluation data, please
   title        = {Building Energy Conditional Flow Matching: Six-Cohort Reliability Study},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {v1.1.1},
-  doi          = {10.5281/zenodo.23641281},
+  version      = {v1.1.2},
+  doi          = {10.5281/zenodo.23641280},
   url          = {https://github.com/mahbubur2008018/building-energy-cfm-reliability}
 }
 ```
