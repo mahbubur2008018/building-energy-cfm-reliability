@@ -4,7 +4,7 @@ This directory contains historical figure-level aggregate data and index metadat
 
 ## Purpose and Scientific Restrictions
 - These files are **historical aggregate exports** preserved to document data provenance for published figures.
-- They contain summary distributions, error metrics, and interval statistics; no individual raw/test target meter records or row-level patient data are included.
+- They contain summary distributions, error metrics, and interval statistics; no individual raw/test target meter records or row-level building energy observations are included.
 - Figure-level aggregate data must not be used for post-hoc hyperparameter tuning, model re-selection, or test set recalibration.
 
 ## Mapping of Historical Internal Figures to Final Manuscript Figures

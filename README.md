@@ -12,7 +12,7 @@ Historical research code, frozen protocol configurations, and verified aggregate
 > *Affiliation:* Department of Mechatronics Engineering, Rajshahi University of Engineering & Technology (RUET), Rajshahi, Bangladesh  
 > *ORCID:* [0009-0004-0252-9140](https://orcid.org/0009-0004-0252-9140)  
 > *Permanent Repository:* [https://github.com/mahbubur2008018/building-energy-cfm-reliability](https://github.com/mahbubur2008018/building-energy-cfm-reliability)  
-> *Archived Software Release (Zenodo):* Concept DOI [10.5281/zenodo.23641280](https://doi.org/10.5281/zenodo.23641280) | Initial Version DOI [10.5281/zenodo.23641281](https://doi.org/10.5281/zenodo.23641281)
+> *Archived Software Releases (Zenodo):* Concept DOI [10.5281/zenodo.23641280](https://doi.org/10.5281/zenodo.23641280) | Submitted Manuscript Version DOI [10.5281/zenodo.24528248](https://doi.org/10.5281/zenodo.24528248)
 
 ---
 
@@ -144,10 +144,10 @@ pip install -r requirements.txt
 ## 6. Dataset Acquisition
 
 In compliance with provider licensing, third-party raw datasets are not bundled in this repository. Refer to [`data/README.md`](data/README.md) for official download links, repository DOIs, and access instructions for:
-- Cairo height-shift EnergyPlus simulations (Wefki et al., 2026; DOI: `10.1177/01436244251405976`)
+- Cairo height-shift EnergyPlus simulations (Wefki et al., 2026; DOI: `10.3390/buildings16050976`)
 - EDCS building geometry simulations (Zenodo DOI: `10.5281/zenodo.15073304`)
-- Five-climate international commercial simulation benchmark (Aloshan & Aldali, 2024)
-- Building Data Genome Project 2 (BDG2; Miller et al., 2020; DOI: `10.1038/s41597-020-00710-x`)
+- Five-climate international commercial simulation benchmark (Aloshan & Aldali, 2025; DOI: `10.1038/s41598-025-32297-z`)
+- Building Data Genome Project 2 (BDG2; Miller et al., 2020; DOI: `10.1038/s41597-020-00712-x`)
 - COFACTOR municipal buildings dataset (Drammen; DOI: `10.1038/s41597-025-04708-3`)
 - COFACTOR-SBHUB school buildings dataset (Oslo; DOI: `10.60609/czgf-5e46`)
 
@@ -191,7 +191,7 @@ If you use this software, protocol records, or empirical evaluation data, please
   title        = {Building Energy Conditional Flow Matching: Six-Cohort Reliability Study},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {v1.1.2},
+  version      = {v1.1.3},
   doi          = {10.5281/zenodo.23641280},
   url          = {https://github.com/mahbubur2008018/building-energy-cfm-reliability}
 }
